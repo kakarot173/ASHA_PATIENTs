@@ -1,0 +1,39 @@
+PODS:
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - LBTATools (1.0.12)
+  - QuickBlox (2.17.4)
+  - Quickblox-WebRTC (2.7.5):
+    - QuickBlox (>= 2.7.5)
+  - SVProgressHUD (2.2.5)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - LBTATools
+  - QuickBlox (~> 2.17.4)
+  - Quickblox-WebRTC (~> 2.7.4)
+  - SVProgressHUD (~> 2.2.5)
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - LBTATools
+    - QuickBlox
+    - Quickblox-WebRTC
+    - SVProgressHUD
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
+  QuickBlox: 992be26bc127313991a1337dfd98c9359832c147
+  Quickblox-WebRTC: 6be5253719fc8b747408fdac53985d04d40f3172
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: 93e96810ba17b6b874c1bbeaf97424b22331d1a1
+
+COCOAPODS: 1.9.3

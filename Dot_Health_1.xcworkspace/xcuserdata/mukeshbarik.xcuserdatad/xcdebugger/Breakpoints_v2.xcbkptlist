@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B2D4F685-856F-4C99-8F41-D51DC3FC4E4F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C252CE61-8419-4F59-A3B4-D317EDD53C4D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotAddAppointment/DotAddAppointmentViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C160509-A261-454C-A4F8-256889F2D74C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift/Components/Auth/AuthViewController/LoginTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "didPressLoginButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20BD2BAB-355B-4DE3-9BC6-39ACEAB69D5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift/Components/Auth/AuthViewController/LoginTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "signUp(fullName:login:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6598ECE2-9183-4C66-8B8F-7640712A5D37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift1/Components1/Call/CallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "configureGUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6598ECE2-9183-4C66-8B8F-7640712A5D37 - a4d990571a180a52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dot_Health_1.CallViewController.(configureGUI in _6643BC6F428349CC47F1EAA12AA2BF9B)() -&gt; ()"
+                  moduleName = "Dot_Health_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mukeshbarik/Desktop/MY%20ASHA%20Patient/DOT%20%2025%20June/dot_dev/Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift1/Components1/Call/CallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "278"
+                  endingLineNumber = "278"
+                  offsetFromSymbolStart = "1932">
+               </Location>
+               <Location
+                  uuid = "6598ECE2-9183-4C66-8B8F-7640712A5D37 - 8ddceea4dcea9d1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;__C.UIButton&gt;) -&gt; () in Dot_Health_1.CallViewController.(configureGUI in _6643BC6F428349CC47F1EAA12AA2BF9B)() -&gt; ()"
+                  moduleName = "Dot_Health_1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mukeshbarik/Desktop/MY%20ASHA%20Patient/DOT%20%2025%20June/dot_dev/Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift1/Components1/Call/CallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "279"
+                  endingLineNumber = "279"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "950BEC87-7D72-414A-AEB4-A0D60B725C09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift1/Components1/Call/CallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "configureGUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F8A363D-6F04-4DED-862B-D303BB16EBC4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dot_Health_1/DotVideoAudioCall/sample-videochat-webrtc-swift1/Components1/Call/CallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "configureGUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
