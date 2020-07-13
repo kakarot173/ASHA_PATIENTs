@@ -1,7 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-Dot_Health_1/Pods-Dot_Health_1-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
-${BUILT_PRODUCTS_DIR}/LBTATools/LBTATools.framework
-${PODS_ROOT}/QuickBlox/Quickblox.framework
-${PODS_ROOT}/Quickblox-WebRTC/QuickbloxWebRTC.framework
-${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
-${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework
