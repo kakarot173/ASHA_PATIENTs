@@ -211,13 +211,7 @@
 		2BE560E2248B0A9300EE112E /* DotDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotDashboardViewController.swift; sourceTree = "<group>"; };
 		2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DotDashboardViewController.xib; sourceTree = "<group>"; };
 		2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailModel.swift; sourceTree = "<group>"; };
-		302E479458FA5E51C4431EF2 /* Pods-Dot_Health_1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1Tests/Pods-Dot_Health_1Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		60D8350D95F5487A09964FDD /* Pods-Dot_Health_1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1Tests.release.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1Tests/Pods-Dot_Health_1Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6566876FA499BE719FC3DD2C /* Pods-Dot_Health_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1.release.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1/Pods-Dot_Health_1.release.xcconfig"; sourceTree = "<group>"; };
 		6AC74BB58B2633520DD3FF0D /* Pods_Dot_Health_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dot_Health_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CD65299A739010E7C06D302 /* Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1-Dot_Health_1UITests/Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig"; sourceTree = "<group>"; };
-		88198DF2B76A479BAE782A52 /* Pods-Dot_Health_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1.debug.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1/Pods-Dot_Health_1.debug.xcconfig"; sourceTree = "<group>"; };
-		9C8E2880601B912B8B14B0C0 /* Pods-Dot_Health_1-Dot_Health_1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1-Dot_Health_1UITests.debug.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1-Dot_Health_1UITests/Pods-Dot_Health_1-Dot_Health_1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F314A6092498578A006B8D0D /* DotAppointmentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentDetailTableViewCell.swift; sourceTree = "<group>"; };
 		F31F0EE8249A579F00D64E7F /* DotAppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentDetailsViewController.swift; sourceTree = "<group>"; };
 		F31F0EEA249A57C600D64E7F /* DotAppointmentDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotAppointmentDetailsViewController.storyboard; sourceTree = "<group>"; };
@@ -359,7 +353,6 @@
 				2B43AB6C24859E04003C4B19 /* Dot_Health_1Tests */,
 				2B43AB7724859E04003C4B19 /* Dot_Health_1UITests */,
 				2B43AB5124859DFF003C4B19 /* Products */,
-				36F4CC12BA05D21A2403D39A /* Pods */,
 				62D340774B9A212C6325E510 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -575,19 +568,6 @@
 				2BE560DE248B093500EE112E /* DotTabViewController.swift */,
 			);
 			path = DotMainTabBarController;
-			sourceTree = "<group>";
-		};
-		36F4CC12BA05D21A2403D39A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				88198DF2B76A479BAE782A52 /* Pods-Dot_Health_1.debug.xcconfig */,
-				6566876FA499BE719FC3DD2C /* Pods-Dot_Health_1.release.xcconfig */,
-				9C8E2880601B912B8B14B0C0 /* Pods-Dot_Health_1-Dot_Health_1UITests.debug.xcconfig */,
-				7CD65299A739010E7C06D302 /* Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig */,
-				302E479458FA5E51C4431EF2 /* Pods-Dot_Health_1Tests.debug.xcconfig */,
-				60D8350D95F5487A09964FDD /* Pods-Dot_Health_1Tests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		62D340774B9A212C6325E510 /* Frameworks */ = {
@@ -1544,7 +1524,6 @@
 		};
 		2B43AB7E24859E04003C4B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88198DF2B76A479BAE782A52 /* Pods-Dot_Health_1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1562,7 +1541,6 @@
 		};
 		2B43AB7F24859E04003C4B19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6566876FA499BE719FC3DD2C /* Pods-Dot_Health_1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1580,7 +1558,6 @@
 		};
 		2B43AB8124859E04003C4B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 302E479458FA5E51C4431EF2 /* Pods-Dot_Health_1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1602,7 +1579,6 @@
 		};
 		2B43AB8224859E04003C4B19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60D8350D95F5487A09964FDD /* Pods-Dot_Health_1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1624,7 +1600,6 @@
 		};
 		2B43AB8424859E04003C4B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C8E2880601B912B8B14B0C0 /* Pods-Dot_Health_1-Dot_Health_1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1644,7 +1619,6 @@
 		};
 		2B43AB8524859E04003C4B19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CD65299A739010E7C06D302 /* Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
