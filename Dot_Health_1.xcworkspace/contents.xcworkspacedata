@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Dot_Health_1.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>
