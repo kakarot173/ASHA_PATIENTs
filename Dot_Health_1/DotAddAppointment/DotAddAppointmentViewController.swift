@@ -12,7 +12,6 @@ class DotAddAppointmentViewController: UIViewController {
 
     @IBOutlet weak var ailmentButton: UIButton!
     @IBOutlet weak var doctorButton: UIButton!
-    @IBOutlet weak var institutionButton: UIButton!
     @IBOutlet weak var specialityButton: UIButton!
     @IBOutlet weak var doctorListTableView: UITableView!
     var selectedAilment : [String] = []
@@ -31,6 +30,16 @@ class DotAddAppointmentViewController: UIViewController {
         })
         doctorListTableView.rowHeight = 135
         self.navigationItem.title = "Add Appointments"
+        self.configureViewItems()
+        
+    }
+    func configureViewItems(){
+        self.doctorButton.createOptionButton()
+        self.specialityButton.createOptionButton()
+        self.ailmentButton.createOptionButton()
+        ailmentButton.titleLabel?.numberOfLines = 1;
+        ailmentButton.titleLabel?.adjustsFontSizeToFitWidth = true;
+        ailmentButton.titleLabel?.lineBreakMode = .byClipping;
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,19 +63,13 @@ class DotAddAppointmentViewController: UIViewController {
         
         switch sender.titleLabel?.text {
         case "Ailment":
-            sender.createFloatingActionButton()
+            sender.createSelectedOptionButton()
         case "Doctor":
-            sender.createFloatingActionButton()
-            self.institutionButton.createNormalButton()
-            self.specialityButton.createNormalButton()
-        case "Institution":
-            sender.createFloatingActionButton()
-            self.doctorButton.createNormalButton()
-            self.specialityButton.createNormalButton()
+            sender.createSelectedOptionButton()
+            self.specialityButton.createOptionButton()
         case "Facility":
-            sender.createFloatingActionButton()
-            self.doctorButton.createNormalButton()
-            self.institutionButton.createNormalButton()
+            sender.createSelectedOptionButton()
+            self.doctorButton.createOptionButton()
         default:
             print("Wrong button")
         }
