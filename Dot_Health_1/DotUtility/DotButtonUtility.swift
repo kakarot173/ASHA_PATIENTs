@@ -85,23 +85,6 @@ class DotLabelUtility: UILabel {
         self.text = "test"
         self.textColor = #colorLiteral(red: 0.1470873058, green: 0.4721398354, blue: 0.7756891847, alpha: 1)
         self.font = UIFont.boldSystemFont(ofSize: 12)
-        
-        
-//         if shadowLayer == nil {
-//                      shadowLayer = CAShapeLayer()
-//                      shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 30).cgPath
-//                      shadowLayer.fillColor = UIColor.white.cgColor
-//
-//                      shadowLayer.shadowColor = UIColor.darkGray.cgColor
-//                      shadowLayer.shadowPath = shadowLayer.path
-//                      shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-//                      shadowLayer.shadowOpacity = 0.8
-//                      shadowLayer.shadowRadius = 2
-//
-//                      layer.insertSublayer(shadowLayer, at: 0)
-//                      //layer.insertSublayer(shadowLayer, below: nil) // also works
-//                  }
-    
     }
 }
 class DotTextFieldUtility:UITextField{
@@ -142,15 +125,15 @@ class ActionButton: UIButton {
         layer.cornerRadius = frame.height / 2
         setTitleColor(UIColor.white, for: .normal)
     }
-    
-    class DotViewUtility: UIView{
-          override func draw(_ rect: CGRect) {
+}
+class DotViewUtility: UIView{
+    override func draw(_ rect: CGRect) {
         backgroundColor = #colorLiteral(red: 0.1665293276, green: 0.5254830718, blue: 0.7482460141, alpha: 1)
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
         layer.shadowColor = UIColor.darkGray.cgColor
         layer.cornerRadius = 10
     }
-    }
-
 }
+
+

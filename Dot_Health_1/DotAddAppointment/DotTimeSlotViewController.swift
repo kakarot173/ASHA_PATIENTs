@@ -16,16 +16,8 @@ class DotTimeSlotViewController: UIViewController {
     @IBOutlet weak var specialityLabel: UILabel!
     @IBOutlet weak var hospitalNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var morningButton: OptionButton!
-   
     @IBOutlet weak var dateTextField: DotTextFieldUtility!
-    @IBOutlet weak var eveningButton: OptionButton!
-    @IBOutlet weak var afternoonButton: UIButton!
-    @IBOutlet weak var slot4Button: OptionButton!
-    @IBOutlet weak var slot3Button: OptionButton!
-   
-    @IBOutlet weak var slot2Button: UIButton!
-    @IBOutlet weak var slot1Button: OptionButton!
+    @IBOutlet weak var timeSlotSegmentedControl: UISegmentedControl!
     var selectedDocImage = UIImage()
     var selectedName = String()
     var selectedSpec = String()
@@ -34,13 +26,6 @@ class DotTimeSlotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Select a time slot"
-        self.afternoonButton.createOptionButton()
-        self.morningButton.createOptionButton()
-         self.eveningButton.createOptionButton()
-         self.slot1Button.createOptionButton()
-         self.slot2Button.createOptionButton()
-         self.slot3Button.createOptionButton()
-         self.slot4Button.createOptionButton()
         self.dateTextField.delegate = self
         self.dateTextField.text = UtilityFunctions.getTodayDate()
     }
