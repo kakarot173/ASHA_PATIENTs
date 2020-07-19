@@ -13,3 +13,9 @@ struct DotCardModel:Hashable{
     var cardName : String?
     var cardTitle : String?
 }
+struct DotSlotsModel:Hashable{
+    var cardName : String?
+    var cardTitle : String?
+    var isSelect : Bool?
+    var id: Int?
+}

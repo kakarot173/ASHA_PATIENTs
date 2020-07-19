@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDy-Ff-tbM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDy-Ff-tbM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,13 +34,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patient Screen-bg" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-yn-vGk">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-SC-QTH">
-                                <rect key="frame" x="20" y="408" width="374" height="178"/>
+                                <rect key="frame" x="20" y="466" width="374" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q6i-vJ-Pyj">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4j-IB-mXZ">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4j-IB-mXZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="6Lq-gs-P1P"/>
@@ -51,7 +54,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ohA-zY-r2d">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kg-ng-vHr" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -61,15 +64,20 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" name="GradientColorlight"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbJ-gm-ABx">
-                                        <rect key="frame" x="0.0" y="99" width="374" height="79"/>
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-n0-Mj8">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-n0-Mj8">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="338" id="0ZM-Z3-J30"/>
@@ -80,7 +88,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="wIt-6y-mBF">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-gt-ZoG" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -90,6 +98,11 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" name="GradientColorlight"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -109,7 +122,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAY-zt-n43">
                                 <rect key="frame" x="143" y="625" width="128" height="40"/>
-                                <color key="backgroundColor" red="0.37376363359999998" green="0.71530802739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="GradientColorDark"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tIg-qy-0SZ"/>
                                 </constraints>
@@ -125,8 +138,8 @@
                                     <segue destination="lrb-Hz-b55" kind="push" id="mIj-L8-8tf"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gg4-21-Je1">
-                                <rect key="frame" x="47" y="169" width="320" height="209"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gg4-21-Je1">
+                                <rect key="frame" x="47" y="169" width="320" height="267"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-9F-jKj">
                                 <rect key="frame" x="287" y="595" width="107" height="21"/>
@@ -135,7 +148,7 @@
                                     <constraint firstAttribute="width" constant="107" id="hjh-DC-dZA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.55299729109999995" green="0.58453512190000001" blue="0.56470894810000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" name="GradientColorDark"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy | Terms And Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-ux-gTb">
@@ -144,7 +157,7 @@
                                     <constraint firstAttribute="height" constant="21" id="538-it-ubT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -152,6 +165,7 @@
                         <constraints>
                             <constraint firstItem="2B3-ux-gTb" firstAttribute="top" secondItem="bT1-gK-0fL" secondAttribute="bottom" constant="65" id="0go-BW-rU7"/>
                             <constraint firstItem="d9Y-dK-WMu" firstAttribute="trailing" secondItem="Yhg-SC-QTH" secondAttribute="trailing" constant="20" id="3tM-ad-ac5"/>
+                            <constraint firstItem="l8b-yn-vGk" firstAttribute="leading" secondItem="d9Y-dK-WMu" secondAttribute="leading" id="4zy-dC-6XN"/>
                             <constraint firstItem="gg4-21-Je1" firstAttribute="top" secondItem="d9Y-dK-WMu" secondAttribute="top" constant="29" id="5FW-ud-fTn"/>
                             <constraint firstItem="XdA-9F-jKj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="d9Y-dK-WMu" secondAttribute="leading" constant="287" id="5h0-fH-TRt"/>
                             <constraint firstItem="XdA-9F-jKj" firstAttribute="top" secondItem="Yhg-SC-QTH" secondAttribute="bottom" constant="9" id="8Dj-s6-dro"/>
@@ -164,10 +178,13 @@
                             <constraint firstItem="dAY-zt-n43" firstAttribute="centerX" secondItem="Yhg-SC-QTH" secondAttribute="centerX" id="MSU-Yr-QaS"/>
                             <constraint firstItem="d9Y-dK-WMu" firstAttribute="trailing" secondItem="XdA-9F-jKj" secondAttribute="trailing" constant="20" id="N6E-Nc-OCD"/>
                             <constraint firstItem="bT1-gK-0fL" firstAttribute="top" secondItem="XdA-9F-jKj" secondAttribute="bottom" constant="126" id="Qjr-oJ-rpU"/>
+                            <constraint firstItem="d9Y-dK-WMu" firstAttribute="trailing" secondItem="l8b-yn-vGk" secondAttribute="trailing" id="cvD-4k-FQn"/>
+                            <constraint firstItem="d9Y-dK-WMu" firstAttribute="bottom" secondItem="l8b-yn-vGk" secondAttribute="bottom" id="lnZ-rD-Rmk"/>
                             <constraint firstItem="Yhg-SC-QTH" firstAttribute="top" secondItem="gg4-21-Je1" secondAttribute="bottom" constant="30" id="oEq-vB-ax2"/>
                             <constraint firstItem="d9Y-dK-WMu" firstAttribute="trailing" secondItem="gg4-21-Je1" secondAttribute="trailing" constant="47" id="usJ-V7-3GW"/>
                             <constraint firstItem="dAY-zt-n43" firstAttribute="leading" secondItem="d9Y-dK-WMu" secondAttribute="leading" constant="143" id="vQh-VL-kGq"/>
                             <constraint firstItem="gg4-21-Je1" firstAttribute="leading" secondItem="d9Y-dK-WMu" secondAttribute="leading" constant="47" id="whG-37-sSv"/>
+                            <constraint firstItem="l8b-yn-vGk" firstAttribute="top" secondItem="d9Y-dK-WMu" secondAttribute="top" id="x8k-MC-36H"/>
                             <constraint firstItem="2B3-ux-gTb" firstAttribute="bottom" secondItem="d9Y-dK-WMu" secondAttribute="bottom" constant="-4" id="ziP-a4-wNi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d9Y-dK-WMu"/>
@@ -588,13 +605,26 @@
     </scenes>
     <resources>
         <image name="Logo" width="1200" height="1200"/>
+        <image name="Patient Screen-bg" width="414" height="896"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
         <image name="settings" width="30" height="30"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientColorDark">
+            <color red="0.046999998390674591" green="0.59600001573562622" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientColorlight">
+            <color red="0.29399999976158142" green="0.7369999885559082" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientColorlight">
+            <color red="0.29399999980000002" green="0.73699998860000004" blue="0.68599998949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Tint">
-            <color red="0.18500000238418579" green="0.43399998545646667" blue="0.72899997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.74900001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -15,4 +15,7 @@ class Theme{
     static let labelFontNameBold = UIFont(name: "KohinoorDevanagari-Bold", size: 15)
     static let backgroundColor = UIColor(named: "Background")
     static let tintcolor = UIColor(named: "Tint")
+    static let gradientColorLight = UIColor(named: "GradientColorlight")
+    static let gradientColorDark = UIColor(named: "GradientColorDark")
+
 }

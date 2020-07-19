@@ -20,17 +20,42 @@ class DotTimeSlotViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateTextField: DotTextFieldUtility!
     @IBOutlet weak var timeSlotSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var slotsView: UIView!
     var selectedDocImage = UIImage()
     var selectedName = String()
     var selectedSpec = String()
     var selectedHosPitalName = String()
     var selectedPrice = String()
     var paymentObject = DotPaymentViewController()
+    enum Section :CaseIterable{
+        case main
+    }
+    
+    // MARK: DataSource & DataSourceSnapshot typealias
+    typealias DataSource = UICollectionViewDiffableDataSource<Section,DotSlotsModel>
+    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Section,DotSlotsModel>
+    // MARK: dataSource & snapshot
+    public var dataSource :DataSource! =  nil
+    public var snapshot = DataSourceSnapshot()
+    var collectionSuperView = UIView()
+    var dashBoardObj = DotDashboardViewController()
+    var CardsCollectionView: UICollectionView! = nil
+    var identiFierForView:String?
+    var doctorDash = ["2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM","2:00 PM - 2:45 PM"]//make didset
+    var green = [3,6,9,11]
+    var red = [4,12,13,14]
+
+    var dummyModel = [DotSlotsModel]()
+    weak var delegate:saveAddedSlots?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Select a time slot"
         self.dateTextField.delegate = self
         self.dateTextField.text = UtilityFunctions.getTodayDate()
+         configureCollectionView()
+        configureCollectionViewDataSource()
+        createDummyData()
     }
     
 

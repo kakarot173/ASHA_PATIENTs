@@ -46,6 +46,8 @@
 		2BE560DF248B093500EE112E /* DotTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE560DE248B093500EE112E /* DotTabViewController.swift */; };
 		2BE560E4248B0A9300EE112E /* DotDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE560E2248B0A9300EE112E /* DotDashboardViewController.swift */; };
 		2BE560E5248B0A9300EE112E /* DotDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */; };
+		2BF005D124C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */; };
+		2BF005D324C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */; };
 		2BFE0AE2248EE76D00AED5E6 /* ProfileDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */; };
 		91DFA5B472732531B47B04D3 /* Pods_Dot_Health_1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385BA697DF3F468FE0651B8 /* Pods_Dot_Health_1Tests.framework */; };
 		9303D98B394F7878A8BAE57D /* Pods_Dot_Health_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC74BB58B2633520DD3FF0D /* Pods_Dot_Health_1.framework */; };
@@ -215,6 +217,8 @@
 		2BE560DE248B093500EE112E /* DotTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTabViewController.swift; sourceTree = "<group>"; };
 		2BE560E2248B0A9300EE112E /* DotDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotDashboardViewController.swift; sourceTree = "<group>"; };
 		2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DotDashboardViewController.xib; sourceTree = "<group>"; };
+		2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotTimeSlotsExtention+CollectionView.swift"; sourceTree = "<group>"; };
+		2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTimeSlotsCollectionCell.swift; sourceTree = "<group>"; };
 		2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailModel.swift; sourceTree = "<group>"; };
 		3896CAE6B9B61FD9ABEF9590 /* Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1-Dot_Health_1UITests/Pods-Dot_Health_1-Dot_Health_1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		3D3E2E2EFB6373E9016C5822 /* Pods-Dot_Health_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Health_1.release.xcconfig"; path = "Target Support Files/Pods-Dot_Health_1/Pods-Dot_Health_1.release.xcconfig"; sourceTree = "<group>"; };
@@ -1004,6 +1008,8 @@
 				F32BE10A24A520FE00E92A78 /* DotAilmentTableViewCell.swift */,
 				F366315F24A793D400614E07 /* DotTimeSlotViewController.storyboard */,
 				F366316124A7943400614E07 /* DotTimeSlotViewController.swift */,
+				2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */,
+				2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */,
 			);
 			path = DotAddAppointment;
 			sourceTree = "<group>";
@@ -1341,6 +1347,7 @@
 				F35AF64C2497E8AA0035833D /* DotAppointmentDetailViewController.swift in Sources */,
 				F3471920249280ED000CB0B1 /* DotAppointmentModel.swift in Sources */,
 				2B43AB9524859FF5003C4B19 /* Result.swift in Sources */,
+				2BF005D324C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift in Sources */,
 				2BBB90DB249C6F9900E01FE7 /* DotUserDetailsModel.swift in Sources */,
 				F36B119124B64CEE00122B05 /* InfoModel.swift in Sources */,
 				2BE560D72489810A00EE112E /* DotButtonUtility.swift in Sources */,
@@ -1358,6 +1365,7 @@
 				2B81DE23249338D20012F78A /* CustomShowPopup.swift in Sources */,
 				F36B11A524B64D5800122B05 /* SharingCell.swift in Sources */,
 				F3623BC5248D355B0082025A /* DotAppointmentsViewController.swift in Sources */,
+				2BF005D124C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift in Sources */,
 				F38F15A4249BB47F0060DD99 /* DotDoctorTableViewCell.swift in Sources */,
 				2BE560DC2489817200EE112E /* DotRegisterViewController.swift in Sources */,
 				2BBD7F82249E02F9004CDC7B /* DashBoardCollectionViewController.swift in Sources */,
