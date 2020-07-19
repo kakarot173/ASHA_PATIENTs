@@ -70,9 +70,6 @@
 		F35AF64C2497E8AA0035833D /* DotAppointmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35AF64B2497E8AA0035833D /* DotAppointmentDetailViewController.swift */; };
 		F3623BC5248D355B0082025A /* DotAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3623BC3248D355B0082025A /* DotAppointmentsViewController.swift */; };
 		F3623BC8248D47E80082025A /* colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3623BC7248D47E80082025A /* colours.xcassets */; };
-		F365A5E724C388FD005A707C /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5E624C388FD005A707C /* PlugNPlay.framework */; };
-		F365A5E924C389AC005A707C /* PayUMoneyCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */; };
-		F365A5EB24C38A40005A707C /* PayUCustomBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */; };
 		F366316024A793D400614E07 /* DotTimeSlotViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F366315F24A793D400614E07 /* DotTimeSlotViewController.storyboard */; };
 		F366316224A7943400614E07 /* DotTimeSlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366316124A7943400614E07 /* DotTimeSlotViewController.swift */; };
 		F36B112724B638DD00122B05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F36B112524B638DD00122B05 /* Localizable.strings */; };
@@ -243,9 +240,6 @@
 		F35AF64B2497E8AA0035833D /* DotAppointmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentDetailViewController.swift; sourceTree = "<group>"; };
 		F3623BC3248D355B0082025A /* DotAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentsViewController.swift; sourceTree = "<group>"; };
 		F3623BC7248D47E80082025A /* colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colours.xcassets; sourceTree = "<group>"; };
-		F365A5E624C388FD005A707C /* PlugNPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlugNPlay.framework; sourceTree = "<group>"; };
-		F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayUMoneyCoreSDK.framework; sourceTree = "<group>"; };
-		F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayUCustomBrowser.framework; sourceTree = "<group>"; };
 		F366315F24A793D400614E07 /* DotTimeSlotViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotTimeSlotViewController.storyboard; sourceTree = "<group>"; };
 		F366316124A7943400614E07 /* DotTimeSlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTimeSlotViewController.swift; sourceTree = "<group>"; };
 		F36B112524B638DD00122B05 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -331,9 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9303D98B394F7878A8BAE57D /* Pods_Dot_Health_1.framework in Frameworks */,
-				F365A5EB24C38A40005A707C /* PayUCustomBrowser.framework in Frameworks */,
-				F365A5E924C389AC005A707C /* PayUMoneyCoreSDK.framework in Frameworks */,
-				F365A5E724C388FD005A707C /* PlugNPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,9 +587,6 @@
 		62D340774B9A212C6325E510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */,
-				F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */,
-				F365A5E624C388FD005A707C /* PlugNPlay.framework */,
 				6AC74BB58B2633520DD3FF0D /* Pods_Dot_Health_1.framework */,
 				277F81B7AFD1D5FD508005F3 /* Pods_Dot_Health_1_Dot_Health_1UITests.framework */,
 				1385BA697DF3F468FE0651B8 /* Pods_Dot_Health_1Tests.framework */,
