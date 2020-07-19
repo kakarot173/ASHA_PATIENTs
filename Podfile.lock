@@ -3,6 +3,11 @@ PODS:
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
   - LBTATools (1.0.12)
+  - PayUIndia-Custom-Browser (6.0)
+  - PayUmoney_CoreSDK (4.1):
+    - PayUIndia-Custom-Browser (~> 6.0)
+  - PayUmoney_PnP (2.5.2):
+    - PayUmoney_CoreSDK
   - QuickBlox (2.17.4)
   - Quickblox-WebRTC (2.7.5):
     - QuickBlox (>= 2.7.5)
@@ -12,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - LBTATools
+  - PayUmoney_PnP
   - QuickBlox (~> 2.17.4)
   - Quickblox-WebRTC (~> 2.7.4)
   - SVProgressHUD (~> 2.2.5)
@@ -21,6 +27,9 @@ SPEC REPOS:
   trunk:
     - Kingfisher
     - LBTATools
+    - PayUIndia-Custom-Browser
+    - PayUmoney_CoreSDK
+    - PayUmoney_PnP
     - QuickBlox
     - Quickblox-WebRTC
     - SVProgressHUD
@@ -29,11 +38,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
+  PayUIndia-Custom-Browser: 61097aa039fdf579193cf8cf8ecfe6d81574966d
+  PayUmoney_CoreSDK: ba7f43dabacec2658dcceda0cf9d957bd1d826ac
+  PayUmoney_PnP: 322171ad495ee6d925bdbc013feced0b77433ad9
   QuickBlox: 992be26bc127313991a1337dfd98c9359832c147
   Quickblox-WebRTC: 6be5253719fc8b747408fdac53985d04d40f3172
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 93e96810ba17b6b874c1bbeaf97424b22331d1a1
+PODFILE CHECKSUM: f711e1db3286782d10d82f70e06ce76729459577
 
 COCOAPODS: 1.9.3

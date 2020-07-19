@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import <CommonCrypto/CommonDigest.h>
+import PlugNPlay
 
 class DotTimeSlotViewController: UIViewController {
 
@@ -23,6 +25,7 @@ class DotTimeSlotViewController: UIViewController {
     var selectedSpec = String()
     var selectedHosPitalName = String()
     var selectedPrice = String()
+    var paymentObject = DotPaymentViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Select a time slot"
@@ -58,6 +61,11 @@ class DotTimeSlotViewController: UIViewController {
          //  endDateTextField.resignFirstResponder()
        }
     
+    @IBAction func proceedToPayAction(_ sender: UIButton) {
+      //  setupPayu()
+//        self.paymentObject.getTxnParam()
+//        self.paymentObject.pay(sender)
+    }
     
 }
 extension DotTimeSlotViewController:UITextFieldDelegate{

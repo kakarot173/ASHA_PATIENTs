@@ -12,6 +12,7 @@ target 'Dot_Health_1' do
   pod 'QuickBlox', '~> 2.17.4'
   pod 'Quickblox-WebRTC', '~> 2.7.4'
   pod 'SVProgressHUD', '~> 2.2.5'
+  pod 'PayUmoney_PnP'
 
   target 'Dot_Health_1Tests' do
     inherit! :search_paths

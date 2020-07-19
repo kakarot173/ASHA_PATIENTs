@@ -70,6 +70,9 @@
 		F35AF64C2497E8AA0035833D /* DotAppointmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35AF64B2497E8AA0035833D /* DotAppointmentDetailViewController.swift */; };
 		F3623BC5248D355B0082025A /* DotAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3623BC3248D355B0082025A /* DotAppointmentsViewController.swift */; };
 		F3623BC8248D47E80082025A /* colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3623BC7248D47E80082025A /* colours.xcassets */; };
+		F365A5E724C388FD005A707C /* PlugNPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5E624C388FD005A707C /* PlugNPlay.framework */; };
+		F365A5E924C389AC005A707C /* PayUMoneyCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */; };
+		F365A5EB24C38A40005A707C /* PayUCustomBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */; };
 		F366316024A793D400614E07 /* DotTimeSlotViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F366315F24A793D400614E07 /* DotTimeSlotViewController.storyboard */; };
 		F366316224A7943400614E07 /* DotTimeSlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366316124A7943400614E07 /* DotTimeSlotViewController.swift */; };
 		F36B112724B638DD00122B05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F36B112524B638DD00122B05 /* Localizable.strings */; };
@@ -143,6 +146,8 @@
 		F3CA03B9249568ED00373944 /* DotAppointmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CA03B8249568ED00373944 /* DotAppointmentsViewController.storyboard */; };
 		F3DCB565249DED790069507F /* DotVitalsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DCB564249DED790069507F /* DotVitalsViewController.storyboard */; };
 		F3DCB567249DEDBE0069507F /* DotVitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DCB566249DEDBD0069507F /* DotVitalsViewController.swift */; };
+		F3F55A7624C489340000E0F4 /* DotPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F55A7524C489340000E0F4 /* DotPaymentViewController.m */; };
+		F3F55A7B24C4B12D0000E0F4 /* DotPaymentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F55A7A24C4B12D0000E0F4 /* DotPaymentViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +243,9 @@
 		F35AF64B2497E8AA0035833D /* DotAppointmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentDetailViewController.swift; sourceTree = "<group>"; };
 		F3623BC3248D355B0082025A /* DotAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAppointmentsViewController.swift; sourceTree = "<group>"; };
 		F3623BC7248D47E80082025A /* colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colours.xcassets; sourceTree = "<group>"; };
+		F365A5E624C388FD005A707C /* PlugNPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlugNPlay.framework; sourceTree = "<group>"; };
+		F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayUMoneyCoreSDK.framework; sourceTree = "<group>"; };
+		F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayUCustomBrowser.framework; sourceTree = "<group>"; };
 		F366315F24A793D400614E07 /* DotTimeSlotViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotTimeSlotViewController.storyboard; sourceTree = "<group>"; };
 		F366316124A7943400614E07 /* DotTimeSlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTimeSlotViewController.swift; sourceTree = "<group>"; };
 		F36B112524B638DD00122B05 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -311,6 +319,10 @@
 		F3CA03B8249568ED00373944 /* DotAppointmentsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotAppointmentsViewController.storyboard; sourceTree = "<group>"; };
 		F3DCB564249DED790069507F /* DotVitalsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotVitalsViewController.storyboard; sourceTree = "<group>"; };
 		F3DCB566249DEDBD0069507F /* DotVitalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotVitalsViewController.swift; sourceTree = "<group>"; };
+		F3F55A7424C489330000E0F4 /* Dot_Health_1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dot_Health_1-Bridging-Header.h"; sourceTree = "<group>"; };
+		F3F55A7524C489340000E0F4 /* DotPaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotPaymentViewController.m; sourceTree = "<group>"; };
+		F3F55A7724C489680000E0F4 /* DotPaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotPaymentViewController.h; sourceTree = "<group>"; };
+		F3F55A7A24C4B12D0000E0F4 /* DotPaymentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotPaymentViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9303D98B394F7878A8BAE57D /* Pods_Dot_Health_1.framework in Frameworks */,
+				F365A5EB24C38A40005A707C /* PayUCustomBrowser.framework in Frameworks */,
+				F365A5E924C389AC005A707C /* PayUMoneyCoreSDK.framework in Frameworks */,
+				F365A5E724C388FD005A707C /* PlugNPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +392,7 @@
 		2B43AB5224859DFF003C4B19 /* Dot_Health_1 */ = {
 			isa = PBXGroup;
 			children = (
+				F3F55A7324C488CC0000E0F4 /* DotPayment */,
 				F36B112324B635A800122B05 /* DotVideoAudioCall */,
 				F38F159C249B99E60060DD99 /* DotAddAppointment */,
 				F3CA03B32495662600373944 /* DotNotification */,
@@ -580,6 +596,9 @@
 		62D340774B9A212C6325E510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F365A5EA24C38A40005A707C /* PayUCustomBrowser.framework */,
+				F365A5E824C389AC005A707C /* PayUMoneyCoreSDK.framework */,
+				F365A5E624C388FD005A707C /* PlugNPlay.framework */,
 				6AC74BB58B2633520DD3FF0D /* Pods_Dot_Health_1.framework */,
 				277F81B7AFD1D5FD508005F3 /* Pods_Dot_Health_1_Dot_Health_1UITests.framework */,
 				1385BA697DF3F468FE0651B8 /* Pods_Dot_Health_1Tests.framework */,
@@ -597,7 +616,6 @@
 				571358D0ADFA68253BE409C2 /* Pods-Dot_Health_1Tests.debug.xcconfig */,
 				A145422C41B31D10B87FBB4F /* Pods-Dot_Health_1Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1008,6 +1026,17 @@
 			path = DotMyVitals;
 			sourceTree = "<group>";
 		};
+		F3F55A7324C488CC0000E0F4 /* DotPayment */ = {
+			isa = PBXGroup;
+			children = (
+				F3F55A7524C489340000E0F4 /* DotPaymentViewController.m */,
+				F3F55A7424C489330000E0F4 /* Dot_Health_1-Bridging-Header.h */,
+				F3F55A7724C489680000E0F4 /* DotPaymentViewController.h */,
+				F3F55A7A24C4B12D0000E0F4 /* DotPaymentViewController.storyboard */,
+			);
+			path = DotPayment;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1081,6 +1110,7 @@
 				TargetAttributes = {
 					2B43AB4F24859DFF003C4B19 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1150;
 					};
 					2B43AB6824859E04003C4B19 = {
 						CreatedOnToolsVersion = 11.4;
@@ -1151,6 +1181,7 @@
 				F36B115D24B64C2A00122B05 /* QAUsers.plist in Resources */,
 				F3623BC8248D47E80082025A /* colours.xcassets in Resources */,
 				2B27F4022491A45600A49C72 /* DotDetailsCellView.xib in Resources */,
+				F3F55A7B24C4B12D0000E0F4 /* DotPaymentViewController.storyboard in Resources */,
 				F36B11C724B64F2C00122B05 /* SettingSwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1369,6 +1400,7 @@
 				2B43AB9924859FF5003C4B19 /* API.swift in Sources */,
 				2BE560D82489810A00EE112E /* DotUtilityClass.swift in Sources */,
 				F34719312492A653000CB0B1 /* Theme.swift in Sources */,
+				F3F55A7624C489340000E0F4 /* DotPaymentViewController.m in Sources */,
 				2B43AB9624859FF5003C4B19 /* APIError.swift in Sources */,
 				2BB934FA248ED7E100EA2FA5 /* DotDetailsView.swift in Sources */,
 				F31F0EED249A6ADF00D64E7F /* DotUtilityFunction.swift in Sources */,
@@ -1548,7 +1580,12 @@
 			baseConfigurationReference = BD9EDD8B920D0556ADFD6C42 /* Pods-Dot_Health_1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Dot_Health_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1556,6 +1593,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kakarot.Dot-Health-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dot_Health_1/DotPayment/Dot_Health_1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1566,7 +1605,12 @@
 			baseConfigurationReference = 3D3E2E2EFB6373E9016C5822 /* Pods-Dot_Health_1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Dot_Health_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1574,6 +1618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kakarot.Dot-Health-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dot_Health_1/DotPayment/Dot_Health_1-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

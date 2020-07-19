@@ -69,6 +69,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dva-lb-Ggr" customClass="DotButtonUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                 <rect key="frame" x="97" y="643" width="220" height="62"/>
                                 <state key="normal" title="Proceed to Pay"/>
+                                <connections>
+                                    <action selector="proceedToPayAction:" destination="0ND-Ib-enT" eventType="touchUpInside" id="P67-22-dzO"/>
+                                    <segue destination="Lsz-sS-6xt" kind="show" id="QMQ-fg-3es"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-yh-4Hy" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                 <rect key="frame" x="20" y="157" width="374" height="48"/>
@@ -137,6 +141,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yK-FU-cxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="95.758928571428569"/>
+        </scene>
+        <!--DotPaymentViewController-->
+        <scene sceneID="A5F-jf-gRH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DotPaymentViewController" id="Lsz-sS-6xt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lvf-vN-0PT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZxN-gh-9eU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="106"/>
         </scene>
     </scenes>
     <resources>
