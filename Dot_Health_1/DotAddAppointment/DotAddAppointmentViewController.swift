@@ -105,7 +105,12 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DotDoctorTableViewCell
-        cell.setUp(rowIndex: indexPath.row,dataArray: MyData.myMedicineModelArray)
+        if screenName == "My Medications"{
+             cell.setUp(rowIndex: indexPath.row,dataArray: MyData.myMedicineModelArray)
+        }
+        else{
+             cell.setUp(rowIndex: indexPath.row,dataArray: MyData.doctorModelArray)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
