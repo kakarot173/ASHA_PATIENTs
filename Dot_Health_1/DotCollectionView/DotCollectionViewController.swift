@@ -172,7 +172,13 @@ extension DotCollectionViewController: UICollectionViewDelegate {
          //nextViewController.itemName = "Mtalk to THB"
          let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
-           
+    case "My Medications":
+        let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotAddAppointmentViewController.self), bundle:nil)
+         let nextViewController = storyBoard.instantiateInitialViewController() as! DotAddAppointmentViewController
+        nextViewController.screenName = item.cardName ?? kblankString
+         let _ = nextViewController.view
+        
+         self.delegate?.addChildViewController(nextViewController, back: true)
     default:
        self.delegate?.addChildViewController(returnDummyView(), back: true)
     }

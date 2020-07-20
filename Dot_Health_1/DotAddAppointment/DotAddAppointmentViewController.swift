@@ -17,6 +17,7 @@ class DotAddAppointmentViewController: UIViewController {
     var selectedAilment : [String] = []
     @IBOutlet weak var selectedAilmentLabel: UILabel!
     var selectedIndexPath: IndexPath = IndexPath()
+    var screenName : String = kblankString
     override func viewDidLoad() {
         super.viewDidLoad()
         doctorListTableView.delegate = self
@@ -29,7 +30,12 @@ class DotAddAppointmentViewController: UIViewController {
            
         })
         doctorListTableView.rowHeight = 135
-        self.navigationItem.title = "Add Appointments"
+        if screenName == "My Medications"{
+             self.navigationItem.title = "My Medications"
+        }
+        else{
+             self.navigationItem.title = "Add Appointments"
+        }
         self.configureViewItems()
         
     }
