@@ -57,6 +57,8 @@
 		F31F0EEB249A57C600D64E7F /* DotAppointmentDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31F0EEA249A57C600D64E7F /* DotAppointmentDetailsViewController.storyboard */; };
 		F31F0EED249A6ADF00D64E7F /* DotUtilityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31F0EEC249A6ADE00D64E7F /* DotUtilityFunction.swift */; };
 		F31F0EEF249A6D6300D64E7F /* DotConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31F0EEE249A6D6300D64E7F /* DotConstants.swift */; };
+		F328102324C633E2005D6728 /* DotMyMedicationFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328102224C633E2005D6728 /* DotMyMedicationFunctions.swift */; };
+		F328102524C634D5005D6728 /* DotMyMedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F328102424C634D5005D6728 /* DotMyMedicineModel.swift */; };
 		F32BE10924A51E7C00E92A78 /* DotAilmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BE10824A51E7C00E92A78 /* DotAilmentViewController.swift */; };
 		F32BE10B24A520FE00E92A78 /* DotAilmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32BE10A24A520FE00E92A78 /* DotAilmentTableViewCell.swift */; };
 		F347191E24928061000CB0B1 /* DotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F347191D24928061000CB0B1 /* DotData.swift */; };
@@ -229,6 +231,8 @@
 		F31F0EEA249A57C600D64E7F /* DotAppointmentDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotAppointmentDetailsViewController.storyboard; sourceTree = "<group>"; };
 		F31F0EEC249A6ADE00D64E7F /* DotUtilityFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotUtilityFunction.swift; sourceTree = "<group>"; };
 		F31F0EEE249A6D6300D64E7F /* DotConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotConstants.swift; sourceTree = "<group>"; };
+		F328102224C633E2005D6728 /* DotMyMedicationFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMyMedicationFunctions.swift; sourceTree = "<group>"; };
+		F328102424C634D5005D6728 /* DotMyMedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMyMedicineModel.swift; sourceTree = "<group>"; };
 		F32BE10824A51E7C00E92A78 /* DotAilmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAilmentViewController.swift; sourceTree = "<group>"; };
 		F32BE10A24A520FE00E92A78 /* DotAilmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotAilmentTableViewCell.swift; sourceTree = "<group>"; };
 		F347191D24928061000CB0B1 /* DotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotData.swift; sourceTree = "<group>"; };
@@ -998,6 +1002,8 @@
 				F366316124A7943400614E07 /* DotTimeSlotViewController.swift */,
 				2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */,
 				2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */,
+				F328102224C633E2005D6728 /* DotMyMedicationFunctions.swift */,
+				F328102424C634D5005D6728 /* DotMyMedicineModel.swift */,
 			);
 			path = DotAddAppointment;
 			sourceTree = "<group>";
@@ -1338,6 +1344,7 @@
 				2BF005D324C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift in Sources */,
 				2BBB90DB249C6F9900E01FE7 /* DotUserDetailsModel.swift in Sources */,
 				F36B119124B64CEE00122B05 /* InfoModel.swift in Sources */,
+				F328102524C634D5005D6728 /* DotMyMedicineModel.swift in Sources */,
 				2BE560D72489810A00EE112E /* DotButtonUtility.swift in Sources */,
 				F32BE10924A51E7C00E92A78 /* DotAilmentViewController.swift in Sources */,
 				F36B117C24B64CB800122B05 /* CustomButton.swift in Sources */,
@@ -1348,6 +1355,7 @@
 				F36B11C424B64F2C00122B05 /* SwitchItemModel.swift in Sources */,
 				2BFE0AE2248EE76D00AED5E6 /* ProfileDetailModel.swift in Sources */,
 				F38F15A6249BB7250060DD99 /* DotDoctorFunctions.swift in Sources */,
+				F328102324C633E2005D6728 /* DotMyMedicationFunctions.swift in Sources */,
 				F36B119E24B64D3A00122B05 /* SessionSettingsViewController.swift in Sources */,
 				2B43AB5E24859DFF003C4B19 /* Dot_Health_1.xcdatamodeld in Sources */,
 				2B81DE23249338D20012F78A /* CustomShowPopup.swift in Sources */,

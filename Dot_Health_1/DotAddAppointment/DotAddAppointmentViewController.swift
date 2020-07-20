@@ -16,6 +16,7 @@ class DotAddAppointmentViewController: UIViewController {
     @IBOutlet weak var doctorListTableView: UITableView!
     var selectedAilment : [String] = []
     @IBOutlet weak var selectedAilmentLabel: UILabel!
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     var selectedIndexPath: IndexPath = IndexPath()
     var screenName : String = kblankString
     override func viewDidLoad() {
@@ -24,17 +25,27 @@ class DotAddAppointmentViewController: UIViewController {
         doctorListTableView.dataSource = self
         doctorListTableView.reloadData()
         
-        doctorFunctions.readDoctors(complition: {[unowned self] in
-            
-            self.doctorListTableView.reloadData()
-           
-        })
+     
         doctorListTableView.rowHeight = 135
         if screenName == "My Medications"{
              self.navigationItem.title = "My Medications"
+             ailmentButton.isHidden = true
+             topViewHeightConstraint.constant = 0
+            MyMecicationFunctions.readMyMedicine(complition: {[unowned self] in
+                     
+                     self.doctorListTableView.reloadData()
+                    
+                 })
         }
         else{
              self.navigationItem.title = "Add Appointments"
+             topViewHeightConstraint.constant = 99
+             ailmentButton.isHidden = false
+            doctorFunctions.readDoctors(complition: {[unowned self] in
+                     
+                     self.doctorListTableView.reloadData()
+                    
+                 })
         }
         self.configureViewItems()
         
@@ -86,26 +97,32 @@ class DotAddAppointmentViewController: UIViewController {
 }
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        MyData.doctorModelArray.count
+        if screenName == "My Medications"{
+            return   MyData.myMedicineModelArray.count
+        }
+        return MyData.doctorModelArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DotDoctorTableViewCell
-        cell.setUp(rowIndex: indexPath.row)
+        cell.setUp(rowIndex: indexPath.row,dataArray: MyData.myMedicineModelArray)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath
-        let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotTimeSlotViewController.self) , bundle:nil)
-              let nextViewController = storyBoard.instantiateInitialViewController() as! DotTimeSlotViewController
-       
-              let _ = nextViewController.view
-//        nextViewController.selectedName = MyData.doctorModelArray[ self.selectedIndexPath.row].name
-//        nextViewController.selectedSpec = MyData.doctorModelArray[ self.selectedIndexPath.row].speciality
-//        nextViewController.selectedHosPitalName = MyData.doctorModelArray[ self.selectedIndexPath.row].hospitalName
-//        nextViewController.priceLabel.text = MyData.doctorModelArray[ self.selectedIndexPath.row].price
-        nextViewController.setUpDoctorDetail(rowIndex:indexPath.row)
-        self.show(nextViewController, sender: self)
+        if screenName == "My Medications"{
+            
+        }
+        else{
+            let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotTimeSlotViewController.self) , bundle:nil)
+            let nextViewController = storyBoard.instantiateInitialViewController() as! DotTimeSlotViewController
+            
+            let _ = nextViewController.view
+            nextViewController.setUpDoctorDetail(rowIndex:indexPath.row)
+            self.show(nextViewController, sender: self)
+        }
+        
+        
     }
     
 }

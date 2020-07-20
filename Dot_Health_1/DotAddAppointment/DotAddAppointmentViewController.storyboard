@@ -16,36 +16,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-Of-a4f">
-                                <rect key="frame" x="20" y="64" width="91.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5Q-iD-jtk">
-                                <rect key="frame" x="20" y="96.5" width="99.5" height="36"/>
-                                <accessibility key="accessibilityConfiguration" identifier="doctor"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                <state key="normal" title="Doctor">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="I6N-iy-ZoG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-CN-Vc6">
-                                <rect key="frame" x="293.5" y="96.5" width="98.5" height="36"/>
-                                <accessibility key="accessibilityConfiguration" identifier="facility"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                <state key="normal" title="Facility">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="hih-1i-Mng"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5t-cx-hym">
+                                <rect key="frame" x="0.0" y="44" width="414" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-Of-a4f">
+                                        <rect key="frame" x="8" y="8" width="92" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="07q-AC-vmK">
+                                        <rect key="frame" x="108" y="8" width="100" height="36"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ailment"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <state key="normal" title="Ailment">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="LvA-TG-gQi"/>
+                                            <segue destination="Le6-cc-ye2" kind="popoverPresentation" popoverAnchorView="07q-AC-vmK" id="Lyo-Qg-Hzp">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYa-Sx-Qvr">
+                                        <rect key="frame" x="216" y="15.5" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5Q-iD-jtk">
+                                        <rect key="frame" x="8" y="53.5" width="100" height="36"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="doctor"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <state key="normal" title="Doctor">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="I6N-iy-ZoG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-CN-Vc6">
+                                        <rect key="frame" x="306" y="53.5" width="100" height="36"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="facility"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <state key="normal" title="Facility">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="hih-1i-Mng"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="aYa-Sx-Qvr" firstAttribute="height" secondItem="c5t-cx-hym" secondAttribute="height" multiplier="0.212121" id="2rH-4u-C5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="07q-AC-vmK" secondAttribute="bottom" constant="55" id="87L-d4-htg"/>
+                                    <constraint firstAttribute="bottom" secondItem="dAd-CN-Vc6" secondAttribute="bottom" constant="9.5" id="9sO-Sj-P12"/>
+                                    <constraint firstItem="QKq-Of-a4f" firstAttribute="top" secondItem="c5t-cx-hym" secondAttribute="top" constant="8" id="BCF-Qe-Ljl"/>
+                                    <constraint firstAttribute="trailing" secondItem="dAd-CN-Vc6" secondAttribute="trailing" constant="8" id="Bzp-HP-n85"/>
+                                    <constraint firstAttribute="height" constant="99" id="C9Z-JV-uIX"/>
+                                    <constraint firstItem="V5Q-iD-jtk" firstAttribute="leading" secondItem="c5t-cx-hym" secondAttribute="leading" constant="8" id="DaC-eo-jYc"/>
+                                    <constraint firstItem="aYa-Sx-Qvr" firstAttribute="centerY" secondItem="07q-AC-vmK" secondAttribute="centerY" id="FVY-Os-iEM"/>
+                                    <constraint firstAttribute="trailing" secondItem="aYa-Sx-Qvr" secondAttribute="trailing" constant="8" id="IH2-OJ-IQb"/>
+                                    <constraint firstItem="dAd-CN-Vc6" firstAttribute="width" secondItem="c5t-cx-hym" secondAttribute="width" multiplier="0.241546" id="JCw-TF-2QH"/>
+                                    <constraint firstItem="QKq-Of-a4f" firstAttribute="leading" secondItem="c5t-cx-hym" secondAttribute="leading" constant="8" id="O1z-GV-Agl"/>
+                                    <constraint firstItem="07q-AC-vmK" firstAttribute="width" secondItem="c5t-cx-hym" secondAttribute="width" multiplier="0.241546" id="PZU-Kr-YjU"/>
+                                    <constraint firstItem="07q-AC-vmK" firstAttribute="top" secondItem="c5t-cx-hym" secondAttribute="top" constant="8" id="QT4-r4-XUn"/>
+                                    <constraint firstItem="V5Q-iD-jtk" firstAttribute="width" secondItem="c5t-cx-hym" secondAttribute="width" multiplier="0.241546" id="SWO-s4-fiy"/>
+                                    <constraint firstItem="dAd-CN-Vc6" firstAttribute="bottom" secondItem="V5Q-iD-jtk" secondAttribute="bottom" id="aqu-ZM-e4M"/>
+                                    <constraint firstItem="aYa-Sx-Qvr" firstAttribute="leading" secondItem="07q-AC-vmK" secondAttribute="trailing" constant="8" id="eT6-Ot-C1X"/>
+                                    <constraint firstItem="V5Q-iD-jtk" firstAttribute="top" secondItem="QKq-Of-a4f" secondAttribute="bottom" constant="25" id="pMP-iN-jFL"/>
+                                    <constraint firstItem="07q-AC-vmK" firstAttribute="leading" secondItem="QKq-Of-a4f" secondAttribute="trailing" constant="8" id="sQx-Wy-Jli"/>
+                                    <constraint firstItem="aYa-Sx-Qvr" firstAttribute="width" secondItem="c5t-cx-hym" secondAttribute="width" multiplier="0.458937" id="uFY-La-QyV"/>
+                                </constraints>
+                            </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="tKi-V0-LHk">
-                                <rect key="frame" x="20" y="143" width="372" height="56"/>
+                                <rect key="frame" x="20" y="143" width="374" height="56"/>
                                 <color key="tintColor" name="Tint"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -55,10 +102,10 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryH-w1-zrd">
-                                <rect key="frame" x="0.0" y="215" width="412" height="1"/>
+                                <rect key="frame" x="0.0" y="214" width="414" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="ec5-ry-eLU"/>
+                                    <constraint firstAttribute="height" constant="1" id="b6a-VV-5bS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -69,57 +116,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="07q-AC-vmK">
-                                <rect key="frame" x="119.5" y="56" width="99.5" height="36"/>
-                                <accessibility key="accessibilityConfiguration" identifier="ailment"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                <state key="normal" title="Ailment">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTouched:" destination="PGa-ER-BHC" eventType="touchUpInside" id="LvA-TG-gQi"/>
-                                    <segue destination="Le6-cc-ye2" kind="popoverPresentation" popoverAnchorView="07q-AC-vmK" id="Lyo-Qg-Hzp">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYa-Sx-Qvr">
-                                <rect key="frame" x="227" y="63" width="165" height="21"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pHf-an-I1a">
-                                <rect key="frame" x="0.0" y="226" width="412" height="640"/>
+                                <rect key="frame" x="0.0" y="225" width="414" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="137" id="LmP-HM-hil" customClass="DotDoctorTableViewCell" customModule="Dot_Health_1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="412" height="137"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LmP-HM-hil" id="EVb-uR-7xW">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vhr-ar-9hX">
-                                                    <rect key="frame" x="20" y="10" width="101.5" height="117"/>
+                                                    <rect key="frame" x="20" y="10" width="102" height="117"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nCq-pX-Yw8">
-                                                    <rect key="frame" x="141.5" y="24.5" width="189" height="88"/>
+                                                    <rect key="frame" x="142" y="24.5" width="190" height="88"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqv-2m-O7Q">
-                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="190" height="24"/>
                                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vay-LK-0ln">
-                                                            <rect key="frame" x="0.0" y="32" width="189" height="24"/>
+                                                            <rect key="frame" x="0.0" y="32" width="190" height="24"/>
                                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-Ef-guL">
-                                                            <rect key="frame" x="0.0" y="64" width="189" height="24"/>
+                                                            <rect key="frame" x="0.0" y="64" width="190" height="24"/>
                                                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -127,7 +154,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh4-vf-MKO">
-                                                    <rect key="frame" x="340.5" y="56.5" width="51.5" height="24"/>
+                                                    <rect key="frame" x="342" y="56.5" width="52" height="24"/>
                                                     <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -159,36 +186,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="aYa-Sx-Qvr" firstAttribute="top" secondItem="LLl-H9-XkS" secondAttribute="top" constant="19" id="1ck-CL-Kpe"/>
-                            <constraint firstItem="dAd-CN-Vc6" firstAttribute="width" secondItem="dp5-HQ-Kpn" secondAttribute="width" multiplier="0.241546" id="2pk-tQ-bAj"/>
-                            <constraint firstItem="tKi-V0-LHk" firstAttribute="height" secondItem="dp5-HQ-Kpn" secondAttribute="height" multiplier="0.0625" id="2rT-sH-3R4"/>
-                            <constraint firstItem="LLl-H9-XkS" firstAttribute="trailing" secondItem="dAd-CN-Vc6" secondAttribute="trailing" constant="20" id="3LT-Cm-sq9"/>
-                            <constraint firstItem="tKi-V0-LHk" firstAttribute="top" secondItem="V5Q-iD-jtk" secondAttribute="bottom" constant="10.5" id="CIR-w3-3dm"/>
-                            <constraint firstItem="V5Q-iD-jtk" firstAttribute="top" secondItem="QKq-Of-a4f" secondAttribute="bottom" constant="12" id="Gb5-59-TRw"/>
-                            <constraint firstItem="aYa-Sx-Qvr" firstAttribute="height" secondItem="dp5-HQ-Kpn" secondAttribute="height" multiplier="0.0234375" id="Gcl-yv-lyH"/>
-                            <constraint firstItem="pHf-an-I1a" firstAttribute="top" secondItem="ryH-w1-zrd" secondAttribute="bottom" constant="10" id="H4V-Y8-PjC"/>
-                            <constraint firstItem="QKq-Of-a4f" firstAttribute="top" secondItem="LLl-H9-XkS" secondAttribute="top" constant="20" id="I49-py-IUI"/>
-                            <constraint firstItem="pHf-an-I1a" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" id="Ivn-cq-jYQ"/>
-                            <constraint firstItem="LLl-H9-XkS" firstAttribute="trailing" secondItem="aYa-Sx-Qvr" secondAttribute="trailing" constant="20" id="KSo-iD-i0q"/>
-                            <constraint firstItem="pHf-an-I1a" firstAttribute="trailing" secondItem="LLl-H9-XkS" secondAttribute="trailing" id="Pto-SM-Cxd"/>
-                            <constraint firstItem="dAd-CN-Vc6" firstAttribute="leading" secondItem="V5Q-iD-jtk" secondAttribute="trailing" constant="174" id="QQB-eo-Uif"/>
-                            <constraint firstItem="tKi-V0-LHk" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" constant="20" id="Qwf-Dp-yBe"/>
-                            <constraint firstItem="07q-AC-vmK" firstAttribute="leading" secondItem="QKq-Of-a4f" secondAttribute="trailing" constant="8" id="Re7-TH-wZv"/>
-                            <constraint firstItem="V5Q-iD-jtk" firstAttribute="width" secondItem="dp5-HQ-Kpn" secondAttribute="width" multiplier="0.241546" id="UoG-Nd-fA0"/>
-                            <constraint firstItem="aYa-Sx-Qvr" firstAttribute="width" secondItem="dp5-HQ-Kpn" secondAttribute="width" multiplier="0.497585" constant="-40" id="YYN-jk-EIW"/>
-                            <constraint firstItem="pHf-an-I1a" firstAttribute="bottom" secondItem="LLl-H9-XkS" secondAttribute="bottom" constant="4" id="ZsL-f5-XPs"/>
-                            <constraint firstItem="tKi-V0-LHk" firstAttribute="width" secondItem="dp5-HQ-Kpn" secondAttribute="width" multiplier="0.903382" id="a2H-bT-hPO"/>
-                            <constraint firstItem="QKq-Of-a4f" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" constant="20" id="aIZ-Oa-Hpo"/>
-                            <constraint firstItem="LLl-H9-XkS" firstAttribute="trailing" secondItem="tKi-V0-LHk" secondAttribute="trailing" constant="20" id="cYE-h2-gw8"/>
-                            <constraint firstAttribute="trailing" secondItem="ryH-w1-zrd" secondAttribute="trailing" id="gKD-ZP-o9p"/>
-                            <constraint firstItem="aYa-Sx-Qvr" firstAttribute="leading" secondItem="07q-AC-vmK" secondAttribute="trailing" constant="8" id="gLX-lg-sL1"/>
-                            <constraint firstItem="dAd-CN-Vc6" firstAttribute="firstBaseline" secondItem="V5Q-iD-jtk" secondAttribute="firstBaseline" id="gnQ-dg-cZI"/>
-                            <constraint firstItem="V5Q-iD-jtk" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" constant="20" id="kXc-Sd-kF4"/>
-                            <constraint firstItem="QKq-Of-a4f" firstAttribute="width" secondItem="dp5-HQ-Kpn" secondAttribute="width" multiplier="0.222222" id="lMK-4Y-xPs"/>
-                            <constraint firstItem="07q-AC-vmK" firstAttribute="top" secondItem="LLl-H9-XkS" secondAttribute="top" constant="12" id="mX6-1b-cjS"/>
-                            <constraint firstItem="tKi-V0-LHk" firstAttribute="centerX" secondItem="dp5-HQ-Kpn" secondAttribute="centerX" id="oOZ-yV-5uX"/>
-                            <constraint firstItem="ryH-w1-zrd" firstAttribute="top" secondItem="tKi-V0-LHk" secondAttribute="bottom" constant="16" id="tJT-Uf-AeO"/>
-                            <constraint firstItem="ryH-w1-zrd" firstAttribute="leading" secondItem="dp5-HQ-Kpn" secondAttribute="leading" id="vqH-s1-IZx"/>
+                            <constraint firstAttribute="trailing" secondItem="ryH-w1-zrd" secondAttribute="trailing" id="0yO-aM-3Dg"/>
+                            <constraint firstItem="c5t-cx-hym" firstAttribute="trailing" secondItem="LLl-H9-XkS" secondAttribute="trailing" id="4fH-B5-Yv6"/>
+                            <constraint firstItem="ryH-w1-zrd" firstAttribute="leading" secondItem="dp5-HQ-Kpn" secondAttribute="leading" id="5gs-pg-biI"/>
+                            <constraint firstItem="ryH-w1-zrd" firstAttribute="top" secondItem="tKi-V0-LHk" secondAttribute="bottom" constant="15" id="Lhz-xb-cwa"/>
+                            <constraint firstItem="c5t-cx-hym" firstAttribute="top" secondItem="LLl-H9-XkS" secondAttribute="top" id="MHu-iU-2YQ"/>
+                            <constraint firstItem="c5t-cx-hym" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" id="QcZ-vB-3h2"/>
+                            <constraint firstItem="pHf-an-I1a" firstAttribute="trailing" secondItem="LLl-H9-XkS" secondAttribute="trailing" id="VdC-Xh-v4I"/>
+                            <constraint firstItem="pHf-an-I1a" firstAttribute="top" secondItem="ryH-w1-zrd" secondAttribute="bottom" constant="10" id="dUh-O7-urP"/>
+                            <constraint firstItem="LLl-H9-XkS" firstAttribute="trailing" secondItem="tKi-V0-LHk" secondAttribute="trailing" constant="20" id="eMa-QE-GMG"/>
+                            <constraint firstItem="tKi-V0-LHk" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" constant="20" id="eV7-ya-4rv"/>
+                            <constraint firstAttribute="bottom" secondItem="pHf-an-I1a" secondAttribute="bottom" constant="20" id="mwf-Qk-F9L"/>
+                            <constraint firstItem="tKi-V0-LHk" firstAttribute="top" secondItem="c5t-cx-hym" secondAttribute="bottom" id="uc7-zb-FaP"/>
+                            <constraint firstItem="pHf-an-I1a" firstAttribute="leading" secondItem="LLl-H9-XkS" secondAttribute="leading" id="wmB-do-vJY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LLl-H9-XkS"/>
                     </view>
@@ -198,6 +208,7 @@
                         <outlet property="doctorListTableView" destination="pHf-an-I1a" id="cCU-PT-c2z"/>
                         <outlet property="selectedAilmentLabel" destination="aYa-Sx-Qvr" id="Qhi-AL-cl6"/>
                         <outlet property="specialityButton" destination="dAd-CN-Vc6" id="OfT-qp-NHS"/>
+                        <outlet property="topViewHeightConstraint" destination="C9Z-JV-uIX" id="KFf-ai-eGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNS-mu-gBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,7 +298,7 @@
     </scenes>
     <resources>
         <namedColor name="Tint">
-            <color red="0.18500000238418579" green="0.43399998545646667" blue="0.72899997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.74900001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
