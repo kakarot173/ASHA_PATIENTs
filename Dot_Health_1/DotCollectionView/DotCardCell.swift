@@ -53,13 +53,13 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         backgroundColor = Theme.backgroundColor
         layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.borderWidth = 1
-        
+        layer.insertSublayer(setGradient(hex: Theme.gradientColorDark!.hexValue, hex: Theme.gradientColorLight!.hexValue, frameSize: bounds), at: 0)
         layer.cornerRadius = 5
         self.layer.shadowColor = #colorLiteral(red: 0.2748524845, green: 0.4150594473, blue: 0.4139105678, alpha: 1)
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowOpacity = 0.5
         clipsToBounds = true
-        self.layer.masksToBounds = false
+        self.layer.masksToBounds = true
         //Setup cell
         addSubview(cardImageView)
         addSubview(nameLabel)
@@ -69,5 +69,15 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         nameLabel.edgesToSuperview(excluding: .top, insets: .left(10) + .right(10) + .bottom(5))
       
         
+    }
+    func setGradient(hex stringDark: String, hex StringLight: String, frameSize : CGRect) -> CAGradientLayer {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.colors = [UIColor(hex: stringDark).cgColor, UIColor(hex: StringLight).cgColor]
+        gradient.locations = [0 , 1]
+        gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0, y: 0)
+        gradient.frame = frameSize
+        return gradient
     }
 }
