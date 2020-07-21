@@ -46,6 +46,8 @@
 		2BE560DF248B093500EE112E /* DotTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE560DE248B093500EE112E /* DotTabViewController.swift */; };
 		2BE560E4248B0A9300EE112E /* DotDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE560E2248B0A9300EE112E /* DotDashboardViewController.swift */; };
 		2BE560E5248B0A9300EE112E /* DotDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */; };
+		2BE6129224C75E150094039F /* DotMedicines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6129124C75E150094039F /* DotMedicines.storyboard */; };
+		2BE6129424C75E290094039F /* DotMedicinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6129324C75E290094039F /* DotMedicinesController.swift */; };
 		2BF005D124C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */; };
 		2BF005D324C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */; };
 		2BFE0AE2248EE76D00AED5E6 /* ProfileDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */; };
@@ -216,6 +218,8 @@
 		2BE560DE248B093500EE112E /* DotTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTabViewController.swift; sourceTree = "<group>"; };
 		2BE560E2248B0A9300EE112E /* DotDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotDashboardViewController.swift; sourceTree = "<group>"; };
 		2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DotDashboardViewController.xib; sourceTree = "<group>"; };
+		2BE6129124C75E150094039F /* DotMedicines.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotMedicines.storyboard; sourceTree = "<group>"; };
+		2BE6129324C75E290094039F /* DotMedicinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMedicinesController.swift; sourceTree = "<group>"; };
 		2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotTimeSlotsExtention+CollectionView.swift"; sourceTree = "<group>"; };
 		2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTimeSlotsCollectionCell.swift; sourceTree = "<group>"; };
 		2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailModel.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 		2B43AB5224859DFF003C4B19 /* Dot_Health_1 */ = {
 			isa = PBXGroup;
 			children = (
+				2BE6129024C75DE20094039F /* DotMedicines */,
 				F3F55A7324C488CC0000E0F4 /* DotPayment */,
 				F36B112324B635A800122B05 /* DotVideoAudioCall */,
 				F38F159C249B99E60060DD99 /* DotAddAppointment */,
@@ -590,6 +595,15 @@
 				2BE560DE248B093500EE112E /* DotTabViewController.swift */,
 			);
 			path = DotMainTabBarController;
+			sourceTree = "<group>";
+		};
+		2BE6129024C75DE20094039F /* DotMedicines */ = {
+			isa = PBXGroup;
+			children = (
+				2BE6129124C75E150094039F /* DotMedicines.storyboard */,
+				2BE6129324C75E290094039F /* DotMedicinesController.swift */,
+			);
+			path = DotMedicines;
 			sourceTree = "<group>";
 		};
 		62D340774B9A212C6325E510 /* Frameworks */ = {
@@ -1172,6 +1186,7 @@
 				2B38B0902492CE7700E47409 /* MultiDetailsTableViewCell.xib in Resources */,
 				F36B112724B638DD00122B05 /* Localizable.strings in Resources */,
 				F36B116A24B64C4D00122B05 /* ringtone.wav in Resources */,
+				2BE6129224C75E150094039F /* DotMedicines.storyboard in Resources */,
 				F36B11D124B6502800122B05 /* Users.storyboard in Resources */,
 				F36B116824B64C4D00122B05 /* end_of_call.wav in Resources */,
 				F34F523D24B796A400BEA92D /* Auth.storyboard in Resources */,
@@ -1331,6 +1346,7 @@
 				F36B119424B64D1700122B05 /* Reachability.swift in Sources */,
 				F36B119224B64CEE00122B05 /* InfoTableViewCell.swift in Sources */,
 				2BE560DF248B093500EE112E /* DotTabViewController.swift in Sources */,
+				2BE6129424C75E290094039F /* DotMedicinesController.swift in Sources */,
 				2B81DE21249338080012F78A /* DotCalenderViewController.swift in Sources */,
 				2B43AB9724859FF5003C4B19 /* APIClient.swift in Sources */,
 				F32BE10B24A520FE00E92A78 /* DotAilmentTableViewCell.swift in Sources */,

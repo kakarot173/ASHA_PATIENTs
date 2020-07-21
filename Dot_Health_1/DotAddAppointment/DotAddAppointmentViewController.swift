@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FittedSheets
 class DotAddAppointmentViewController: UIViewController {
 
     @IBOutlet weak var ailmentButton: UIButton!
@@ -19,6 +19,7 @@ class DotAddAppointmentViewController: UIViewController {
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     var selectedIndexPath: IndexPath = IndexPath()
     var screenName : String = kblankString
+    let controller = UIStoryboard(name: "DotMedicines", bundle: nil).instantiateInitialViewController() as? DotMedicinesController
     override func viewDidLoad() {
         super.viewDidLoad()
         doctorListTableView.delegate = self
@@ -116,7 +117,22 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath
         if screenName == "My Medications"{
-            
+            let sheetController = SheetViewController(controller: controller ?? UIViewController(), sizes: [.fixed(250), .halfScreen])
+                   
+                   
+                   sheetController.adjustForBottomSafeArea = false
+                   sheetController.blurBottomSafeArea = true
+                   sheetController.dismissOnBackgroundTap = true
+                   sheetController.extendBackgroundBehindHandle = false
+                   sheetController.topCornersRadius = 15
+                   
+                   sheetController.willDismiss = { _ in
+                       print("Will dismiss ")
+                   }
+                   sheetController.didDismiss = { _ in
+                       print("Will dismiss ")
+                   }
+            self.present(sheetController, animated: false, completion: nil)
         }
         else{
             let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotTimeSlotViewController.self) , bundle:nil)

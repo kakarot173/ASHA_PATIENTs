@@ -66,7 +66,7 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         cardImageView.edgesToSuperview(excluding: .bottom, insets: .left(40) + .right(40) + .top(5))
         cardImageView.height(contentView.bounds.height/2 - 30)
         nameLabel.topToBottom(of: cardImageView)
-        nameLabel.edgesToSuperview(excluding: .top, insets: .left(10) + .right(10) + .bottom(5))
+        nameLabel.edgesToSuperview(excluding: .top, insets: .left(5) + .right(5) + .bottom(5))
       
         
     }
