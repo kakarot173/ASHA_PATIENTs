@@ -48,6 +48,9 @@
 		2BE560E5248B0A9300EE112E /* DotDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */; };
 		2BE6129224C75E150094039F /* DotMedicines.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6129124C75E150094039F /* DotMedicines.storyboard */; };
 		2BE6129424C75E290094039F /* DotMedicinesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6129324C75E290094039F /* DotMedicinesController.swift */; };
+		2BE6129624C771FF0094039F /* DotAddDocsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6129524C771FF0094039F /* DotAddDocsCell.swift */; };
+		2BE6129924C772C20094039F /* DotAddDocsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6129724C772C20094039F /* DotAddDocsTableViewCell.swift */; };
+		2BE6129A24C772C20094039F /* DotAddDocsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6129824C772C20094039F /* DotAddDocsTableViewCell.xib */; };
 		2BF005D124C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */; };
 		2BF005D324C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */; };
 		2BFE0AE2248EE76D00AED5E6 /* ProfileDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */; };
@@ -220,6 +223,9 @@
 		2BE560E3248B0A9300EE112E /* DotDashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DotDashboardViewController.xib; sourceTree = "<group>"; };
 		2BE6129124C75E150094039F /* DotMedicines.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotMedicines.storyboard; sourceTree = "<group>"; };
 		2BE6129324C75E290094039F /* DotMedicinesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMedicinesController.swift; sourceTree = "<group>"; };
+		2BE6129524C771FF0094039F /* DotAddDocsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotAddDocsCell.swift; sourceTree = "<group>"; };
+		2BE6129724C772C20094039F /* DotAddDocsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotAddDocsTableViewCell.swift; sourceTree = "<group>"; };
+		2BE6129824C772C20094039F /* DotAddDocsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DotAddDocsTableViewCell.xib; sourceTree = "<group>"; };
 		2BF005D024C4CC250024E7EE /* DotTimeSlotsExtention+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotTimeSlotsExtention+CollectionView.swift"; sourceTree = "<group>"; };
 		2BF005D224C4CC430024E7EE /* DotTimeSlotsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotTimeSlotsCollectionCell.swift; sourceTree = "<group>"; };
 		2BFE0AE1248EE76D00AED5E6 /* ProfileDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailModel.swift; sourceTree = "<group>"; };
@@ -526,12 +532,15 @@
 			children = (
 				2BB934F8248ED7E100EA2FA5 /* DotDetailsView.swift */,
 				2BB934F9248ED7E100EA2FA5 /* DotDetailsView.xib */,
+				2BE6129524C771FF0094039F /* DotAddDocsCell.swift */,
 				2B27F3FF2491A45600A49C72 /* DotDetailsCellView.swift */,
 				2B27F4002491A45600A49C72 /* DotDetailsCellView.xib */,
 				2B27F3FB24919E8C00A49C72 /* UITableView+Extensions.swift */,
 				2B27F3FD24919EEA00A49C72 /* GenericTableViewCell.swift */,
 				2B38B08D2492CE7700E47409 /* MultiDetailsTableViewCell.swift */,
 				2B38B08E2492CE7700E47409 /* MultiDetailsTableViewCell.xib */,
+				2BE6129724C772C20094039F /* DotAddDocsTableViewCell.swift */,
+				2BE6129824C772C20094039F /* DotAddDocsTableViewCell.xib */,
 			);
 			path = DotUserDetails;
 			sourceTree = "<group>";
@@ -1171,6 +1180,7 @@
 				F36B11CA24B64F2C00122B05 /* SettingSliderCell.xib in Resources */,
 				F36B116924B64C4D00122B05 /* calling.wav in Resources */,
 				F3CA03B9249568ED00373944 /* DotAppointmentsViewController.storyboard in Resources */,
+				2BE6129A24C772C20094039F /* DotAddDocsTableViewCell.xib in Resources */,
 				2BE560E5248B0A9300EE112E /* DotDashboardViewController.xib in Resources */,
 				2B43AB6024859E04003C4B19 /* Assets.xcassets in Resources */,
 				F38F159E249B9A3A0060DD99 /* DotAddAppointmentViewController.storyboard in Resources */,
@@ -1417,8 +1427,10 @@
 				F347192F2492A567000CB0B1 /* UIViewExtension.swift in Sources */,
 				F36B117624B64C9D00122B05 /* UserCell.swift in Sources */,
 				F36B11C024B64F2C00122B05 /* SettingSliderCell.swift in Sources */,
+				2BE6129924C772C20094039F /* DotAddDocsTableViewCell.swift in Sources */,
 				2B43AB9924859FF5003C4B19 /* API.swift in Sources */,
 				2BE560D82489810A00EE112E /* DotUtilityClass.swift in Sources */,
+				2BE6129624C771FF0094039F /* DotAddDocsCell.swift in Sources */,
 				F34719312492A653000CB0B1 /* Theme.swift in Sources */,
 				F3F55A7624C489340000E0F4 /* DotPaymentViewController.m in Sources */,
 				2B43AB9624859FF5003C4B19 /* APIError.swift in Sources */,

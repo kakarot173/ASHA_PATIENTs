@@ -8,12 +8,16 @@
 
 import UIKit
 import TinyConstraints
+import QuickLook
+enum Section :CaseIterable{
+    case main
+}
 class DotDetailsView: UIViewController{
 
     @IBOutlet weak var profileDataView: UIView!
-    let data:NSMutableDictionary = ["Basic Details":["Nationality","Religion","MemberShip Number","Primary Address",["Communication":["a","b","c"]],"Insurance Details","Emirates ID"], "Habits":["Smoking","Drinking","Exercise"],"Others":["animesh"]]
+    let data:NSMutableDictionary = ["Basic Details":["Nationality","Religion","MemberShip Number","Primary Address",["Communication":["a","b","c"]],"Insurance Details","Emirates ID"], "Habits":["Smoking","Drinking","Exercise"],"DOCS":[""]]
     
-    let sectionNames = ["Basic Details","Habits","Others"]
+    let sectionNames = ["Basic Details","Habits","DOCS"]
     var expandableRows = [Any]()
     var isExpanded :Bool = false
     var expandedheader = ""
@@ -32,7 +36,25 @@ class DotDetailsView: UIViewController{
     var constView = UIView()
     @IBOutlet weak var detailsShow: UIButton!
     @IBOutlet weak var LabelStackView: UIStackView!
+    var documentController:UIDocumentInteractionController!
     weak var delegate:setViewAutomatically?
+ 
+    // MARK: DataSource & DataSourceSnapshot typealias
+       typealias DataSource = UICollectionViewDiffableDataSource<Section,AdddocumentsModel>
+       typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Section,AdddocumentsModel>
+       // MARK: dataSource & snapshot
+       private var dataSource :DataSource! =  nil
+       private var snapshot = DataSourceSnapshot()
+       var collectionSuperView = UIView()
+       
+       var CardsCollectionView: UICollectionView! = nil
+       var identiFierForView:String?
+       var doctorDash = ["2:00 PM - 2:45 PM",""]//make didset
+       var green = [3,6,9,11]
+       var red = [4,12,13,14]
+       var dummyModel = [AdddocumentsModel]()
+       var docIndex = 0
+       let addDocumentsLimiter = 10
     let EditSaveButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Edit", for: .normal)
@@ -72,9 +94,12 @@ class DotDetailsView: UIViewController{
     
         table.register(UINib(nibName: "DotDetailsCellView", bundle: nil), forCellReuseIdentifier: "cellId")
         table.register(UINib(nibName: "MultiDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "multiCell")
+        table.register(UINib(nibName: "DotAddDocsTableViewCell", bundle: nil), forCellReuseIdentifier: "docs")
         constTableView = table
         constView = mainView
-        
+        configureCollectionView()
+        configureCollectionViewDataSource()
+        createDummyData()
     }
     @IBAction func ShowDetails(_ sender: Any) {
         table = constTableView
@@ -137,6 +162,13 @@ extension DotDetailsView: UITableViewDelegate, UITableViewDataSource {
             cell.first.text = (data.value(forKey: sectionNames[indexPath.section]) as? NSArray)?.object(at: indexPath.row) as? String
             return cell
         }
+        else  if sectionNames[indexPath.section] == "DOCS" {
+                         guard let cell = tableView.dequeueReusableCell(withIdentifier: "docs") as? DotAddDocsTableViewCell else{return UITableViewCell()}
+                       cell.backgroundColor = .clear
+                       cell.addSubview(CardsCollectionView)
+                       CardsCollectionView.edgesToSuperview()
+                           return cell
+                       }
         else if let arr = (data.value(forKey: sectionNames[indexPath.section]) as? NSArray)?.object(at: indexPath.row) as? NSDictionary{
              guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellId") as? DotDetailsCellView else{return UITableViewCell()}
             cell.first.text = arr.allKeys.first as? String ?? ""
@@ -214,9 +246,10 @@ extension DotDetailsView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      
-        
-            return 40
+      if sectionNames[indexPath.section] == "DOCS"{
+          return 120
+      }
+        return 40
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
@@ -259,3 +292,141 @@ extension DotDetailsView{
         UIView.transition(with: table, duration: 0.5, options: .transitionCrossDissolve, animations: {self.table.reloadData()}, completion: nil)
     }
 }
+extension DotDetailsView {
+    func configureCollectionView() {
+        let collectionView = UICollectionView(frame: view.bounds , collectionViewLayout: generateLayout())
+//        view.addSubview(collectionView)
+        
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self
+        // register collection view to different types of cells
+        collectionView.register(DotAddDocsCell.self, forCellWithReuseIdentifier: DotAddDocsCell.reuseIdentifier)
+        //For registering sections
+        
+        CardsCollectionView = collectionView
+//        CardsCollectionView.edgesToSuperview()
+    }
+    //dynamic for multi sections and layouts
+    func generateLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
+            layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
+            //add cases with sections
+            let sectionLayoutKind = Section.allCases[sectionIndex]
+            switch (sectionLayoutKind) {
+            case .main: return self.generateMyAlbumsLayout(isWide: isWideView)
+            }
+        }
+        return layout
+    }
+    func generateMyAlbumsLayout(isWide: Bool) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 4, trailing: 0)
+        
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(3.0),
+            heightDimension: .absolute(100))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: addDocumentsLimiter)
+        
+        //TODO : - Add section header
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        
+        return section
+    }
+    private func configureCollectionViewDataSource() {
+        // TODO: dataSource
+        
+        dataSource = DataSource(collectionView: CardsCollectionView, cellProvider: { (collectionView, indexpath, mov) -> DotAddDocsCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DotAddDocsCell.reuseIdentifier, for: indexpath) as? DotAddDocsCell
+                else{fatalError("Could not create new cell")}
+            cell.nameLabel.text =  self.dummyModel[indexpath.row].cardName
+//            cell.nameButton.setTitle( self.doctorDash[indexpath.row] , for: .normal)
+            cell.isSelect = mov.isSelect ?? false
+            if self.dummyModel[indexpath.row].cardName == ""{
+                cell.DocumentImageView.image = #imageLiteral(resourceName: "icons8-plus-64")
+            }
+            else{
+                cell.DocumentImageView.image = UIImage()
+            }
+//            cell.cardImageView.image = DotLoginViewController.shared.signature == "Doctor" ? self.imagesArray[indexpath.row] : self.imagesArray1[indexpath.row]
+            return cell
+        })
+    }
+    private func createDummyData() {
+        var dummyContacts: [AdddocumentsModel] = []
+        let count = doctorDash.count
+        for i in 0..<count {
+           dummyContacts.append(AdddocumentsModel(cardName: "\(self.doctorDash[i])", cardTitle: "Test\(i)",isSelect: false))
+            
+        }
+        dummyModel = dummyContacts
+        applySnapshot(items: dummyContacts)
+        
+    }
+    private func applySnapshot(items: [AdddocumentsModel]) {
+        
+        snapshot = DataSourceSnapshot()
+        snapshot.appendSections([Section.main])
+        snapshot.appendItems(items)
+        dataSource.apply(snapshot,animatingDifferences: true)
+    }
+    func openDocumentPicker(){
+        let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.text", "com.apple.iwork.pages.pages", "public.data"], in: .import)
+
+              documentPicker.delegate = self
+              present(documentPicker, animated: true, completion: nil)
+    }
+    func showPreview(url: String){
+                   // Instantiate the interaction controller
+//        if let file = URL(string: url){
+//                   let previewQL = QLPreviewController() // 4
+//                   previewQL.dataSource = self // 5
+//                   previewQL.currentPreviewItemIndex = docIndex // 6
+//                    show(previewQL, sender: nil) // 7
+//
+//               }else {
+//                   print("File missing! Button has been disabled")
+//               }
+    }
+}
+
+extension DotDetailsView: UICollectionViewDelegate,UIDocumentPickerDelegate,UIDocumentInteractionControllerDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
+    docIndex = indexPath.row
+    if item.cardName == ""{
+        openDocumentPicker()
+    }
+    else{
+        showPreview(url: item.cardTitle!)
+    }
+    
+  }
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        print(url)
+
+        print(url.lastPathComponent.split(separator: "_").first!)
+
+        print(url.pathExtension)
+        let newCard = AdddocumentsModel(cardName: "", cardTitle: "", selectedImage: UIImage(), isSelect: false)
+        
+        var model = dummyModel.remove(at: docIndex)
+        model.cardName = (url.lastPathComponent.components(separatedBy: "-").first) ?? ""
+        model.cardTitle = "\(url)"
+        dummyModel.insert(model, at: docIndex)
+        dummyModel.insert(newCard, at: dummyModel.count)
+        applySnapshot(items: dummyModel)
+                  }
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
+}
+
