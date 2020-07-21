@@ -17,9 +17,9 @@
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-#define kMerchantKey @"mdyCKV"
-#define kMerchantID @"4914106"
-#define kMerchantSalt @"Je7q3652"
+#define kMerchantKey @"CLAMB2ZM"
+#define kMerchantID @"D3FnuV"
+#define kMerchantSalt @"DEWA5PQd0s"
 
 @interface DotPaymentViewController ()<UIScrollViewDelegate>{
     UITextField *fieldInAction;
