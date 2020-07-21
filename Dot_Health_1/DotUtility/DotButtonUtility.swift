@@ -102,7 +102,7 @@ class DotTextFieldUtility:UITextField{
             self.layer.shadowColor = #colorLiteral(red: 0.2748524845, green: 0.4150594473, blue: 0.4139105678, alpha: 1)
             self.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
             self.layer.shadowOpacity = 0.5
-            self.textColor = #colorLiteral(red: 0.148154825, green: 0.4918324947, blue: 0.8079950213, alpha: 1)
+            self.textColor = Theme.gradientColorDark
             self.font = UIFont(name: "KohinoorDevanagari-Regular", size: 20)
             let view = UIView()
             view.frame = CGRect(x: 0, y: 2, width: 10, height: 25)
