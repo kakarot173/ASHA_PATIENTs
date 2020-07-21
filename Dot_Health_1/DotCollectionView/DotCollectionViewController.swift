@@ -59,7 +59,7 @@ extension DotCollectionViewController {
          view.addSubview(collectionView)
        
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collectionView.backgroundColor = #colorLiteral(red: 0.8707037568, green: 0.9958868623, blue: 1, alpha: 1)
+        collectionView.backgroundColor = Theme.backgroundColor
         collectionView.delegate = self
         // register collection view to different types of cells
          collectionView.register(DotCardCell.self, forCellWithReuseIdentifier: DotCardCell.reuseIdentifier)

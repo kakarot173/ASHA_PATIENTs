@@ -19,3 +19,9 @@ struct DotSlotsModel:Hashable{
     var isSelect : Bool?
     var id: Int?
 }
+struct AdddocumentsModel:Hashable{
+    var cardName : String?
+    var cardTitle : String?
+    var selectedImage : UIImage?
+   var isSelect : Bool?
+}

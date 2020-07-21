@@ -620,9 +620,6 @@
         <namedColor name="GradientColorlight">
             <color red="0.29399999976158142" green="0.7369999885559082" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="GradientColorlight">
-            <color red="0.29399999980000002" green="0.73699998860000004" blue="0.68599998949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Tint">
             <color red="0.0" green="0.74900001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
