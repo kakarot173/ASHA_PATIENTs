@@ -108,6 +108,7 @@ extension DotCollectionViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DotCardCell.reuseIdentifier, for: indexpath) as? DotCardCell else{fatalError("Could not create new cell")}
             cell.nameLabel.text = self.identiFierForView == "1" ? self.labelArray1[indexpath.row] : self.labelArray[indexpath.row]
             cell.cardImageView.image = self.identiFierForView == "1" ? self.imagesArray1[indexpath.row] : self.imagesArray[indexpath.row]
+            cell.tintColor = .white
             return cell
         })
     }
@@ -166,12 +167,23 @@ extension DotCollectionViewController: UICollectionViewDelegate {
          let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
     case "Talk to THB":
-        print("talk to thb")
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
+       
+      self.delegate?.showActionSheet()
+       
+        
+        /*
+        
+        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
+               let current = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        self.delegate?.addChildViewController(current, back: true)
+ */
+       /*
+         let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! LoginTableViewController
          //nextViewController.itemName = "Mtalk to THB"
          let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
+      */
     case "My Medications":
         let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotAddAppointmentViewController.self), bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! DotAddAppointmentViewController
@@ -186,6 +198,9 @@ extension DotCollectionViewController: UICollectionViewDelegate {
 //    navigationController?.pushViewController(albumDetailVC, animated: true)
   }
 }
+
 protocol setViewControllerAutomatically : class{
     func addChildViewController(_ views: UIViewController, back:Bool)
+    func showActionSheet()
+    
 }

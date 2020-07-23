@@ -32,22 +32,23 @@ struct AppDelegateConstant {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy private var backgroundTask: UIBackgroundTaskIdentifier = {
-           let backgroundTask = UIBackgroundTaskIdentifier.invalid
-           return backgroundTask
-       }()
-       
-       var window: UIWindow?
-       
-       var isCalling = false {
-           didSet {
-               if UIApplication.shared.applicationState == .background,
-                   isCalling == false, CallKitManager.instance.isHasSession() {
-                   disconnect()
-               }
-           }
-       }
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let backgroundTask = UIBackgroundTaskIdentifier.invalid
+        return backgroundTask
+    }()
+    
+    var window: UIWindow?
+   
+    var isCalling = false {
+        didSet {
+            if UIApplication.shared.applicationState == .background,
+                isCalling == false, CallKitManager.instance.isHasSession() {
+                disconnect()
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         QBSettings.applicationID = CredentialsConstant.applicationID;
         QBSettings.authKey = CredentialsConstant.authKey
@@ -129,17 +130,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Logging out from chat.
         disconnect()
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
-         // Logging out from chat.
-         if isCalling == false {
-             disconnect()
-         }
-     }
+        // Logging out from chat.
+        if isCalling == false {
+            disconnect()
+        }
+    }
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Logging in to chat.
         if QBChat.instance.isConnected == true {
@@ -162,7 +163,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 code: LoginConstant.errorDomaimCode,
                                 userInfo: [
                                     NSLocalizedDescriptionKey: "Please enter your login and username."
-                ]))
+            ]))
             return
         }
         if QBChat.instance.isConnected == true {
@@ -176,7 +177,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func disconnect(completion: QBChatCompletionBlock? = nil) {
         QBChat.instance.disconnect(completionBlock: completion)
     }
-
+    
 }
 
 extension AppDelegate {
@@ -187,4 +188,7 @@ extension AppDelegate {
     var rootViewController: UIViewController {
         return window!.rootViewController!
     }
+    var chatRootViewController: RootParentVC {
+          return window!.rootViewController as! RootParentVC
+      }
 }
