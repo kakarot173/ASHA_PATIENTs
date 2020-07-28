@@ -13,7 +13,10 @@ target 'Dot_Health_1' do
   pod 'Quickblox-WebRTC', '~> 2.7.4'
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'PayUmoney_PnP'
-  pod 'FittedSheets'	
+  pod 'FittedSheets'
+  pod 'TTTAttributedLabel', '~> 2.0.0'
+  pod 'SDWebImage', '~> 4.4.7'
+  
   target 'Dot_Health_1Tests' do
     inherit! :search_paths
     # Pods for testing

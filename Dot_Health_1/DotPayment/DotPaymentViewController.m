@@ -11,6 +11,8 @@
 #import "DotPaymentViewController.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <PlugNPlay/PlugNPlay.h>
+#import "Dot_Health_1-Swift.h"
+
 
 #define SCROLLVIEW_HEIGHT 600
 #define SCROLLVIEW_WIDTH 320
@@ -71,7 +73,7 @@
 
     [self loadThemeColor];
 
-    _navItem.text = _tfMerchantDisplayName.text;
+    _navItem.text = @"Asha Cares";
 //    serverSelector.selectedSegmentIndex = 1;
     
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -149,9 +151,9 @@
     //Set UI level customisations in PnP
     [PlugNPlay setMerchantDisplayName:_tfMerchantDisplayName.text];
     [PlugNPlay setButtonTextColor:UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text])];
-    [PlugNPlay setButtonColor:UIColorFromRGB([self intFromHexString:_tfButtonColor.text])];
-    [PlugNPlay setTopTitleTextColor:UIColorFromRGB([self intFromHexString:_tfNavTitleColor.text])];
-    [PlugNPlay setTopBarColor:UIColorFromRGB([self intFromHexString:_tfTopNavColor.text])];
+    [PlugNPlay setButtonColor: UIColorFromRGB(0x00bfa5)];
+    [PlugNPlay setTopTitleTextColor:UIColor.whiteColor];
+    [PlugNPlay setTopBarColor:UIColorFromRGB(0x00bfa5)];
     
     //Customize plug and play's behaviour//optional step
     [PlugNPlay setDisableCompletionScreen:_isCompletionDisable];
@@ -315,17 +317,17 @@
 
 
 - (void)loadThemeColor {
-    _navigationBar.barTintColor = UIColorFromRGB([self intFromHexString:_tfTopNavColor.text]);
-    _tfNavTitleColor.backgroundColor = UIColorFromRGB([self intFromHexString:_tfNavTitleColor.text]);
-    _tfTopNavColor.backgroundColor = UIColorFromRGB([self intFromHexString:_tfTopNavColor.text]);
+    _navigationBar.barTintColor = UIColorFromRGB(0x00bfa5);
+    _tfNavTitleColor.backgroundColor = UIColor.whiteColor;
+    _tfTopNavColor.backgroundColor = UIColorFromRGB(0x00bfa5);
     _tfButtonColor.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
-    _tfButtonTextColor.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]);
-    _btnPayment.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
+    _tfButtonTextColor.backgroundColor = UIColor.whiteColor;
+    _btnPayment.backgroundColor = UIColorFromRGB(0x00bfa5);
     _btnResetTheme.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
-    _navItem.textColor = UIColorFromRGB([self intFromHexString:_tfNavTitleColor.text]);
-    _btnMyWallet.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
+    _navItem.textColor = UIColor.whiteColor;
+    _btnMyWallet.backgroundColor = UIColorFromRGB(0x00bfa5);
     [_btnMyWallet setTitleColor: UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]) forState:UIControlStateNormal];
-    [_btnPayment setTitleColor: UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]) forState:UIControlStateNormal];
+    [_btnPayment setTitleColor: UIColor.whiteColor forState:UIControlStateNormal];
     [_btnResetTheme setTitleColor: UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]) forState:UIControlStateNormal];
 }
 

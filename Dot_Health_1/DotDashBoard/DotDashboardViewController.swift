@@ -81,7 +81,34 @@ class DotDashboardViewController: UIViewController {
 
 }
 extension DotDashboardViewController:setViewAutomatically,setViewControllerAutomatically{
-
+ 
+    func showActionSheet(){
+          let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.view.tintColor = .darkText
+        actionSheet.view.backgroundColor = .clear
+          let chat = UIAlertAction(title: "Chat", style: .default) { (action) in
+            
+           let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
+                  let current = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+           self.addChildViewController(current, back: true)
+          }
+          let call = UIAlertAction(title: "Audio/Video call", style: .default) { (action) in
+            
+           let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
+            let nextViewController = storyBoard.instantiateInitialViewController() as! LoginTableViewController
+            //nextViewController.itemName = "Mtalk to THB"
+            let _ = nextViewController.view
+           self.addChildViewController(nextViewController, back: true)
+              
+          }
+          let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+          
+          actionSheet.addAction(chat)
+          actionSheet.addAction(call)
+          actionSheet.addAction(cancel)
+          
+          present(actionSheet,animated: true,completion: nil)
+      }
     
     func addChildViewController(_ views:UIViewController, back: Bool) {
         self.navigationController?.pushViewController(views, animated: true)
@@ -105,8 +132,4 @@ extension DotDashboardViewController:setViewAutomatically,setViewControllerAutom
         }
         
     }
-
-   
-    
-    
 }
