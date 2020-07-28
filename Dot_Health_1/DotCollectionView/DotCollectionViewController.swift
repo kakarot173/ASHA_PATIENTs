@@ -170,20 +170,6 @@ extension DotCollectionViewController: UICollectionViewDelegate {
        
       self.delegate?.showActionSheet()
        
-        
-        /*
-        
-        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
-               let current = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
-        self.delegate?.addChildViewController(current, back: true)
- */
-       /*
-         let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
-         let nextViewController = storyBoard.instantiateInitialViewController() as! LoginTableViewController
-         //nextViewController.itemName = "Mtalk to THB"
-         let _ = nextViewController.view
-        self.delegate?.addChildViewController(nextViewController, back: true)
-      */
     case "My Medications":
         let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotAddAppointmentViewController.self), bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! DotAddAppointmentViewController
