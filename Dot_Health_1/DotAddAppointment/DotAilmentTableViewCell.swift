@@ -23,7 +23,7 @@ class DotAilmentTableViewCell: UITableViewCell {
         if(selected){
             self.backgroundColor = .white
             self.ailmentLabel.textColor = .white
-            self.cellBGView.backgroundColor = Theme.tintcolor
+            self.cellBGView.backgroundColor = Theme.accentColor
             self.cellBGView.layer.shadowOpacity = 1
             self.cellBGView.layer.shadowOffset = CGSize.zero
             self.cellBGView.layer.shadowColor = UIColor.darkGray.cgColor

@@ -67,7 +67,7 @@ class DotRegisterViewController: UIViewController {
           toolBar.sizeToFit()
           
           //Customizations
-        toolBar.barTintColor = Theme.tintcolor
+        toolBar.barTintColor = Theme.accentColor
           toolBar.tintColor = .white
           
           let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(DotRegisterViewController.closePickerView))
@@ -128,7 +128,7 @@ extension DotRegisterViewController:UIPickerViewDataSource, UIPickerViewDelegate
             label = UILabel()
         }
         
-        label.textColor = Theme.tintcolor
+        label.textColor = Theme.accentColor
         label.textAlignment = .center
         label.font = UIFont(name: "Menlo-Regular", size: 17)
         

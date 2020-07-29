@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDy-Ff-tbM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDy-Ff-tbM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
@@ -34,11 +39,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patient Screen-bg" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-yn-vGk">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PatientScreen" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-yn-vGk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                <color key="tintColor" name="Tint"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-SC-QTH">
-                                <rect key="frame" x="20" y="466" width="374" height="120"/>
+                                <rect key="frame" x="20" y="326" width="374" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q6i-vJ-Pyj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -58,11 +64,12 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kg-ng-vHr" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <color key="tintColor" name="GradientColorDark"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="b35-3L-Eqa"/>
                                                             <constraint firstAttribute="width" constant="374" id="u2c-4h-G5o"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -92,11 +99,13 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-gt-ZoG" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <color key="tintColor" name="GradientColorlight"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="374" id="IkO-1V-osC"/>
                                                             <constraint firstAttribute="height" constant="50" id="Qns-4j-zMB"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" name="GradientColorlight"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -111,23 +120,28 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT1-gK-0fL" customClass="ButtonUtils" customModule="Dot_Health_1" customModuleProvider="target">
-                                <rect key="frame" x="29" y="742" width="365" height="30"/>
+                                <rect key="frame" x="29" y="602" width="365" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bKH-Ny-r3i"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" name="Tint"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" name="Tint"/>
+                                </state>
                                 <connections>
                                     <segue destination="KLk-R1-xO8" kind="push" id="2bW-RA-lzo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAY-zt-n43">
-                                <rect key="frame" x="143" y="625" width="128" height="40"/>
-                                <color key="backgroundColor" name="GradientColorDark"/>
+                                <rect key="frame" x="143" y="485" width="128" height="40"/>
+                                <color key="backgroundColor" name="Accent"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tIg-qy-0SZ"/>
                                 </constraints>
                                 <color key="tintColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="SIGN IN"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" name="Tint"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -139,20 +153,20 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gg4-21-Je1">
-                                <rect key="frame" x="47" y="169" width="320" height="267"/>
+                                <rect key="frame" x="47" y="29" width="320" height="267"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdA-9F-jKj">
-                                <rect key="frame" x="287" y="595" width="107" height="21"/>
+                                <rect key="frame" x="287" y="455" width="107" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="TSq-rQ-ffl"/>
                                     <constraint firstAttribute="width" constant="107" id="hjh-DC-dZA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" name="GradientColorDark"/>
+                                <color key="textColor" name="Tint"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy | Terms And Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2B3-ux-gTb">
-                                <rect key="frame" x="66" y="837" width="291" height="21"/>
+                                <rect key="frame" x="66" y="697" width="291" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="538-it-ubT"/>
                                 </constraints>
@@ -208,11 +222,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-Fr-ce1">
-                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="8" width="414" height="714"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zGi-fs-dSx">
-                                <rect key="frame" x="20" y="145" width="374" height="633"/>
+                                <rect key="frame" x="20" y="5" width="374" height="633"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-It-Jwd">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="82.5"/>
@@ -447,7 +461,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z05-aO-l6D">
-                                <rect key="frame" x="101" y="798" width="212" height="40"/>
+                                <rect key="frame" x="101" y="658" width="212" height="40"/>
                                 <color key="backgroundColor" red="0.29751221760000002" green="0.56391013099999998" blue="0.92140331330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="Ooc-6Z-z2j"/>
@@ -509,6 +523,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" name="Tint"/>
                         <viewLayoutGuide key="safeArea" id="CcP-EG-fIc"/>
                     </view>
                     <navigationItem key="navigationItem" id="TKQ-Sc-Qgy"/>
@@ -525,7 +540,8 @@
                     <tabBar key="tabBar" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="jkZ-lc-jFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Tint"/>
+                        <color key="tintColor" name="Tint"/>
+                        <color key="barTintColor" name="Accent"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -551,10 +567,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bDy-Ff-tbM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" backIndicatorTransitionMaskImage="lessthan" catalog="system" id="r4q-Rs-v5h">
+                    <navigationBar key="navigationBar" hidden="YES" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" backIndicatorTransitionMaskImage="lessthan" catalog="system" id="r4q-Rs-v5h">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Tint"/>
+                        <color key="barTintColor" name="Accent"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                             <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <offsetWrapper key="textShadowOffset" horizontal="20" vertical="0.0"/>
                         </textAttributes>
@@ -586,9 +605,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" modalPresentationStyle="pageSheet" interfaceStyle="light" id="mKf-DL-dkF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" springLoaded="YES" id="2cC-Nf-2fh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="arrowshape.turn.up.left.fill" catalog="system" id="y1Y-T1-eA1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="arrowshape.turn.up.left.fill" catalog="system" id="y1Y-T1-eA1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Accent"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zx6-mM-oGk">
@@ -605,23 +625,26 @@
     </scenes>
     <resources>
         <image name="Logo" width="1200" height="1200"/>
-        <image name="Patient Screen-bg" width="414" height="896"/>
+        <image name="PatientScreen" width="207" height="448"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
         <image name="settings" width="30" height="30"/>
+        <namedColor name="Accent">
+            <color red="0.078431372549019607" green="0.2627450980392157" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GradientColorDark">
-            <color red="0.046999998390674591" green="0.59600001573562622" blue="0.50599998235702515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12156862745098039" green="0.36470588235294116" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GradientColorlight">
-            <color red="0.29399999976158142" green="0.7369999885559082" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.074509803921568626" green="0.792156862745098" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.0" green="0.74900001287460327" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

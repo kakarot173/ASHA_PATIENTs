@@ -10,10 +10,10 @@ import UIKit
 
 class Theme{
     
-    static let mainFontName = UIFont(name: "KohinoorDevanagari-Regular", size: 20)
-    static let labelFontName = UIFont(name: "KohinoorDevanagari-Regular", size: 15)
-    static let labelFontNameBold = UIFont(name: "KohinoorDevanagari-Bold", size: 15)
+    static let mainFontName = "Roboto-Regular"
+    static let mainFontBoldName = "Roboto-Bold"
     static let backgroundColor = UIColor(named: "Background")
+    static let accentColor = UIColor(named: "Accent")
     static let tintcolor = UIColor(named: "Tint")
     static let gradientColorLight = UIColor(named: "GradientColorlight")
     static let gradientColorDark = UIColor(named: "GradientColorDark")

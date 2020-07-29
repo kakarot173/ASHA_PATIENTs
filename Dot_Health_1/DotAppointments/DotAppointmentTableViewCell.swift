@@ -21,13 +21,13 @@ class DotAppointmentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        dateLabel.font = Theme.labelFontName
-        dateLabel.textColor = Theme.tintcolor
-        issueLabel.font = Theme.labelFontName
-        doctorNameLabel.font = Theme.labelFontName
-        hospitalNameLabel.font = Theme.labelFontNameBold
-        timeLabel.font = Theme.labelFontName
-        statusLabel.font = Theme.labelFontName
+        dateLabel.font = UIFont(name: Theme.mainFontName, size: 17)
+        dateLabel.textColor = Theme.accentColor
+        issueLabel.font = UIFont(name: Theme.mainFontName, size: 17)
+        doctorNameLabel.font = UIFont(name: Theme.mainFontName, size: 17)
+        hospitalNameLabel.font = UIFont(name: Theme.mainFontName, size: 17)
+        timeLabel.font = UIFont(name: Theme.mainFontName, size: 17)
+        statusLabel.font = UIFont(name: Theme.mainFontName, size: 17)
         
         dateLabel.contentMode = .center
         dateLabel.lineBreakMode = .byWordWrapping

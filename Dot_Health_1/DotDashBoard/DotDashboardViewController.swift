@@ -112,8 +112,8 @@ extension DotDashboardViewController:setViewAutomatically,setViewControllerAutom
     
     func addChildViewController(_ views:UIViewController, back: Bool) {
         self.navigationController?.pushViewController(views, animated: true)
-        self.navigationController?.navigationBar.barTintColor = Theme.tintcolor
-        self.navigationController?.navigationBar.tintColor = Theme.backgroundColor
+        self.navigationController?.navigationBar.barTintColor = Theme.accentColor
+        self.navigationController?.navigationBar.tintColor = Theme.tintcolor
         self.navigationController?.navigationBar.isTranslucent = false
       
     }

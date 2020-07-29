@@ -113,7 +113,7 @@ extension NSAttributedString{
         var fFont = UIFont()
         var sFont = UIFont()
         if fBold{
-             fFont = UIFont.boldSystemFont(ofSize: 13)
+            fFont = UIFont.boldSystemFont(ofSize: 13)
         }
         else{
              fFont = UIFont.systemFont(ofSize: 13)

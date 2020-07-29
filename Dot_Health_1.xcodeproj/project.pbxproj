@@ -244,6 +244,8 @@
 		F3CA03B5249566B500373944 /* DotNotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CA03B4249566B500373944 /* DotNotificationViewController.storyboard */; };
 		F3CA03B7249566D900373944 /* DotNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA03B6249566D900373944 /* DotNotificationViewController.swift */; };
 		F3CA03B9249568ED00373944 /* DotAppointmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CA03B8249568ED00373944 /* DotAppointmentsViewController.storyboard */; };
+		F3D8504F24D0C0C400AB4ECE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3D8504E24D0C0C400AB4ECE /* Roboto-Regular.ttf */; };
+		F3D8505124D0C8F000AB4ECE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3D8505024D0C8EF00AB4ECE /* Roboto-Bold.ttf */; };
 		F3DCB565249DED790069507F /* DotVitalsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DCB564249DED790069507F /* DotVitalsViewController.storyboard */; };
 		F3DCB567249DEDBE0069507F /* DotVitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DCB566249DEDBD0069507F /* DotVitalsViewController.swift */; };
 		F3F55A7624C489340000E0F4 /* DotPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F55A7524C489340000E0F4 /* DotPaymentViewController.m */; };
@@ -518,6 +520,8 @@
 		F3CA03B4249566B500373944 /* DotNotificationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DotNotificationViewController.storyboard; sourceTree = "<group>"; };
 		F3CA03B6249566D900373944 /* DotNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotNotificationViewController.swift; sourceTree = "<group>"; };
 		F3CA03B8249568ED00373944 /* DotAppointmentsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotAppointmentsViewController.storyboard; sourceTree = "<group>"; };
+		F3D8504E24D0C0C400AB4ECE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F3D8505024D0C8EF00AB4ECE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F3DCB564249DED790069507F /* DotVitalsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DotVitalsViewController.storyboard; sourceTree = "<group>"; };
 		F3DCB566249DEDBD0069507F /* DotVitalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotVitalsViewController.swift; sourceTree = "<group>"; };
 		F3F55A7424C489330000E0F4 /* Dot_Health_1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dot_Health_1-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -775,6 +779,8 @@
 		2BE560D4248980EF00EE112E /* DotUtility */ = {
 			isa = PBXGroup;
 			children = (
+				F3D8504E24D0C0C400AB4ECE /* Roboto-Regular.ttf */,
+				F3D8505024D0C8EF00AB4ECE /* Roboto-Bold.ttf */,
 				2BE560D52489810A00EE112E /* DotButtonUtility.swift */,
 				2BE560D62489810A00EE112E /* DotUtilityClass.swift */,
 				F3623BC7248D47E80082025A /* colours.xcassets */,
@@ -1786,7 +1792,9 @@
 				F36B11CA24B64F2C00122B05 /* SettingSliderCell.xib in Resources */,
 				F341C69324C8C62C00795965 /* ChatIncomingCell.xib in Resources */,
 				F36B116924B64C4D00122B05 /* calling.wav in Resources */,
+				F3D8504F24D0C0C400AB4ECE /* Roboto-Regular.ttf in Resources */,
 				F3CA03B9249568ED00373944 /* DotAppointmentsViewController.storyboard in Resources */,
+				F3D8505124D0C8F000AB4ECE /* Roboto-Bold.ttf in Resources */,
 				F341C6F124C8C62C00795965 /* Chat.storyboard in Resources */,
 				2BE6129A24C772C20094039F /* DotAddDocsTableViewCell.xib in Resources */,
 				2BE560E5248B0A9300EE112E /* DotDashboardViewController.xib in Resources */,

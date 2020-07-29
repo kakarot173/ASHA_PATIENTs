@@ -74,8 +74,8 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         let gradient: CAGradientLayer = CAGradientLayer()
         
         gradient.colors = [UIColor(hex: stringDark).cgColor, UIColor(hex: StringLight).cgColor]
-        gradient.locations = [0 , 1]
-        gradient.startPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient.locations = [0.5 , 1.2]
+        gradient.startPoint = CGPoint(x: 0.6, y: 1.3)
         gradient.endPoint = CGPoint(x: 0, y: 0)
         gradient.frame = frameSize
         return gradient

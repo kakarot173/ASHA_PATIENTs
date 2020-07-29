@@ -22,7 +22,7 @@ extension UIView{
 extension UIButton {
 
     func createFloatingActionButton() {
-       backgroundColor = Theme.tintcolor
+       backgroundColor = Theme.accentColor
        layer.cornerRadius = frame.height / 2
        layer.shadowOpacity = 0.3
        layer.shadowRadius = 3
@@ -37,7 +37,7 @@ extension UIButton {
     }
     
     func createSelectedOptionButton() {
-        backgroundColor = Theme.tintcolor
+        backgroundColor = Theme.accentColor
         self.setTitleColor(.white, for: .normal)
        layer.cornerRadius = 5
        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor

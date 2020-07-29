@@ -14,7 +14,7 @@ class DotButtonUtility: UIButton {
 
        override func layoutSubviews() {
            super.layoutSubviews()
-           self.backgroundColor = Theme.tintcolor
+           self.backgroundColor = Theme.accentColor
            self.layer.cornerRadius = 5
            self.clipsToBounds = true
            self.setTitleColor(.white, for: .normal)
@@ -70,7 +70,7 @@ class ButtonUtils: UIButton {
  
         let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
            
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: Theme.gradientColorDark]))
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont(name: Theme.mainFontName, size: 16), NSAttributedString.Key.foregroundColor: Theme.tintcolor]))
            self.setAttributedTitle(attributedTitle, for: .normal)
       
 //           button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
@@ -83,8 +83,8 @@ class DotLabelUtility: UILabel {
     private var shadowLayer: CAShapeLayer!
     override func draw(_ rect: CGRect) {
         self.text = "test"
-        self.textColor = #colorLiteral(red: 0.1470873058, green: 0.4721398354, blue: 0.7756891847, alpha: 1)
-        self.font = UIFont.boldSystemFont(ofSize: 12)
+        self.textColor = Theme.accentColor
+        self.font = UIFont(name: Theme.mainFontName, size: 17)
     }
 }
 class DotTextFieldUtility:UITextField{
@@ -103,16 +103,12 @@ class DotTextFieldUtility:UITextField{
             self.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
             self.layer.shadowOpacity = 0.5
             self.textColor = Theme.gradientColorDark
-            self.font = UIFont(name: "KohinoorDevanagari-Regular", size: 20)
+            self.font = UIFont(name: Theme.mainFontName, size: 20)
             let view = UIView()
             view.frame = CGRect(x: 0, y: 2, width: 10, height: 25)
             view.backgroundColor = UIColor.clear
             self.leftView = view
             self.leftViewMode = UITextField.ViewMode.always
-         
-            
-            
-            
         }
     }
 
@@ -121,7 +117,7 @@ class ActionButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        backgroundColor = Theme.tintcolor
+        backgroundColor = Theme.accentColor
         layer.cornerRadius = frame.height / 2
         setTitleColor(UIColor.white, for: .normal)
     }

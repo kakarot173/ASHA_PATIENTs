@@ -60,7 +60,7 @@ class DotDetailsView: UIViewController{
         button.setTitle("Edit", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = Theme.tintcolor
+        button.backgroundColor = Theme.accentColor
         button.tag = 11
 //        button.addTarget(self, action: #selector(), for: .touchUpInside)
         button.layer.cornerRadius = 5
@@ -74,12 +74,12 @@ class DotDetailsView: UIViewController{
         profileDataView.height(self.view.frame.height/2 - 250)
         LabelStackView.arrangedSubviews.forEach { (lable) in
             switch lable.tag{
-            case 1 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: customStringFormatting(str: "Anna Johnsaan(F)", no: 4), second: "MRN:THB888868", fColor: .black, sColor: .black, fBold:true,sBold:true)
-            case 2 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "DOB: ", second: "13/10/1994", fColor: #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
-            case 3 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Language: ", second: "English", fColor: #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
-            case 4 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Phone no: ", second: "+971-55-123-1234", fColor: #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
-            case 5 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Email: ", second: "anna.j@thbglobal.com", fColor: #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
-            case 6 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Emergency Contact: ", second: "+971-55-123-1234", fColor: #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
+            case 1 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: customStringFormatting(str: "Anna Johnsaan(F)", no: 4), second: "MRN:THB888868",fColor: Theme.accentColor ?? .black, sColor: .black, fBold:true,sBold:true)
+            case 2 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "DOB: ", second: "13/10/1994", fColor:Theme.accentColor ?? #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
+            case 3 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Language: ", second: "English", fColor: Theme.accentColor ?? #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
+            case 4 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Phone no: ", second: "+971-55-123-1234", fColor: Theme.accentColor ?? #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
+            case 5 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Email: ", second: "anna.j@thbglobal.com", fColor: Theme.accentColor ?? #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
+            case 6 : (lable as? UILabel)?.attributedText = NSAttributedString().createAttributedString(first: "Emergency Contact: ", second: "+971-55-123-1234", fColor: Theme.accentColor ?? #colorLiteral(red: 0.2069825828, green: 0.7254605889, blue: 1, alpha: 1), sColor: .black,fBold:true,sBold:false)
             case 7 : print("3")
             case 8 : print("3")
             default: break
