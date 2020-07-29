@@ -25,8 +25,8 @@ class DotCollectionViewController: UIViewController {
     var labelArray = ["My Health Records","Appointments","24/7 Doctor","Talk to THB","Health Info","More THB"]//make didset
     var imagesArray = [#imageLiteral(resourceName: "Health-Records") ,#imageLiteral(resourceName: "Appointments") ,#imageLiteral(resourceName: "24-7-Doctor"),#imageLiteral(resourceName: "Talk-to-THB"),#imageLiteral(resourceName: "Health-Info"),#imageLiteral(resourceName: "More-THB")]//make Didset
     var identiFierForView:String?
-    var labelArray1 = ["My Vitals","My Clinical Visits","My Medications","My Records","My Care Plan","My Tele consult"]//make didset
-    var imagesArray1 = [#imageLiteral(resourceName: "vitals") ,#imageLiteral(resourceName: "Clinical") ,#imageLiteral(resourceName: "Medications"),#imageLiteral(resourceName: "Records"),#imageLiteral(resourceName: "medication"),#imageLiteral(resourceName: "consult")]//make Didset
+    var healthRecordLabelArray = ["Vitals","Clinical Visits","Medications","Records","Care Plan","Tele consult"]//make didset
+    var healthRecordImages = [#imageLiteral(resourceName: "vitals") ,#imageLiteral(resourceName: "Clinical-Visits") ,#imageLiteral(resourceName: "Medication"),#imageLiteral(resourceName: "Records"),#imageLiteral(resourceName: "Care-Plan"),#imageLiteral(resourceName: "Tele-Consult")]//make Didset
     weak var delegate:setViewControllerAutomatically?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,8 +106,8 @@ extension DotCollectionViewController {
      
         dataSource = DataSource(collectionView: CardsCollectionView, cellProvider: { (collectionView, indexpath, mov) -> DotCardCell? in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DotCardCell.reuseIdentifier, for: indexpath) as? DotCardCell else{fatalError("Could not create new cell")}
-            cell.nameLabel.text = self.identiFierForView == "1" ? self.labelArray1[indexpath.row] : self.labelArray[indexpath.row]
-            cell.cardImageView.image = self.identiFierForView == "1" ? self.imagesArray1[indexpath.row] : self.imagesArray[indexpath.row]
+            cell.nameLabel.text = self.identiFierForView == "1" ? self.healthRecordLabelArray[indexpath.row] : self.labelArray[indexpath.row]
+            cell.cardImageView.image = self.identiFierForView == "1" ? self.healthRecordImages[indexpath.row] : self.imagesArray[indexpath.row]
             cell.tintColor = .white
             return cell
         })
@@ -115,7 +115,7 @@ extension DotCollectionViewController {
     private func createDummyData() {
            var dummyContacts: [DotCardModel] = []
            for i in 0..<6 {
-            self.identiFierForView == "1" ? dummyContacts.append(DotCardModel(cardName: "\(self.labelArray1[i])", cardTitle: "Test\(i)")) : dummyContacts.append(DotCardModel(cardName: "\(self.labelArray[i])", cardTitle: "Test\(i)"))
+            self.identiFierForView == "1" ? dummyContacts.append(DotCardModel(cardName: "\(self.healthRecordLabelArray[i])", cardTitle: "Test\(i)")) : dummyContacts.append(DotCardModel(cardName: "\(self.labelArray[i])", cardTitle: "Test\(i)"))
                
            }
         applySnapshot(items: dummyContacts)

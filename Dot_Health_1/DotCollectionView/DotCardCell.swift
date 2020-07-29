@@ -40,11 +40,12 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont(name: Theme.mainFontName, size: 20)
         label.textColor = Theme.backgroundColor
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -63,8 +64,8 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         //Setup cell
         addSubview(cardImageView)
         addSubview(nameLabel)
-        cardImageView.edgesToSuperview(excluding: .bottom, insets: .left(40) + .right(40) + .top(5))
-        cardImageView.height(contentView.bounds.height/2 - 30)
+        cardImageView.edgesToSuperview(excluding: .bottom, insets: .left(45) + .right(45) + .top(15))
+        cardImageView.height(contentView.bounds.height/2 - 60)
         nameLabel.topToBottom(of: cardImageView)
         nameLabel.edgesToSuperview(excluding: .top, insets: .left(5) + .right(5) + .bottom(5))
       

@@ -18,7 +18,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frd-Lm-d3x">
@@ -52,7 +52,7 @@
             <objects>
                 <viewController id="i2I-jd-ZxA" customClass="DotLoginViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8aT-I7-402">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PatientScreen" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-yn-vGk">
@@ -234,18 +234,18 @@
             <objects>
                 <viewController id="KLk-R1-xO8" customClass="DotRegisterViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9aW-zD-gLR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-Fr-ce1">
-                                <rect key="frame" x="0.0" y="8" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="8" width="414" height="570"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zGi-fs-dSx">
-                                <rect key="frame" x="20" y="5" width="374" height="633"/>
+                                <rect key="frame" x="20" y="5" width="374" height="495"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-It-Jwd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-5t-wKr">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -258,10 +258,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7cn-kj-PTE">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-9E-iRd" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="5Ju-2c-SiO"/>
                                                             <constraint firstAttribute="width" constant="177" id="Muh-Q2-bxy"/>
@@ -284,7 +284,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJJ-qf-RIm" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="197" y="0.0" width="177" height="53.5"/>
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="177" id="5yO-6o-b39"/>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="cEn-w8-mbg"/>
@@ -297,7 +297,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NCA-gO-d3K">
-                                        <rect key="frame" x="0.0" y="91.5" width="374" height="83"/>
+                                        <rect key="frame" x="0.0" y="72" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-Mk-Nmu">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -310,10 +310,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eX4-aV-xgI">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="54"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email-ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OL6-fM-eI8" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="IaB-xs-gqF"/>
                                                             <constraint firstAttribute="width" constant="374" id="Ohb-nv-LdJ"/>
@@ -326,7 +326,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xeq-nW-G4F">
-                                        <rect key="frame" x="0.0" y="183.5" width="374" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="144" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm0-Pz-KzH">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -339,7 +339,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXM-As-O63" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="NUd-sJ-cjb"/>
                                                     <constraint firstAttribute="width" constant="374" id="azw-Nf-wYF"/>
@@ -350,7 +350,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-Cm-RYa">
-                                        <rect key="frame" x="0.0" y="275" width="374" height="83"/>
+                                        <rect key="frame" x="0.0" y="216" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile No-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-Qc-4iy">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -363,10 +363,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vuk-MP-IhF">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="54"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ext-" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cq4-Ct-xbB" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="FIN-rX-nJc"/>
                                                             <constraint firstAttribute="width" constant="50" id="hQb-B5-pJ0"/>
@@ -375,7 +375,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu3-AD-uo1" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="90" y="0.0" width="284" height="54"/>
+                                                        <rect key="frame" x="90" y="0.0" width="284" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="VD6-kE-W9R"/>
                                                             <constraint firstAttribute="width" constant="284" id="sXi-lE-PDR"/>
@@ -388,7 +388,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MKP-C9-V1z">
-                                        <rect key="frame" x="0.0" y="367" width="374" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="288" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hX-en-lp0">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -401,10 +401,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-MJ-i3P">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nrG-7U-jmZ" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Z6j-F4-ywP"/>
                                                             <constraint firstAttribute="width" constant="374" id="dtA-Cq-0lL"/>
@@ -417,7 +417,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-4y-JfK">
-                                        <rect key="frame" x="0.0" y="458.5" width="374" height="83"/>
+                                        <rect key="frame" x="0.0" y="360" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d0-mt-ZU0">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -430,10 +430,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FRQ-TP-fwu">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="54"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFC-vw-KXw" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="MZ1-ob-3g1"/>
                                                             <constraint firstAttribute="width" constant="374" id="fSk-i5-HBe"/>
@@ -446,7 +446,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SkG-K0-wbp">
-                                        <rect key="frame" x="0.0" y="550.5" width="374" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="432" width="374" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referral Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAL-Te-V5R">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
@@ -459,10 +459,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rCk-d1-Rkg">
-                                                <rect key="frame" x="0.0" y="29" width="374" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="OPTIONAL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-e1-YzH" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="B8S-hj-k6L"/>
                                                             <constraint firstAttribute="width" constant="374" id="OuI-If-pl6"/>
@@ -477,7 +477,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z05-aO-l6D">
-                                <rect key="frame" x="101" y="658" width="212" height="40"/>
+                                <rect key="frame" x="101" y="520" width="212" height="34"/>
                                 <color key="backgroundColor" red="0.29751221760000002" green="0.56391013099999998" blue="0.92140331330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="Ooc-6Z-z2j"/>
@@ -536,7 +536,7 @@
             <objects>
                 <viewController id="tLC-Eg-YdA" customClass="DotDashboardViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1c-ks-ffK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" name="Tint"/>
