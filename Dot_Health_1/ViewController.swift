@@ -9,6 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var signOut: UIButton!
+    
+    @IBAction func logOutAction(_ sender: Any) {
+     let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .actionSheet)
+            alertController.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { (_) in
+               // KeychainService.removePassword(service: keyChainPrefix.loginSession.rawValue, account: DotLoginViewController.shared.signature ?? kblankString)
+                self.signingOut()
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+        func signingOut(){
+            navigationController?.popToRootViewController(animated: true)
+        }
+    
 private let client = MyClient()
     override func viewDidLoad() {
         super.viewDidLoad()

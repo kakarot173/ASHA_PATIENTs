@@ -80,9 +80,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-nB-Iow">
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-nB-Iow">
                                 <rect key="frame" x="20" y="225" width="287" height="81"/>
-                                <color key="backgroundColor" name="Background"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="e0d-74-R5E"/>
                                 </constraints>
@@ -91,8 +91,8 @@
                                     <segment title="" image="afternoon"/>
                                     <segment title="" image="night"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" name="Tint"/>
+                                <color key="tintColor" name="Tint"/>
+                                <color key="selectedSegmentTintColor" name="Accent"/>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upO-a7-BOh">
                                 <rect key="frame" x="20" y="315" width="287" height="298"/>
@@ -213,14 +213,14 @@
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="morning" width="40" height="40"/>
         <image name="night" width="40" height="40"/>
-        <namedColor name="Background">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Accent">
+            <color red="0.078431372549019607" green="0.2627450980392157" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GradientColorDark">
             <color red="0.12156862745098039" green="0.36470588235294116" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

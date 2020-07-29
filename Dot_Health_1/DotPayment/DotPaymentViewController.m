@@ -18,7 +18,11 @@
 #define SCROLLVIEW_WIDTH 320
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
+/*
+#define kMerchantKey @"mdyCKV"
+#define kMerchantID @"4914106"
+#define kMerchantSalt @"Je7q3652"
+*/
 #define kMerchantKey @"CLAMB2ZM"
 #define kMerchantID @"D3FnuV"
 #define kMerchantSalt @"DEWA5PQd0s"
@@ -151,9 +155,9 @@
     //Set UI level customisations in PnP
     [PlugNPlay setMerchantDisplayName:_tfMerchantDisplayName.text];
     [PlugNPlay setButtonTextColor:UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text])];
-    [PlugNPlay setButtonColor: UIColorFromRGB(0x00bfa5)];
+    [PlugNPlay setButtonColor: UIColorFromRGB(0x144372)];
     [PlugNPlay setTopTitleTextColor:UIColor.whiteColor];
-    [PlugNPlay setTopBarColor:UIColorFromRGB(0x00bfa5)];
+    [PlugNPlay setTopBarColor:UIColorFromRGB(0x144372)];
     
     //Customize plug and play's behaviour//optional step
     [PlugNPlay setDisableCompletionScreen:_isCompletionDisable];
@@ -317,15 +321,15 @@
 
 
 - (void)loadThemeColor {
-    _navigationBar.barTintColor = UIColorFromRGB(0x00bfa5);
+    _navigationBar.barTintColor =  UIColorFromRGB(0x144372);
     _tfNavTitleColor.backgroundColor = UIColor.whiteColor;
-    _tfTopNavColor.backgroundColor = UIColorFromRGB(0x00bfa5);
+    _tfTopNavColor.backgroundColor = UIColorFromRGB(0x144372);
     _tfButtonColor.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
     _tfButtonTextColor.backgroundColor = UIColor.whiteColor;
-    _btnPayment.backgroundColor = UIColorFromRGB(0x00bfa5);
+    _btnPayment.backgroundColor = UIColorFromRGB(0x144372);
     _btnResetTheme.backgroundColor = UIColorFromRGB([self intFromHexString:_tfButtonColor.text]);
     _navItem.textColor = UIColor.whiteColor;
-    _btnMyWallet.backgroundColor = UIColorFromRGB(0x00bfa5);
+    _btnMyWallet.backgroundColor = UIColorFromRGB(0x144372);
     [_btnMyWallet setTitleColor: UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]) forState:UIControlStateNormal];
     [_btnPayment setTitleColor: UIColor.whiteColor forState:UIControlStateNormal];
     [_btnResetTheme setTitleColor: UIColorFromRGB([self intFromHexString:_tfButtonTextColor.text]) forState:UIControlStateNormal];

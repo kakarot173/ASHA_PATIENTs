@@ -279,8 +279,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-ou-lfg">
-                                <rect key="frame" x="1" y="44" width="414" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1K-ou-lfg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" name="Accent"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" name="Tint"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem id="r1C-fs-vkz">
                                         <nil key="title"/>
@@ -296,7 +300,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArL-Kt-Sb8">
                                 <rect key="frame" x="109" y="44" width="196" height="44"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Tint"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -311,10 +315,10 @@
                             <constraint firstItem="Uoi-5H-lQc" firstAttribute="bottom" secondItem="9KB-mO-79E" secondAttribute="top" id="L5u-6a-BHp"/>
                             <constraint firstItem="hAL-EI-pGv" firstAttribute="leading" secondItem="lP9-Rd-bRX" secondAttribute="leadingMargin" constant="1" id="Lt6-Jn-ifa"/>
                             <constraint firstItem="ArL-Kt-Sb8" firstAttribute="leading" secondItem="lP9-Rd-bRX" secondAttribute="leadingMargin" constant="89" id="R9S-5a-pim"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="a1K-ou-lfg" secondAttribute="trailing" constant="-21" id="UBz-nU-ebg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1K-ou-lfg" secondAttribute="trailing" constant="-20" id="UBz-nU-ebg"/>
                             <constraint firstItem="a1K-ou-lfg" firstAttribute="bottom" secondItem="ArL-Kt-Sb8" secondAttribute="bottom" id="X2s-la-lHN"/>
                             <constraint firstItem="ArL-Kt-Sb8" firstAttribute="top" secondItem="Ppy-J0-XZX" secondAttribute="bottom" id="kuX-0j-rJ9"/>
-                            <constraint firstItem="a1K-ou-lfg" firstAttribute="leading" secondItem="lP9-Rd-bRX" secondAttribute="leadingMargin" constant="-19" id="mTA-hW-eD2"/>
+                            <constraint firstItem="a1K-ou-lfg" firstAttribute="leading" secondItem="lP9-Rd-bRX" secondAttribute="leadingMargin" constant="-20" id="mTA-hW-eD2"/>
                             <constraint firstItem="hAL-EI-pGv" firstAttribute="top" secondItem="lP9-Rd-bRX" secondAttribute="topMargin" constant="67" id="oZg-AT-Jw4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YaI-hI-jWL"/>
@@ -351,8 +355,11 @@
     </scenes>
     <resources>
         <image name="DoctorImage" width="400" height="300"/>
+        <namedColor name="Accent">
+            <color red="0.078431372549019607" green="0.2627450980392157" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Tint">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -20,12 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frd-Lm-d3x">
+                                <rect key="frame" x="157" y="286.5" width="100" height="100"/>
+                                <state key="normal" image="logout"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZt-6T-ANU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="frd-Lm-d3x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XDf-Cz-gGt"/>
+                            <constraint firstItem="frd-Lm-d3x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s9B-BK-sCW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="VtM-zB-wki">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="signOut" destination="frd-Lm-d3x" id="rQt-Rd-Fmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -630,6 +646,7 @@
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="lessthan" catalog="system" width="128" height="111"/>
+        <image name="logout" width="100" height="100"/>
         <image name="settings" width="30" height="30"/>
         <namedColor name="Accent">
             <color red="0.078431372549019607" green="0.2627450980392157" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
