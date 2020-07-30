@@ -38,11 +38,11 @@ class LoadingButton: UIButton {
     override var isEnabled: Bool{
         didSet {
             if isEnabled == true {
-                shapeLayer.fillColor = LoadingButtonColorConstant.blueColor.cgColor
-                addShadowToButton(cornerRadius: 4)
+                shapeLayer.fillColor = Theme.gradientColorDark?.cgColor
+//                addShadowToButton(cornerRadius: 4)
             } else {
                 shapeLayer.fillColor = LoadingButtonColorConstant.grayColor.cgColor
-                removeShadowFromButton()
+//                removeShadowFromButton()
             }
         }
     }
@@ -88,12 +88,12 @@ class LoadingButton: UIButton {
         currentText = currentTitle ?? "Title"
         setTitle("", for: .normal)
         
-        let fromColor = LoadingButtonColorConstant.blueColor
-        let toColor = LoadingButtonColorConstant.greenColor
+        let fromColor = Theme.gradientColorDark
+        let toColor = Theme.gradientColorLight
         
         let colorAnimation = CABasicAnimation(keyPath: "fillColor")
-        colorAnimation.fromValue = fromColor.cgColor
-        colorAnimation.toValue = toColor.cgColor
+        colorAnimation.fromValue = fromColor?.cgColor
+        colorAnimation.toValue = toColor?.cgColor
         colorAnimation.repeatCount = Float(NSIntegerMax)
         colorAnimation.duration = 1.0
         colorAnimation.autoreverses = true
@@ -107,7 +107,7 @@ class LoadingButton: UIButton {
         }
         activity.stopAnimating()
         shapeLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 5.0).cgPath
-        shapeLayer.fillColor = LoadingButtonColorConstant.blueColor.cgColor
+        shapeLayer.fillColor = Theme.gradientColorDark?.cgColor
         
         isUserInteractionEnabled = true
         shapeLayer.removeAllAnimations()

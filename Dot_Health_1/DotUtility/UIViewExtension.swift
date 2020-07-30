@@ -62,14 +62,24 @@ extension UIButton {
 
 }
 extension UITextField{
-    func openDatePicker(){
+    
+    func openDatePicker(modeType:UIDatePicker.Mode){
            let datePicker = UIDatePicker()
-           datePicker.datePickerMode = .date
-           self.inputView = datePicker
+           datePicker.datePickerMode = modeType
+            datePicker.backgroundColor = Theme.backgroundColor
+        datePicker.set18YearValidation()
+        datePicker.setValue(Theme.accentColor, forKey: "textColor")
+        datePicker.perform(Selector(("setHighlightsToday:")), with:Theme.gradientColorDark, afterDelay: 0.5)
+            self.inputView = datePicker
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.superview?.frame.width ?? 414, height: 44))
         
     let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelButtonAction))
            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneButtonAccion))
+        if modeType == .date {
+             doneButton.tag = 1
+        } else{
+            doneButton.tag = 2
+        }
            let flexibleButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
            toolbar.setItems([cancelButton, flexibleButton, doneButton], animated: false)
            self.inputAccessoryView = toolbar
@@ -78,9 +88,16 @@ extension UITextField{
     @objc func cancelButtonAction(){
         self.resignFirstResponder()
     }
-    @objc func doneButtonAccion(){
+    @objc func doneButtonAccion(sender:UIBarButtonItem){
         let dateFormater = DateFormatter()
-        dateFormater.dateStyle = .medium
+        if sender.tag == 2{
+           dateFormater.dateFormat = "HH:mm"
+        }
+        else{
+            dateFormater.dateStyle = .medium
+        }
+        
+//        dateFormater.dateFormat = "HH:mm"
         if let datePicker = self.inputView as? UIDatePicker{
             print(datePicker.date)
             self.text = dateFormater.string(from: datePicker.date)
@@ -89,16 +106,32 @@ extension UITextField{
     }
     func addDoneButton(title: String, target: Any, selector: Selector) {
 
-        let toolBar = UIToolbar(frame: CGRect(x: 0.0,
-                                              y: 0.0,
-                                              width: UIScreen.main.bounds.size.width,
-                                              height: 44.0))//1
-        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)//2
-        let barButton = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)//3
-        toolBar.setItems([flexible, barButton], animated: false)//4
-        self.inputAccessoryView = toolBar//5
+            let toolBar = UIToolbar(frame: CGRect(x: 0.0,
+                                                  y: 0.0,
+                                                  width: UIScreen.main.bounds.size.width,
+                                                  height: 44.0))//1
+            let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)//2
+            let barButton = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)//3
+            toolBar.setItems([flexible, barButton], animated: false)//4
+            self.inputAccessoryView = toolBar//5
+        }
     }
-}
+
+extension UIDatePicker {
+func set18YearValidation() {
+    let currentDate: Date = Date()
+    var calendar: Calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+    calendar.timeZone = TimeZone(identifier: "UTC")!
+    var components: DateComponents = DateComponents()
+    components.calendar = calendar
+    components.year = -18
+    let maxDate: Date = calendar.date(byAdding: components, to: currentDate)!
+    components.year = -150
+    let minDate: Date = calendar.date(byAdding: components, to: currentDate)!
+    self.minimumDate = minDate
+    self.maximumDate = currentDate
+} }
+
 extension UITextView {
 
     func addDoneButton(title: String, target: Any, selector: Selector) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MyClient: APIClient {
+class DotConnectionClient: APIClient {
     
     var session: URLSession
     
@@ -23,16 +23,25 @@ class MyClient: APIClient {
 
 // MARK: - API Request calls
 
-extension MyClient {
+extension DotConnectionClient {
     //In the signature of the function we define the Class type that is the generic one in the API
-    func getSomething(from endpoint: Endpoint, completion: @escaping (Result<Model2?, APIError>) -> Void) {
+    func userLogin(from endpoint: Endpoint, completion: @escaping (Result<AnyObject?, APIError>) -> Void){
+        let request = endpoint.request
+        callAPI(with: request, modelParser: String.self, completion: completion)
+    }
+    func getCountryList(from endpoint: Endpoint, completion: @escaping (Result<AnyObject?, APIError>) -> Void){
+           let request = endpoint.request
+                  callAPI(with: request, modelParser: String.self, completion: completion)
+       }
+    func registerUser(from endpoint: Endpoint, completion: @escaping (Result<AnyObject?, APIError>) -> Void) {
         
         let request = endpoint.request
-        
-        callAPI(with: request, decode: { json -> Model2? in
-            guard let model2 = json as? Model2 else { return  nil }
-            return model2
-        }, completion: completion)
+        callAPI(with: request, modelParser: String.self, completion: completion)
+//        callAPI(with: request, decode: { json -> String? in
+//
+//            guard let model2 = json as? String else { return  nil }
+//            return model2
+//        }, completion: completion)
     }
 }
 

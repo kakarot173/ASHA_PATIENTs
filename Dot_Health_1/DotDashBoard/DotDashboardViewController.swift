@@ -34,8 +34,6 @@ class DotDashboardViewController: UIViewController {
         detailsView.delegate = self
         dashboardSubview.topToBottom(of: profileDetailsView,offset: 8)
         dashboardSubview.edgesToSuperview(excluding: .top, insets: .left(8) + .right(8) + .bottom(8),usingSafeArea: true)
-        profileDetailsView.layer.borderWidth = 1
-        profileDetailsView.layer.borderColor = UIColor.black.cgColor
         collectionViewObj.setBounds(bound: dashboardSubview.bounds)
         let _ = collectionViewObj.view
         
@@ -43,15 +41,11 @@ class DotDashboardViewController: UIViewController {
         collectionViewObj.collectionSuperView = dashboardSubview
         dashboardSubview.addSubview(view ?? UIView())
         view?.edgesToSuperview()
-        self.view.alpha = 0
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         // Hide the navigation bar on the this view controller
-        UIView.animate(withDuration: 0.7) {
-            self.view.alpha = 1.0
-        }
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 

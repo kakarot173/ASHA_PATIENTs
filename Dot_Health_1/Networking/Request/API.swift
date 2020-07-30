@@ -9,11 +9,14 @@
 import Foundation
 
 enum API: String {
-    case api1 = "api1/string/value"
-    case api2 = "api2/string/value"
+     case api1 = "http://104.215.179.29/v1/"
+     case api2 = "http://104.215.179.29/v1/sessions"
     
     // To get the API endpoint with request setup
-    func getAPIEndpoint(queryItems: [URLQueryItem] = [], headers: HTTPHeaders = [ : ], body: Data = Data()) -> Endpoint {
-            return Endpoint(path: self.rawValue, httpMethod: .post, headers: headers, body: body, queryItems: queryItems)
+   func getPostAPIEndpoint(urlString:String ,queryItems: [URLQueryItem] = [], headers: HTTPHeaders = [ : ], body: Data = Data()) -> Endpoint {
+            return Endpoint(path: urlString, httpMethod: .post, headers: headers, body: body, queryItems: nil)
+    }
+    func getPostAPIEndpointForStates(urlString:String ,queryItems: [URLQueryItem] = [], headers: HTTPHeaders = [ : ], body: Data? = Data()) -> Endpoint {
+            return Endpoint(path: urlString, httpMethod: .get, headers: nil, body: nil, queryItems: nil)
     }
 }

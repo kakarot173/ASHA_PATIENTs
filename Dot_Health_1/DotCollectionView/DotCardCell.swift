@@ -53,7 +53,7 @@ class DotCardCell: UICollectionViewCell, SelfConfiguringCell  {
         //configure Cell
         backgroundColor = Theme.backgroundColor
         layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        layer.borderWidth = 1
+        layer.borderWidth = 0
         layer.insertSublayer(setGradient(hex: Theme.gradientColorDark!.hexValue, hex: Theme.gradientColorLight!.hexValue, frameSize: bounds), at: 0)
         layer.cornerRadius = 5
         self.layer.shadowColor = #colorLiteral(red: 0.2748524845, green: 0.4150594473, blue: 0.4139105678, alpha: 1)

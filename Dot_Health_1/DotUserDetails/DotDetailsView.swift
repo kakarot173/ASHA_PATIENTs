@@ -107,7 +107,7 @@ class DotDetailsView: UIViewController,TableViewDelegate, MultiTableViewDelegate
         mainView = constView
         if detailsShow.titleLabel?.text != " Back"{
             detailsShow.setTitle(" Back", for: .normal)
-            detailsShow.setImage(UIImage(systemName: "arrow.left"), for: .normal)
+            detailsShow.setImage(UIImage(systemName: "arrow.left")?.withTintColor(Theme.accentColor ?? UIColor.systemBlue), for: .normal)
             delegate?.addChildView(mainView,back: false)
             table.edgesToSuperview()
         }

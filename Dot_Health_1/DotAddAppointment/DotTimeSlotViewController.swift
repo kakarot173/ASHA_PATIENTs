@@ -96,7 +96,7 @@ class DotTimeSlotViewController: UIViewController {
 extension DotTimeSlotViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
        
-        textField.openDatePicker()
+        textField.openDatePicker(modeType: .date)
        
       // showPopup(calenderPopover, sourceView: textField)
     }

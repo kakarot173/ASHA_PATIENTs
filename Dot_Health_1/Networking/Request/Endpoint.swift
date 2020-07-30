@@ -43,7 +43,7 @@ extension Endpoint {
     }
     
     var request: URLRequest {
-        var request = URLRequest(url: urlComponents.url!)
+        var request = URLRequest(url: URL(string: urlComponents.path.replacingOccurrences(of: " ", with: "%20"))!)
         request.httpMethod  = httpMethod.rawValue
         request.httpBody    = body
         if  let headers = headers {

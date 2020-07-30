@@ -20,3 +20,19 @@ struct Model1: Decodable {
 struct Model2: Decodable {
     let results: [Model1]?
 }
+struct registerModel:Decodable{
+    let patient_name:String
+    let patient_dob:String
+    let patient_gender:String
+    let patient_email:String
+    let patient_mobile:String
+    let patient_refcode:String
+    let patient_city:String
+    let patient_pincode:String
+    let patient_address1:String
+    let patient_address2:String
+    let patient_country:String
+    let patient_state:String
+    let patient_id:Int
+    let patient_password:String
+}
