@@ -164,7 +164,7 @@ class DotRegisterViewController: LBTAFormController {
                     formContainerStackView.addArrangedSubview(stateTextField)
                 }
                 else if registerItems[i] == "Date Of Birth" {
-                    
+        
                     let tf = FloatingLabelInput(placeholder: registerItems[i], cornerRadius: 5, keyboardType: .emailAddress, backgroundColor: .white,height: heightCons)
                     tf.delegate = self
                     tf.accessibilityIdentifier = "dob"
@@ -283,9 +283,11 @@ class DotRegisterViewController: LBTAFormController {
             
             client.registerUser(from: endpoint) { [weak self] result in
                 guard let self = self else { return }
+                SVProgressHUD.dismiss()
                 switch result {
+                
                 case .success(let model2Result):
-                    SVProgressHUD.dismiss()
+        
                     guard let model2Result = model2Result else { return }
                     if let dataModel = model2Result as? NSDictionary ,let type = dataModel["type"] as? String,let desc = dataModel["description"] as? String{
                         switch type{
@@ -296,13 +298,15 @@ class DotRegisterViewController: LBTAFormController {
                                                    print(error.localizedDescription)
                                                }
                         default:
-                            self.showAlertView("Login Failed", message: desc)
+                            self.showAlertView("Registration Failed", message: desc)
                         }
                     }
-                   
+                    else{
+                        self.showAlertView("Registration Failed", message: "Some Error Occured")
+                    }
                     print(model2Result)
                 case .failure(let error):
-                    SVProgressHUD.dismiss()
+                   
                     print("the error \(error)")
                 }
             }
