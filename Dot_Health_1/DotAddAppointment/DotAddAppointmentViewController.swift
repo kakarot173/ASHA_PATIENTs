@@ -28,8 +28,8 @@ class DotAddAppointmentViewController: UIViewController {
         
      
         doctorListTableView.rowHeight = 135
-        if screenName == "My Medications"{
-             self.navigationItem.title = "My Medications"
+        if screenName == "Medications"{
+             self.navigationItem.title = "Medications"
              ailmentButton.isHidden = true
              topViewHeightConstraint.constant = 0
             MyMecicationFunctions.readMyMedicine(complition: {[unowned self] in
@@ -98,7 +98,7 @@ class DotAddAppointmentViewController: UIViewController {
 }
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if screenName == "My Medications"{
+        if screenName == "Medications"{
             return   MyData.myMedicineModelArray.count
         }
         return MyData.doctorModelArray.count
@@ -106,7 +106,7 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DotDoctorTableViewCell
-        if screenName == "My Medications"{
+        if screenName == "Medications"{
              cell.setUp(rowIndex: indexPath.row,dataArray: MyData.myMedicineModelArray)
         }
         else{
@@ -116,7 +116,7 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath
-        if screenName == "My Medications"{
+        if screenName == "Medications"{
             let sheetController = SheetViewController(controller: controller ?? UIViewController(), sizes: [.fixed(250), .halfScreen])
                    
                    
