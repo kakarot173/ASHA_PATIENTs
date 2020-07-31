@@ -84,10 +84,14 @@ class DotAddAppointmentViewController: UIViewController {
             sender.createSelectedOptionButton()
         case "Doctor":
             sender.createSelectedOptionButton()
+            ailmentButton.setTitle("Ailment", for: .normal)
             self.specialityButton.createOptionButton()
         case "Facility":
             sender.createSelectedOptionButton()
+            ailmentButton.setTitle("Services", for: .normal)
             self.doctorButton.createOptionButton()
+        case "Services":
+             sender.createSelectedOptionButton()
         default:
             print("Wrong button")
         }
