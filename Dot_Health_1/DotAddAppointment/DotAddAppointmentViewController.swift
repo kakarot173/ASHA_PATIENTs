@@ -14,7 +14,7 @@ class DotAddAppointmentViewController: UIViewController {
     @IBOutlet weak var doctorButton: UIButton!
     @IBOutlet weak var specialityButton: UIButton!
     @IBOutlet weak var doctorListTableView: UITableView!
-    var selectedAilment : [String] = []
+    var selectedAilment : [[String:Any]] = []
     @IBOutlet weak var selectedAilmentLabel: UILabel!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     var selectedIndexPath: IndexPath = IndexPath()
@@ -79,7 +79,9 @@ class DotAddAppointmentViewController: UIViewController {
             }
                
                destination.callback = {result in
-               self.selectedAilmentLabel.text = result.joined(separator: ", ")
+                self.selectedAilment = result
+                let ailmetServiceList = result.map({$0["name"] as? String}) as? [String]
+                self.selectedAilmentLabel.text = ailmetServiceList?.joined(separator: ", ")
            }
         
         }
@@ -114,7 +116,11 @@ class DotAddAppointmentViewController: UIViewController {
     }
     
 
-
+    @IBAction func searchAction(_ sender: UIButton) {
+        
+       print(selectedAilment)
+    }
+    
 }
 //MARK:API CAlls
 extension DotAddAppointmentViewController{

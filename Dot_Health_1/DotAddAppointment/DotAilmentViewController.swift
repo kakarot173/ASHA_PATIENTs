@@ -14,9 +14,9 @@ class DotAilmentViewController: UIViewController {
     var ailmentData = [ailment]()
     var servicesData = [service]()
     var selectedData = ""
-    var selectedAilment = [String]()
+    var selectedAilmentServiceArray = [[String:Any]]()
     
-    var callback : (([String])->())?
+    var callback : (([[String:Any]])->())?
     @IBOutlet weak var ailmentTableView: UITableView!
 
     override func viewDidLoad() {
@@ -55,18 +55,37 @@ extension DotAilmentViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
         var cellValue = ""
+        var ailmentServiceId = 0
+        var selectedAilmentService = [String:Any]()
         switch selectedData{
-        case "Ailment":cellValue = ailmentData[indexPath.row].ailment
-        case "Services":cellValue = servicesData[indexPath.row].service
+        case "Ailment":
+            cellValue = ailmentData[indexPath.row].ailment
+            ailmentServiceId = ailmentData[indexPath.row].ailment_id
+            selectedAilmentService["name"] = cellValue
+            selectedAilmentService["id"] = ailmentServiceId
+            
+        case "Services":
+            cellValue = servicesData[indexPath.row].service
+            ailmentServiceId = servicesData[indexPath.row].service_id
+            selectedAilmentService["name"] = cellValue
+            selectedAilmentService["id"] = ailmentServiceId
         default:
-            cellValue = kblankString
+            print("Nothing selected")
         }
-        if selectedAilment.contains(cellValue) == false{
-            self.selectedAilment.append(cellValue)
+        if !selectedAilmentServiceArray.contains(where: { $0["name"] as? String == cellValue}){
+            self.selectedAilmentServiceArray.append(selectedAilmentService)
+            cell.accessoryType = .checkmark
         }
-        callback?(selectedAilment)
-        print(selectedAilment)
+        else{
+            print("deselect row")
+             cell.accessoryType = .none
+            selectedAilmentServiceArray.removeAll{$0["name"] as? String == cellValue}
+        }
+        //let selectedList = Array(selectedAilmentServiceArray.map({$0.keys}))
+        callback?(selectedAilmentServiceArray)
+        print("Selected ailment:",selectedAilmentServiceArray)
     }
     
     
