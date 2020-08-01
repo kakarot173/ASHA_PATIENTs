@@ -14,12 +14,12 @@ class DotButtonUtility: UIButton {
 
        override func layoutSubviews() {
            super.layoutSubviews()
-           self.backgroundColor = Theme.backgroundColor
-        self.borderColor = Theme.accentColor
+           self.backgroundColor = Theme.gradientColorDark
+        self.borderColor = Theme.gradientColorDark
         self.borderWidth = 1
            self.layer.cornerRadius = 5
            self.clipsToBounds = true
-        self.setTitleColor(Theme.accentColor, for: .normal)
+        self.setTitleColor(Theme.tintcolor, for: .normal)
        }
 
     // Only override draw() if you perform custom drawing.
@@ -85,7 +85,7 @@ class DotLabelUtility: UILabel {
     private var shadowLayer: CAShapeLayer!
     override func draw(_ rect: CGRect) {
         self.text = "test"
-        self.textColor = Theme.accentColor
+        self.textColor = Theme.gradientColorDark
         self.font = UIFont(name: Theme.mainFontName, size: 17)
     }
 }
@@ -282,7 +282,7 @@ class ActionButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        backgroundColor = Theme.accentColor
+        backgroundColor = Theme.gradientColorDark
         layer.cornerRadius = frame.height / 2
         setTitleColor(UIColor.white, for: .normal)
     }

@@ -47,9 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func customizeNavigationBar() {
+        
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = Theme.accentColor
+        navigationBarAppearace.barTintColor = Theme.tintcolor
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Theme.tintcolor!, NSAttributedString.Key.font: UIFont(name: Theme.mainFontName, size: 17)!]
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        customizeNavigationBar()
         QBSettings.applicationID = CredentialsConstant.applicationID;
         QBSettings.authKey = CredentialsConstant.authKey
         QBSettings.authSecret = CredentialsConstant.authSecret
@@ -68,7 +78,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
         QBRTCClient.initializeRTC()
-        
         return true
     }
 

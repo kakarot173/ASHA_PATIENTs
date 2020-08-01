@@ -144,7 +144,7 @@ extension DotCollectionViewController: UICollectionViewDelegate {
        
               let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
-    case "My Vitals":
+    case "Vitals":
         let storyBoard : UIStoryboard = UIStoryboard(name: "DotVitalsViewController", bundle:nil)
                let nextViewController = storyBoard.instantiateInitialViewController() as! DotVitalsViewController
         
@@ -152,14 +152,14 @@ extension DotCollectionViewController: UICollectionViewDelegate {
          self.delegate?.addChildViewController(nextViewController, back: true)
  
        
-    case "My Clinical Visits":
+    case "Clinical Visits":
         
          let storyBoard : UIStoryboard = UIStoryboard(name: "DotAppointmentsViewController", bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! DotAppointmentsViewController
           nextViewController.itemName = "My Clinical Visits"
          let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
-    case "My Records":
+    case "Records":
          let storyBoard : UIStoryboard = UIStoryboard(name: "DotAppointmentsViewController", bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! DotAppointmentsViewController
          nextViewController.itemName = "My Records"
@@ -169,7 +169,7 @@ extension DotCollectionViewController: UICollectionViewDelegate {
        
       self.delegate?.showActionSheet()
        
-    case "My Medications":
+    case "Medications":
         let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotAddAppointmentViewController.self), bundle:nil)
          let nextViewController = storyBoard.instantiateInitialViewController() as! DotAddAppointmentViewController
         nextViewController.screenName = item.cardName ?? kblankString
