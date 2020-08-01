@@ -71,9 +71,9 @@ class DotTimeSlotViewController: UIViewController {
     func setUpDoctorDetail(rowIndex: Int){
         self.doctorImageView.image = UIImage(named: "DoctorImage")
         self.nameLabel.text = MyData.doctorModelArray[rowIndex].name
-        self.specialityLabel.text = MyData.doctorModelArray[rowIndex].speciality
-        self.hospitalNameLabel.text = MyData.doctorModelArray[rowIndex].hospitalName
-        self.priceLabel.text = MyData.doctorModelArray[rowIndex].price
+        self.specialityLabel.text = MyData.doctorModelArray[rowIndex].country
+        self.hospitalNameLabel.text = MyData.doctorModelArray[rowIndex].state
+        self.priceLabel.text = "$100"//MyData.doctorModelArray[rowIndex].gender
         self.priceLabel.textColor = #colorLiteral(red: 0, green: 0.6795158386, blue: 0, alpha: 1)
     }
  

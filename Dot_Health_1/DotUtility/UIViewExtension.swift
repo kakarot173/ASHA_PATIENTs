@@ -22,7 +22,7 @@ extension UIView{
 extension UIButton {
 
     func createFloatingActionButton() {
-       backgroundColor = Theme.accentColor
+       backgroundColor = Theme.gradientColorDark
        layer.cornerRadius = frame.height / 2
        layer.shadowOpacity = 0.3
        layer.shadowRadius = 3

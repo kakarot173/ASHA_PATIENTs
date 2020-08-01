@@ -41,9 +41,9 @@ class DotDoctorTableViewCell: UITableViewCell {
         if let doctorArray = dataArray as? [DoctorModel]{
             self.doctorImageView.image = UIImage(named: "DoctorImage")
                 self.nameLabel.text = doctorArray[rowIndex].name
-                self.specialityLabel.text = doctorArray[rowIndex].speciality
-                self.hospitalNameLabel.text = doctorArray[rowIndex].hospitalName
-                self.priceLabel.text = doctorArray[rowIndex].price
+                self.specialityLabel.text = doctorArray[rowIndex].country
+                self.hospitalNameLabel.text = doctorArray[rowIndex].state
+                self.priceLabel.text = "$100"//doctorArray[rowIndex].gender
                 self.priceLabel.textColor = #colorLiteral(red: 0, green: 0.6795158386, blue: 0, alpha: 1)
         }
     

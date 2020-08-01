@@ -34,14 +34,14 @@ class MockData {
         return apointmentDetailModel
     }
     static func createMockDoctors()->[DoctorModel]{
-         var mockDoctorModel = [DoctorModel]()
-        mockDoctorModel.append(DoctorModel(name: "Dr. Naeem Modin", speciality: "Orthodontist", hospitalName: "NOA Dental Clinic", price: "$50"))
+        let mockDoctorModel = [DoctorModel]()
+     /*   mockDoctorModel.append(DoctorModel(name: "Dr. Naeem Modin", speciality: "Orthodontist", hospitalName: "NOA Dental Clinic", price: "$50"))
         mockDoctorModel.append(DoctorModel(name: "Dr. Roy Thomas", speciality: "Oral Surgeon", hospitalName: "NOA Dental Clinic", price: "$100"))
          mockDoctorModel.append(DoctorModel(name: "Dr. Anupama", speciality: "Dentist", hospitalName: "NOA Dental Clinic", price: "$40"))
         mockDoctorModel.append(DoctorModel(name: "Dr. Lelde Sire", speciality: "Beauty Therapist", hospitalName: "Florentia Clinic", price: "$90"))
         mockDoctorModel.append(DoctorModel(name: "Dr. Amin", speciality: "Urologist", hospitalName: "Novomed centers", price: "$50"))
          mockDoctorModel.append(DoctorModel(name: "Dr. Ali Reza", speciality: "General Surgeon", hospitalName: "King's College Hospital", price: "$30"))
-        
+        */
         return mockDoctorModel
     }
     static func createMockMedicne()->[MyMedicineModel]{

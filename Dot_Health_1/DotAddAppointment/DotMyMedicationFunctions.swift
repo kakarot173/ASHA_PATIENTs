@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MyMecicationFunctions{
+class MyMedicationFunctions{
 static func createAvailableDoctors(doctorModel: DoctorModel) {
         MyData.doctorModelArray.append(doctorModel)
     }
