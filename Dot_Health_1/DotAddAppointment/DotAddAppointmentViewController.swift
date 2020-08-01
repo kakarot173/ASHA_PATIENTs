@@ -8,6 +8,7 @@
 
 import UIKit
 import FittedSheets
+import SVProgressHUD
 class DotAddAppointmentViewController: UIViewController {
 
     @IBOutlet weak var ailmentButton: UIButton!
@@ -22,7 +23,9 @@ class DotAddAppointmentViewController: UIViewController {
     let controller = UIStoryboard(name: "DotMedicines", bundle: nil).instantiateInitialViewController() as? DotMedicinesController
      private let client = DotConnectionClient()
     var ailments = [ailment]()
-     var services = [service]()
+    var services = [service]()
+    var doctorData = [doctorModel]()
+    var facilityData = [facilityModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
         doctorListTableView.delegate = self
@@ -54,7 +57,6 @@ class DotAddAppointmentViewController: UIViewController {
         self.configureViewItems()
         getAilments()
         getServices()
-        searchItemsForQuery()
     }
     func configureViewItems(){
         self.doctorButton.createOptionButton()
@@ -119,18 +121,21 @@ class DotAddAppointmentViewController: UIViewController {
     @IBAction func searchAction(_ sender: UIButton) {
         
        print(selectedAilment)
+       searchItemsForQuery(searchItem: selectedAilment)
     }
     
 }
 //MARK:API CAlls
 extension DotAddAppointmentViewController{
     func getServices(){
+        
         let api : API = .api1
             let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)services", queryItems: nil, headers: nil, body: nil)
             client.callAPI(with: endpoint.request, modelParser: [service].self) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let model2Result):
+                SVProgressHUD.dismiss()
                 if let model = model2Result as? [service]{
                     self.services = model
                 }
@@ -138,17 +143,21 @@ extension DotAddAppointmentViewController{
                     print("error occured")
                 }
             case .failure(let error):
+                SVProgressHUD.dismiss()
                 print("the error \(error)")
             }
         }
     }
     func getAilments(){
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultMaskType(.custom)
         let api : API = .api1
         let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)ailments", queryItems: nil, headers: nil, body: nil)
         client.callAPI(with: endpoint.request, modelParser: [ailment].self) { [weak self] result in
         guard let self = self else { return }
         switch result {
         case .success(let model2Result):
+            
             if let model = model2Result as? [ailment]{
                 self.ailments = model
             }
@@ -156,32 +165,73 @@ extension DotAddAppointmentViewController{
                 print("error occured")
             }
         case .failure(let error):
+            
             print("the error \(error)")
         }
     }
 }
-    func searchItemsForQuery(){
-
+    func searchItemsForQuery(searchItem:[[String:Any]]){
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultMaskType(.custom)
         // Query item for doc
-        let queryItem1 = [ URLQueryItem(name: "ailmentId", value: "1"), URLQueryItem(name: "city", value: "Bangalore")]
-          // Query item for facility
-        let queryItem2 = [ URLQueryItem(name: "serviceId", value: "1"), URLQueryItem(name: "city", value: "Delhi")]
-        let api : API = .api1
-            let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)facilities", queryItems: queryItem2, headers: nil, body: nil)
-            client.callAPI(with: endpoint.request, modelParser: [facilityModel].self) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let model2Result):
-                if let model = model2Result as? [DoctorModel]{
-//                    self.ailments = model
-                }
-                else{
-                    print("error occured")
-                }
-            case .failure(let error):
-                print("the error \(error)")
+        var queryItem = [URLQueryItem]()
+        var urlString = ""
+        if let item = searchItem.first?["name"] as? String,let id = searchItem.first?["id"] as? Int{
+            if ailments.contains(where: {$0.ailment == item}){
+                 queryItem = [ URLQueryItem(name: "ailmentId", value:"\(id)"), URLQueryItem(name: "city", value: "Bangalore")]
+                urlString = "doctors"
+                
+            }
+            else if services.contains(where: {$0.service == item}){
+                queryItem = [ URLQueryItem(name: "serviceId", value: "\(id)"), URLQueryItem(name: "city", value: "Delhi")]
+                urlString = "facilities"
             }
         }
+        
+          // Query item for facility
+        let api : API = .api1
+        let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)\(urlString)", queryItems: queryItem, headers: nil, body: nil)
+        switch urlString{
+        case "doctors":
+            client.callAPI(with: endpoint.request, modelParser: [doctorModel].self) { [weak self] result in
+                        guard let self = self else { return }
+                        switch result {
+                        case .success(let model2Result):
+                            SVProgressHUD.dismiss()
+                            if let model = model2Result as? [doctorModel]{
+                                self.doctorData = model
+                                print(self.doctorData)
+                            }
+                            else{
+                                print("error occured")
+                            }
+                        case .failure(let error):
+                            SVProgressHUD.dismiss()
+                            print("the error \(error)")
+                        }
+                    }
+        case "facilities":
+            client.callAPI(with: endpoint.request, modelParser: [facilityModel].self) { [weak self] result in
+                        guard let self = self else { return }
+                        switch result {
+                        case .success(let model2Result):
+                            SVProgressHUD.dismiss()
+                            if let model = model2Result as? [facilityModel]{
+                                self.facilityData = model
+                                print(self.facilityData)
+                            }
+                            else{
+                                print("error occured")
+                            }
+                        case .failure(let error):
+                            SVProgressHUD.dismiss()
+                            print("the error \(error)")
+                        }
+                    }
+        default:
+            print("no data found")
+        }
+        
     }
 }
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
