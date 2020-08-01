@@ -21,6 +21,11 @@ class DotAppointmentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //to have full length cell separator
+        self.preservesSuperviewLayoutMargins = false
+        self.separatorInset = UIEdgeInsets.zero
+        self.layoutMargins = UIEdgeInsets.zero
+        
         dateLabel.font = UIFont(name: Theme.mainFontName, size: 17)
         dateLabel.textColor = Theme.accentColor
         issueLabel.font = UIFont(name: Theme.mainFontName, size: 17)
