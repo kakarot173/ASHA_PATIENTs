@@ -14,6 +14,7 @@ class DotLoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: DotTextFieldUtility!
     @IBOutlet weak var signIn: LoadingButton!
     @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var proImage: UIImageView!
        var iconClick = true
     var eyeButton:UIButton = UIButton(type: .custom)
     private let client = DotConnectionClient()
@@ -58,6 +59,7 @@ class DotLoginViewController: UIViewController {
             }
             else{
                 let _ = self.view.subviews.map({$0.isHidden = false})
+                self.proImage.isHidden = true
             }
         }
         
@@ -67,7 +69,7 @@ class DotLoginViewController: UIViewController {
         
         completion(true)
     }
-    
+    completion(false)
     }
     @IBAction func signInAction(_ sender: Any) {
         print("sign in clicked")
@@ -94,7 +96,7 @@ class DotLoginViewController: UIViewController {
            
            // Query item
            let queryItem = [ URLQueryItem(name: "keyName", value: "ValueName") ]
-           
+    
            /*
            // Body as string
            let bodyString = "yourParameterString"
@@ -112,7 +114,7 @@ class DotLoginViewController: UIViewController {
           let headers = ["Content-Type":"application/json"]
            
            let api: API = .api1
-           let endpoint: Endpoint = api.getPostAPIEndpoint(urlString: "\(api.rawValue)sessions", queryItems: queryItem, headers: headers, body: body)
+           let endpoint: Endpoint = api.getPostAPIEndpoint(urlString: "\(api.rawValue)sessions", queryItems: nil, headers: headers, body: body)
            
            client.userLogin(from: endpoint) { [weak self] result in
                guard let self = self else { return }

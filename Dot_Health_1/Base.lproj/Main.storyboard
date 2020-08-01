@@ -301,7 +301,7 @@
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="DKR-p1-ZAe">
                                 <rect key="frame" x="47" y="29" width="320" height="267"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-4u-RB3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-4u-RB3">
                                 <rect key="frame" x="287" y="455" width="107" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="fUL-TJ-uU1"/>
@@ -320,6 +320,17 @@
                                 <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-B2-Pbn">
+                                <rect key="frame" x="281" y="450" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="fMG-tz-gZg"/>
+                                    <constraint firstAttribute="height" constant="30" id="hmW-c8-dQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" name="Tint"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -332,14 +343,17 @@
                             <constraint firstItem="XDg-kE-Z7u" firstAttribute="trailing" secondItem="DKR-p1-ZAe" secondAttribute="trailing" constant="47" id="JEd-oi-JVT"/>
                             <constraint firstItem="DKR-p1-ZAe" firstAttribute="leading" secondItem="XDg-kE-Z7u" secondAttribute="leading" constant="47" id="JsN-XF-RKH"/>
                             <constraint firstItem="f7i-cb-Oas" firstAttribute="top" secondItem="BTW-EN-TdO" secondAttribute="bottom" constant="77" id="LdQ-4o-zEk"/>
+                            <constraint firstItem="XDg-kE-Z7u" firstAttribute="trailing" secondItem="VRU-B2-Pbn" secondAttribute="trailing" constant="20" id="MVc-zg-q0v"/>
                             <constraint firstItem="ZQA-l8-hO3" firstAttribute="top" secondItem="DKR-p1-ZAe" secondAttribute="bottom" constant="30" id="OSY-ms-mBR"/>
                             <constraint firstItem="f7i-cb-Oas" firstAttribute="top" secondItem="EzW-4u-RB3" secondAttribute="bottom" constant="126" id="OhI-Ed-lhI"/>
                             <constraint firstItem="XDg-kE-Z7u" firstAttribute="trailing" secondItem="f7i-cb-Oas" secondAttribute="trailing" constant="20" id="QHB-OA-qjn"/>
                             <constraint firstItem="XDg-kE-Z7u" firstAttribute="trailing" secondItem="6Oj-r7-ZrY" secondAttribute="trailing" id="QO1-4n-UcY"/>
                             <constraint firstItem="6Oj-r7-ZrY" firstAttribute="leading" secondItem="XDg-kE-Z7u" secondAttribute="leading" id="UC2-82-hKg"/>
                             <constraint firstItem="f7i-cb-Oas" firstAttribute="leading" secondItem="XDg-kE-Z7u" secondAttribute="leading" constant="29" id="USR-5T-Eg5"/>
+                            <constraint firstItem="VRU-B2-Pbn" firstAttribute="top" secondItem="ZQA-l8-hO3" secondAttribute="bottom" constant="4" id="WsH-dQ-3GE"/>
                             <constraint firstItem="EzW-4u-RB3" firstAttribute="top" secondItem="ZQA-l8-hO3" secondAttribute="bottom" constant="9" id="XKk-78-KmI"/>
                             <constraint firstItem="W0n-QK-dUc" firstAttribute="top" secondItem="f7i-cb-Oas" secondAttribute="bottom" constant="65" id="ZY1-gL-3VE"/>
+                            <constraint firstItem="f7i-cb-Oas" firstAttribute="top" secondItem="VRU-B2-Pbn" secondAttribute="bottom" constant="122" id="bFO-ec-Yfy"/>
                             <constraint firstItem="EzW-4u-RB3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="XDg-kE-Z7u" secondAttribute="leading" constant="287" id="dQr-0b-Vqy"/>
                             <constraint firstItem="XDg-kE-Z7u" firstAttribute="trailing" secondItem="W0n-QK-dUc" secondAttribute="trailing" constant="57" id="dWX-NJ-JWM"/>
                             <constraint firstItem="DKR-p1-ZAe" firstAttribute="top" secondItem="XDg-kE-Z7u" secondAttribute="top" constant="29" id="qgH-zR-RWS"/>
@@ -352,13 +366,14 @@
                     <connections>
                         <outlet property="bgImage" destination="6Oj-r7-ZrY" id="g8Z-tz-dA0"/>
                         <outlet property="passwordTextField" destination="yRg-nN-2s7" id="Hkp-Gi-Ho0"/>
+                        <outlet property="proImage" destination="DKR-p1-ZAe" id="BVw-Or-4uz"/>
                         <outlet property="signIn" destination="BTW-EN-TdO" id="Nny-xC-PDd"/>
                         <outlet property="userNameTextField" destination="LJ9-nl-T09" id="lxT-Rf-Nyi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7O-OF-7Yz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3336" y="-754"/>
+            <point key="canvasLocation" x="-3336.2318840579715" y="-754.01785714285711"/>
         </scene>
     </scenes>
     <resources>
