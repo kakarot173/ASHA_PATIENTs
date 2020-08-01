@@ -54,7 +54,7 @@ class DotAddAppointmentViewController: UIViewController {
         self.configureViewItems()
         getAilments()
         getServices()
-        
+        searchItemsForQuery()
     }
     func configureViewItems(){
         self.doctorButton.createOptionButton()
@@ -154,6 +154,29 @@ extension DotAddAppointmentViewController{
         }
     }
 }
+    func searchItemsForQuery(){
+
+        // Query item for doc
+        let queryItem1 = [ URLQueryItem(name: "ailmentId", value: "1"), URLQueryItem(name: "city", value: "Bangalore")]
+          // Query item for facility
+        let queryItem2 = [ URLQueryItem(name: "serviceId", value: "1"), URLQueryItem(name: "city", value: "Delhi")]
+        let api : API = .api1
+            let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)facilities", queryItems: queryItem2, headers: nil, body: nil)
+            client.callAPI(with: endpoint.request, modelParser: [facilityModel].self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model2Result):
+                if let model = model2Result as? [DoctorModel]{
+//                    self.ailments = model
+                }
+                else{
+                    print("error occured")
+                }
+            case .failure(let error):
+                print("the error \(error)")
+            }
+        }
+    }
 }
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -44,3 +44,32 @@ struct registerModel:Decodable{
     let patient_id:Int
     let patient_password:String
 }
+struct doctorModel:Codable,Hashable{
+    let name:String
+    let dob:String
+    let gender:String
+    let email:String
+    let phone:String
+    let facility_id:Int
+    let city:String
+    let pincode:String
+    let address1:String
+    let address2:String
+    let country:String
+    let state:String
+    let doctor_id:Int
+}
+struct facilityModel:Codable,Hashable{
+    let name:String
+    let doe:String
+    let type:String
+    let email:String
+    let phone:String
+    let facility_id:Int
+    let city:String
+    let pincode:String
+    let address1:String
+    let address2:String
+    let country:String
+    let state:String
+}

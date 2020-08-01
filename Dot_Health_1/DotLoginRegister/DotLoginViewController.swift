@@ -50,16 +50,22 @@ class DotLoginViewController: UIViewController {
         checkLoginData(){ [weak self]result in
             guard let self = self else { return }
             if result{
-                let _ = self.view.subviews.map({$0.isHidden = true})
-                self.bgImage.isHidden = false
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let sameViewController = storyboard.instantiateViewController(withIdentifier: "mainTab") as! DotTabViewController
-                self.navigationController?.pushViewController(sameViewController, animated: true)
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                DispatchQueue.main.async(execute: {
+                    let _ = self.view.subviews.map({$0.isHidden = true})
+                    self.bgImage.isHidden = false
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let sameViewController = storyboard.instantiateViewController(withIdentifier: "mainTab") as! DotTabViewController
+                    self.navigationController?.pushViewController(sameViewController, animated: true)
+                    self.navigationController?.setNavigationBarHidden(true, animated: true)
+                })
+                
             }
             else{
-                let _ = self.view.subviews.map({$0.isHidden = false})
-                self.proImage.isHidden = true
+                DispatchQueue.main.async(execute: {
+                    let _ = self.view.subviews.map({$0.isHidden = false})
+                    self.proImage.isHidden = true
+                })
+                
             }
         }
         
