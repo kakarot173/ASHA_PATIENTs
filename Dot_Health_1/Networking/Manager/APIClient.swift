@@ -34,7 +34,7 @@ extension APIClient {
                     }
                     else{
                         let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        decoder.keyDecodingStrategy = .useDefaultKeys
                         let genericModel = try decoder.decode(decodingType, from: data)
                         completion(genericModel as AnyObject,nil)
                     }

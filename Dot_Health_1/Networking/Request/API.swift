@@ -16,7 +16,7 @@ enum API: String {
    func getPostAPIEndpoint(urlString:String ,queryItems: [URLQueryItem]? = [], headers: HTTPHeaders = [ : ], body: Data = Data()) -> Endpoint {
             return Endpoint(path: urlString, httpMethod: .post, headers: headers, body: body, queryItems: queryItems)
     }
-    func getPostAPIEndpointForStates(urlString:String ,queryItems: [URLQueryItem] = [], headers: HTTPHeaders = [ : ], body: Data? = Data()) -> Endpoint {
-            return Endpoint(path: urlString, httpMethod: .get, headers: nil, body: nil, queryItems: nil)
+    func getPostAPIEndpointForAppointments(urlString:String ,queryItems: [URLQueryItem]? = [], headers: HTTPHeaders? = [ : ], body: Data? = Data()) -> Endpoint {
+            return Endpoint(path: urlString, httpMethod: .get, headers: headers, body: body, queryItems: queryItems)
     }
 }

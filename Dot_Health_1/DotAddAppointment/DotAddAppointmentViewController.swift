@@ -20,6 +20,9 @@ class DotAddAppointmentViewController: UIViewController {
     var selectedIndexPath: IndexPath = IndexPath()
     var screenName : String = kblankString
     let controller = UIStoryboard(name: "DotMedicines", bundle: nil).instantiateInitialViewController() as? DotMedicinesController
+     private let client = DotConnectionClient()
+    var ailments = [ailment]()
+     var services = [service]()
     override func viewDidLoad() {
         super.viewDidLoad()
         doctorListTableView.delegate = self
@@ -49,6 +52,8 @@ class DotAddAppointmentViewController: UIViewController {
                  })
         }
         self.configureViewItems()
+        getAilments()
+        getServices()
         
     }
     func configureViewItems(){
@@ -62,6 +67,17 @@ class DotAddAppointmentViewController: UIViewController {
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if let destination = segue.destination as? DotAilmentViewController  {
+            switch ailmentButton.titleLabel?.text{
+            case "Ailment":
+                destination.selectedData = "Ailment"
+                destination.ailmentData = ailments
+            case "Services":
+                destination.selectedData = "Services"
+                destination.servicesData = services
+            default:
+                print("no data found")
+            }
+               
                destination.callback = {result in
                self.selectedAilmentLabel.text = result.joined(separator: ", ")
            }
@@ -99,6 +115,45 @@ class DotAddAppointmentViewController: UIViewController {
     
 
 
+}
+//MARK:API CAlls
+extension DotAddAppointmentViewController{
+    func getServices(){
+        let api : API = .api1
+            let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)services", queryItems: nil, headers: nil, body: nil)
+            client.callAPI(with: endpoint.request, modelParser: [service].self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model2Result):
+                if let model = model2Result as? [service]{
+                    self.services = model
+                }
+                else{
+                    print("error occured")
+                }
+            case .failure(let error):
+                print("the error \(error)")
+            }
+        }
+    }
+    func getAilments(){
+        let api : API = .api1
+        let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)ailments", queryItems: nil, headers: nil, body: nil)
+        client.callAPI(with: endpoint.request, modelParser: [ailment].self) { [weak self] result in
+        guard let self = self else { return }
+        switch result {
+        case .success(let model2Result):
+            if let model = model2Result as? [ailment]{
+                self.ailments = model
+            }
+            else{
+                print("error occured")
+            }
+        case .failure(let error):
+            print("the error \(error)")
+        }
+    }
+}
 }
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

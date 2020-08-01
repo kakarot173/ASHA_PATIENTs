@@ -20,6 +20,14 @@ struct Model1: Decodable {
 struct Model2: Decodable {
     let results: [Model1]?
 }
+struct ailment :Decodable{
+    let ailment :String
+    let ailment_id:Int
+}
+struct service :Decodable{
+    let service :String
+    let service_id:Int
+}
 struct registerModel:Decodable{
     let patient_name:String
     let patient_dob:String

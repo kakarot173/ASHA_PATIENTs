@@ -35,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let backgroundTask = UIBackgroundTaskIdentifier.invalid
         return backgroundTask
     }()
-    
+    static var standard: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     var window: UIWindow?
    
     var isCalling = false {
