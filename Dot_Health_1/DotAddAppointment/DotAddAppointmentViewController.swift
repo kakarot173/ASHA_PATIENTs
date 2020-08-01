@@ -14,6 +14,7 @@ class DotAddAppointmentViewController: UIViewController {
     @IBOutlet weak var ailmentButton: UIButton!
     @IBOutlet weak var doctorButton: UIButton!
     @IBOutlet weak var specialityButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var doctorListTableView: UITableView!
     var selectedAilment : [[String:Any]] = []
     @IBOutlet weak var selectedAilmentLabel: UILabel!
@@ -28,6 +29,7 @@ class DotAddAppointmentViewController: UIViewController {
     var facilityData = [facilityModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureViewItems()
         doctorListTableView.delegate = self
         doctorListTableView.dataSource = self
         doctorListTableView.reloadData()
@@ -47,14 +49,13 @@ class DotAddAppointmentViewController: UIViewController {
         else{
              self.navigationItem.title = "Add Appointments"
              topViewHeightConstraint.constant = 99
-             ailmentButton.isHidden = false
             doctorFunctions.readDoctors(complition: {[unowned self] in
                      
                      self.doctorListTableView.reloadData()
                     
                  })
         }
-        self.configureViewItems()
+        
         getAilments()
         getServices()
     }
@@ -62,6 +63,7 @@ class DotAddAppointmentViewController: UIViewController {
         self.doctorButton.createOptionButton()
         self.specialityButton.createOptionButton()
         self.ailmentButton.createOptionButton()
+        self.searchButton.createFloatingActionButton()
         ailmentButton.titleLabel?.numberOfLines = 1;
         ailmentButton.titleLabel?.adjustsFontSizeToFitWidth = true;
         ailmentButton.titleLabel?.lineBreakMode = .byClipping;
