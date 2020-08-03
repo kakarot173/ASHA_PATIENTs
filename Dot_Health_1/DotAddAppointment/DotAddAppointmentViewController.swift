@@ -14,6 +14,7 @@ class DotAddAppointmentViewController: UIViewController {
     @IBOutlet weak var ailmentButton: UIButton!
     @IBOutlet weak var doctorButton: UIButton!
     @IBOutlet weak var specialityButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var doctorListTableView: UITableView!
     var selectedAilment : [[String:Any]] = []
     @IBOutlet weak var selectedAilmentLabel: UILabel!
@@ -24,10 +25,11 @@ class DotAddAppointmentViewController: UIViewController {
      private let client = DotConnectionClient()
     var ailments = [ailment]()
     var services = [service]()
-    var doctorData = [doctorModel]()
+    var doctorData = [DoctorModel]()
     var facilityData = [facilityModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureViewItems()
         doctorListTableView.delegate = self
         doctorListTableView.dataSource = self
         doctorListTableView.reloadData()
@@ -38,30 +40,27 @@ class DotAddAppointmentViewController: UIViewController {
              self.navigationItem.title = "Medications"
              ailmentButton.isHidden = true
              topViewHeightConstraint.constant = 0
-            MyMecicationFunctions.readMyMedicine(complition: {[unowned self] in
-                     
-                     self.doctorListTableView.reloadData()
-                    
-                 })
+             getMedication()
         }
         else{
+            getAilments()
+            getServices()
              self.navigationItem.title = "Add Appointments"
              topViewHeightConstraint.constant = 99
-             ailmentButton.isHidden = false
             doctorFunctions.readDoctors(complition: {[unowned self] in
                      
                      self.doctorListTableView.reloadData()
                     
                  })
         }
-        self.configureViewItems()
-        getAilments()
-        getServices()
+        
+        
     }
     func configureViewItems(){
         self.doctorButton.createOptionButton()
         self.specialityButton.createOptionButton()
         self.ailmentButton.createOptionButton()
+        self.searchButton.createFloatingActionButton()
         ailmentButton.titleLabel?.numberOfLines = 1;
         ailmentButton.titleLabel?.adjustsFontSizeToFitWidth = true;
         ailmentButton.titleLabel?.lineBreakMode = .byClipping;
@@ -91,9 +90,9 @@ class DotAddAppointmentViewController: UIViewController {
             if (segue.identifier == "timeSlotView") &&  self.selectedIndexPath.count > 0{
                 let viewController = segue.destination as? DotTimeSlotViewController
                 viewController?.selectedName = MyData.doctorModelArray[ self.selectedIndexPath.row].name
-                viewController?.selectedSpec = MyData.doctorModelArray[ self.selectedIndexPath.row].speciality
-                viewController?.selectedHosPitalName = MyData.doctorModelArray[ self.selectedIndexPath.row].hospitalName
-                viewController?.selectedPrice = MyData.doctorModelArray[ self.selectedIndexPath.row].price
+                viewController?.selectedSpec = MyData.doctorModelArray[ self.selectedIndexPath.row].country
+                viewController?.selectedHosPitalName = MyData.doctorModelArray[ self.selectedIndexPath.row].state
+                viewController?.selectedPrice = "$100"//MyData.doctorModelArray[ self.selectedIndexPath.row].gender
                    }
     }
     
@@ -127,6 +126,34 @@ class DotAddAppointmentViewController: UIViewController {
 }
 //MARK:API CAlls
 extension DotAddAppointmentViewController{
+    func getMedication(){
+        SVProgressHUD.show()
+        let api: API = .api1
+        let endpoint: Endpoint = api.getPostAPIEndpointForMedication(urlString: "\(api.rawValue)patients/13/medications", queryItems: nil, headers: nil, body: nil)
+        client.callAPI(with: endpoint.request, modelParser: [MyMedicineModel].self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model2Result):
+                SVProgressHUD.dismiss()
+                if let model = model2Result as? [MyMedicineModel]{
+                    MyData.myMedicineModelArray = model
+                    print("Fetched doctor:",MyData.myMedicineModelArray)
+                    MyMedicationFunctions.readMyMedicine(complition: {[unowned self] in
+                        
+                        self.doctorListTableView.reloadData()
+                        
+                    })
+                }
+                else{
+                    print("error occured")
+                }
+            case .failure(let error):
+                SVProgressHUD.dismiss()
+                print("the error \(error)")
+            }
+        }
+        
+    }
     func getServices(){
         
         let api : API = .api1
@@ -193,14 +220,19 @@ extension DotAddAppointmentViewController{
         let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)\(urlString)", queryItems: queryItem, headers: nil, body: nil)
         switch urlString{
         case "doctors":
-            client.callAPI(with: endpoint.request, modelParser: [doctorModel].self) { [weak self] result in
+            client.callAPI(with: endpoint.request, modelParser: [DoctorModel].self) { [weak self] result in
                         guard let self = self else { return }
                         switch result {
                         case .success(let model2Result):
                             SVProgressHUD.dismiss()
-                            if let model = model2Result as? [doctorModel]{
-                                self.doctorData = model
-                                print(self.doctorData)
+                            if let model = model2Result as? [DoctorModel]{
+                                MyData.doctorModelArray = model
+                                print("Fetched doctor:",MyData.doctorModelArray)
+                                doctorFunctions.readDoctors(complition: {[unowned self] in
+                                                  
+                                                  self.doctorListTableView.reloadData()
+                                                 
+                                              })
                             }
                             else{
                                 print("error occured")
@@ -219,6 +251,7 @@ extension DotAddAppointmentViewController{
                             if let model = model2Result as? [facilityModel]{
                                 self.facilityData = model
                                 print(self.facilityData)
+                                // write here to populate facility data in table
                             }
                             else{
                                 print("error occured")
@@ -234,6 +267,7 @@ extension DotAddAppointmentViewController{
         
     }
 }
+//MARK:TableView Delegates
 extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if screenName == "Medications"{
