@@ -25,7 +25,7 @@ class DotAppointmentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //  Bundle.main.loadNibNamed("DotAppointmentsViewController", owner: self, options: nil)
-         guard let vc = Bundle.main.classNamed("Dot_Health_1.DotDashboardViewController") as? DotDashboardViewController.Type else{return}
+         guard let vc = Bundle.main.classNamed("Asha_Cares.DotDashboardViewController") as? DotDashboardViewController.Type else{return}
         let vire = vc.init()
       
         vire.check()

@@ -162,42 +162,69 @@
                                             <constraint firstItem="Lbl-WZ-KVE" firstAttribute="leading" secondItem="R54-Rb-hG6" secondAttribute="leading" constant="20" id="uSB-6Q-USl"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ailment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRU-nC-Hsa">
-                                        <rect key="frame" x="20" y="483.5" width="70" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mouth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLL-JK-w4F">
-                                        <rect key="frame" x="100" y="483.5" width="100" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23, July 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sby-pa-d3Z">
-                                        <rect key="frame" x="100" y="533.5" width="100" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time     :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1U-Kh-8B4">
-                                        <rect key="frame" x="20" y="583.5" width="70" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu2-K8-y31">
-                                        <rect key="frame" x="100" y="583.5" width="100" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date     :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFT-md-RSb">
-                                        <rect key="frame" x="20" y="533.5" width="70" height="30"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rCT-6W-FR7">
+                                        <rect key="frame" x="20" y="483.5" width="177.5" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ailment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRU-nC-Hsa">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="67.5" id="fRQ-01-MM6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mouth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLL-JK-w4F">
+                                                <rect key="frame" x="77.5" y="0.0" width="100" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="XTY-u3-vG0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rx7-nf-HTK">
+                                        <rect key="frame" x="20" y="571.5" width="178" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time     :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1U-Kh-8B4">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="67.5" id="uez-QJ-plU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu2-K8-y31">
+                                                <rect key="frame" x="77.5" y="0.0" width="100.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q0e-Gy-vtB">
+                                        <rect key="frame" x="20" y="527.5" width="178" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date     :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFT-md-RSb">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="67.5" id="RoC-F4-wdN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23, July 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sby-pa-d3Z">
+                                                <rect key="frame" x="77.5" y="0.0" width="100.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-e7-2rf" customClass="DotButtonUtility" customModule="Dot_Health_1" customModuleProvider="target">
                                         <rect key="frame" x="97" y="260.5" width="220" height="46"/>
                                         <color key="backgroundColor" name="Tint"/>
@@ -209,63 +236,48 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SiQ-LJ-pQO" firstAttribute="leading" secondItem="4sa-5U-seg" secondAttribute="leading" id="2cE-P0-YpJ"/>
+                                    <constraint firstItem="rCT-6W-FR7" firstAttribute="top" secondItem="R54-Rb-hG6" secondAttribute="bottom" constant="20" id="3oU-gz-hIW"/>
                                     <constraint firstItem="UtX-EC-tqO" firstAttribute="leading" secondItem="ndE-qf-hwl" secondAttribute="leading" id="3xM-PY-xUS"/>
+                                    <constraint firstItem="q0e-Gy-vtB" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="4C0-Dm-G8h"/>
                                     <constraint firstItem="awY-Oc-4wP" firstAttribute="leading" secondItem="9eI-kd-4O6" secondAttribute="leading" id="6OZ-Sm-6t2"/>
                                     <constraint firstItem="4sa-5U-seg" firstAttribute="trailing" secondItem="SiQ-LJ-pQO" secondAttribute="trailing" id="8pS-lg-gGl"/>
-                                    <constraint firstItem="sby-pa-d3Z" firstAttribute="top" secondItem="LLL-JK-w4F" secondAttribute="bottom" constant="20" id="9Cs-ep-IC9"/>
-                                    <constraint firstItem="P1U-Kh-8B4" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="9WW-aX-TU7"/>
                                     <constraint firstAttribute="trailing" secondItem="4sa-5U-seg" secondAttribute="trailing" constant="24" id="ClJ-Bu-h8b"/>
-                                    <constraint firstItem="LLL-JK-w4F" firstAttribute="leading" secondItem="xRU-nC-Hsa" secondAttribute="trailing" constant="10" id="EIK-xO-43A"/>
-                                    <constraint firstItem="P1U-Kh-8B4" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="Fwo-Pz-57y"/>
                                     <constraint firstItem="9eI-kd-4O6" firstAttribute="leading" secondItem="vMA-Ai-6Wp" secondAttribute="leading" id="G9W-ji-ku7"/>
-                                    <constraint firstItem="hu2-K8-y31" firstAttribute="leading" secondItem="P1U-Kh-8B4" secondAttribute="trailing" constant="10" id="GPc-Cg-S9J"/>
                                     <constraint firstItem="gaY-vJ-Lbc" firstAttribute="bottom" secondItem="UtX-EC-tqO" secondAttribute="bottom" id="H8t-pV-n7K"/>
                                     <constraint firstItem="4sa-5U-seg" firstAttribute="leading" secondItem="awY-Oc-4wP" secondAttribute="trailing" constant="8" symbolic="YES" id="HOL-ak-Ua7"/>
-                                    <constraint firstItem="xRU-nC-Hsa" firstAttribute="top" secondItem="R54-Rb-hG6" secondAttribute="bottom" constant="20" id="HvV-ob-Mj4"/>
                                     <constraint firstItem="Eno-e7-2rf" firstAttribute="top" secondItem="vMA-Ai-6Wp" secondAttribute="bottom" constant="20" id="Kee-dU-zW6"/>
                                     <constraint firstItem="ndE-qf-hwl" firstAttribute="baseline" secondItem="UDJ-B3-Z4v" secondAttribute="baseline" id="Kwz-bx-kkX"/>
                                     <constraint firstItem="4sa-5U-seg" firstAttribute="top" secondItem="Uoi-5H-lQc" secondAttribute="top" constant="30" id="LAL-IP-gnb"/>
-                                    <constraint firstItem="hu2-K8-y31" firstAttribute="top" secondItem="sby-pa-d3Z" secondAttribute="bottom" constant="20" id="M1t-J6-YDg"/>
-                                    <constraint firstItem="sby-pa-d3Z" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.241546" id="MYY-ug-fqw"/>
                                     <constraint firstItem="SiQ-LJ-pQO" firstAttribute="top" secondItem="awY-Oc-4wP" secondAttribute="bottom" constant="8" symbolic="YES" id="Nbx-YJ-2TV"/>
                                     <constraint firstItem="Eno-e7-2rf" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.531401" id="NcO-U8-ynv"/>
-                                    <constraint firstItem="P1U-Kh-8B4" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.169082" id="O9O-US-Aan"/>
                                     <constraint firstItem="R54-Rb-hG6" firstAttribute="top" secondItem="Eno-e7-2rf" secondAttribute="bottom" constant="20" id="OFc-S4-Onb"/>
                                     <constraint firstAttribute="trailing" secondItem="vMA-Ai-6Wp" secondAttribute="trailing" constant="18" id="P3r-oE-zvb"/>
-                                    <constraint firstItem="LLL-JK-w4F" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.241546" id="Pay-KM-3NL"/>
-                                    <constraint firstItem="LLL-JK-w4F" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="QNf-6z-2yO"/>
-                                    <constraint firstAttribute="bottom" secondItem="P1U-Kh-8B4" secondAttribute="bottom" constant="203" id="S3a-l8-Bch"/>
+                                    <constraint firstAttribute="bottom" secondItem="rx7-nf-HTK" secondAttribute="bottom" constant="20" id="PPY-Hv-ZgL"/>
                                     <constraint firstItem="UtX-EC-tqO" firstAttribute="leading" secondItem="gaY-vJ-Lbc" secondAttribute="trailing" constant="29" id="S4a-mF-VHj"/>
-                                    <constraint firstItem="AFT-md-RSb" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="TJl-Gr-JfK"/>
-                                    <constraint firstItem="sby-pa-d3Z" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="Vx5-0L-EZV"/>
-                                    <constraint firstItem="hu2-K8-y31" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.241546" id="WqL-Vv-7RR"/>
                                     <constraint firstItem="Eno-e7-2rf" firstAttribute="top" secondItem="vMA-Ai-6Wp" secondAttribute="bottom" constant="20" id="XUA-5E-RJM"/>
                                     <constraint firstItem="UtX-EC-tqO" firstAttribute="top" secondItem="SiQ-LJ-pQO" secondAttribute="bottom" constant="2" id="Xhp-O8-lhB"/>
-                                    <constraint firstItem="xRU-nC-Hsa" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="Xy2-qH-7bM"/>
                                     <constraint firstItem="SiQ-LJ-pQO" firstAttribute="trailing" secondItem="UtX-EC-tqO" secondAttribute="trailing" id="Ye4-5r-MKU"/>
-                                    <constraint firstItem="sby-pa-d3Z" firstAttribute="leading" secondItem="AFT-md-RSb" secondAttribute="trailing" constant="10" id="ZMN-fY-B9y"/>
-                                    <constraint firstItem="xRU-nC-Hsa" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.169082" id="Zb4-GO-YQh"/>
                                     <constraint firstItem="UDJ-B3-Z4v" firstAttribute="leading" secondItem="ndE-qf-hwl" secondAttribute="trailing" constant="1" id="aUv-ch-2aN"/>
                                     <constraint firstItem="vMA-Ai-6Wp" firstAttribute="top" secondItem="ndE-qf-hwl" secondAttribute="bottom" constant="46" id="aks-tJ-OnL"/>
-                                    <constraint firstItem="xRU-nC-Hsa" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="bur-OQ-2Pb"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="rx7-nf-HTK" secondAttribute="trailing" constant="216" id="c37-8E-ZlI"/>
                                     <constraint firstAttribute="trailing" secondItem="R54-Rb-hG6" secondAttribute="trailing" constant="20" id="cEL-SL-Gg6"/>
                                     <constraint firstItem="9eI-kd-4O6" firstAttribute="top" secondItem="SiQ-LJ-pQO" secondAttribute="top" id="cWN-Dr-dKV"/>
                                     <constraint firstItem="vMA-Ai-6Wp" firstAttribute="centerX" secondItem="Uoi-5H-lQc" secondAttribute="centerX" id="dJ3-58-A9e"/>
-                                    <constraint firstItem="LLL-JK-w4F" firstAttribute="top" secondItem="R54-Rb-hG6" secondAttribute="bottom" constant="20" id="dUV-2W-Q12"/>
-                                    <constraint firstItem="AFT-md-RSb" firstAttribute="top" secondItem="xRU-nC-Hsa" secondAttribute="bottom" constant="20" id="fx9-83-4Rq"/>
+                                    <constraint firstItem="q0e-Gy-vtB" firstAttribute="top" secondItem="rCT-6W-FR7" secondAttribute="bottom" constant="20" id="dzl-Is-U9R"/>
+                                    <constraint firstItem="rx7-nf-HTK" firstAttribute="top" secondItem="q0e-Gy-vtB" secondAttribute="bottom" constant="20" id="f6V-8b-iNa"/>
+                                    <constraint firstItem="rCT-6W-FR7" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="gTF-zj-4v0"/>
                                     <constraint firstItem="UtX-EC-tqO" firstAttribute="leading" secondItem="9eI-kd-4O6" secondAttribute="trailing" constant="8" symbolic="YES" id="iHp-1b-TDo"/>
-                                    <constraint firstItem="AFT-md-RSb" firstAttribute="width" secondItem="Uoi-5H-lQc" secondAttribute="width" multiplier="0.169082" id="ltg-yB-vCX"/>
+                                    <constraint firstItem="rx7-nf-HTK" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="kjC-ub-Jub"/>
                                     <constraint firstItem="4sa-5U-seg" firstAttribute="leading" secondItem="UtX-EC-tqO" secondAttribute="leading" id="oRi-w1-bG6"/>
                                     <constraint firstItem="gaY-vJ-Lbc" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="17" id="owX-um-2Uf"/>
                                     <constraint firstItem="Eno-e7-2rf" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.0565111" id="pZw-Mq-NSS"/>
                                     <constraint firstItem="9eI-kd-4O6" firstAttribute="bottom" secondItem="SiQ-LJ-pQO" secondAttribute="bottom" id="q0n-nB-8WS"/>
-                                    <constraint firstItem="hu2-K8-y31" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="rCd-FS-pcK"/>
+                                    <constraint firstAttribute="trailing" secondItem="rCT-6W-FR7" secondAttribute="trailing" constant="216.5" id="r5H-ht-HMF"/>
                                     <constraint firstItem="R54-Rb-hG6" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="20" id="s86-s1-d3L"/>
-                                    <constraint firstItem="P1U-Kh-8B4" firstAttribute="top" secondItem="AFT-md-RSb" secondAttribute="bottom" constant="20" id="sAj-LY-nFc"/>
                                     <constraint firstItem="awY-Oc-4wP" firstAttribute="centerY" secondItem="4sa-5U-seg" secondAttribute="centerY" id="sXR-I9-6vs"/>
                                     <constraint firstItem="awY-Oc-4wP" firstAttribute="leading" secondItem="Uoi-5H-lQc" secondAttribute="leading" constant="18" id="tCN-r9-4Rh"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="q0e-Gy-vtB" secondAttribute="trailing" constant="216" id="tax-LX-41X"/>
                                     <constraint firstItem="ndE-qf-hwl" firstAttribute="top" secondItem="UtX-EC-tqO" secondAttribute="bottom" constant="24" id="usF-4T-H4Q"/>
-                                    <constraint firstItem="AFT-md-RSb" firstAttribute="height" secondItem="Uoi-5H-lQc" secondAttribute="height" multiplier="0.036855" id="wCp-Ab-TdD"/>
                                     <constraint firstItem="Eno-e7-2rf" firstAttribute="centerX" secondItem="Uoi-5H-lQc" secondAttribute="centerX" id="xTw-T0-16s"/>
                                     <constraint firstItem="gaY-vJ-Lbc" firstAttribute="top" secondItem="UtX-EC-tqO" secondAttribute="top" id="yKz-Ry-MfT"/>
                                 </constraints>
