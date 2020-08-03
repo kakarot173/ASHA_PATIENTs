@@ -17,7 +17,7 @@ class DotMedicinesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViw.rowHeight = 80
-        tableViw.backgroundColor = Theme.gradientColorLight
+        tableViw.backgroundColor = Theme.gradientColorDark
         // Do any additional setup after loading the view.
     }
     
@@ -35,9 +35,9 @@ extension DotMedicinesController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "med", for: indexPath)
         let key = arr1[indexPath.row]
        
-            cell.textLabel?.attributedText = NSAttributedString().createAttributedString(first: "\(key): ", second: "\(arr[key] ?? "")", fColor: .black, sColor: .white,fBold:true,sBold:false)
+            cell.textLabel?.attributedText = NSAttributedString().createAttributedString(first: "\(key): ", second: "\(arr[key] ?? "")", fColor: .black, sColor: .black,fBold:true,sBold:false)
        
-        cell.textLabel?.font = .systemFont(ofSize: 18)
+        cell.textLabel?.font = UIFont(name: Theme.mainFontName, size: 18)
         return cell
     }
    

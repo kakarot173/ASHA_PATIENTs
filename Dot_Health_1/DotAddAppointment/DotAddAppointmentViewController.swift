@@ -40,13 +40,11 @@ class DotAddAppointmentViewController: UIViewController {
              self.navigationItem.title = "Medications"
              ailmentButton.isHidden = true
              topViewHeightConstraint.constant = 0
-            MyMedicationFunctions.readMyMedicine(complition: {[unowned self] in
-                     
-                     self.doctorListTableView.reloadData()
-                    
-                 })
+             getMedication()
         }
         else{
+            getAilments()
+            getServices()
              self.navigationItem.title = "Add Appointments"
              topViewHeightConstraint.constant = 99
             doctorFunctions.readDoctors(complition: {[unowned self] in
@@ -56,8 +54,7 @@ class DotAddAppointmentViewController: UIViewController {
                  })
         }
         
-        getAilments()
-        getServices()
+        
     }
     func configureViewItems(){
         self.doctorButton.createOptionButton()
@@ -129,6 +126,34 @@ class DotAddAppointmentViewController: UIViewController {
 }
 //MARK:API CAlls
 extension DotAddAppointmentViewController{
+    func getMedication(){
+        SVProgressHUD.show()
+        let api: API = .api1
+        let endpoint: Endpoint = api.getPostAPIEndpointForMedication(urlString: "\(api.rawValue)patients/13/medications", queryItems: nil, headers: nil, body: nil)
+        client.callAPI(with: endpoint.request, modelParser: [MyMedicineModel].self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model2Result):
+                SVProgressHUD.dismiss()
+                if let model = model2Result as? [MyMedicineModel]{
+                    MyData.myMedicineModelArray = model
+                    print("Fetched doctor:",MyData.myMedicineModelArray)
+                    MyMedicationFunctions.readMyMedicine(complition: {[unowned self] in
+                        
+                        self.doctorListTableView.reloadData()
+                        
+                    })
+                }
+                else{
+                    print("error occured")
+                }
+            case .failure(let error):
+                SVProgressHUD.dismiss()
+                print("the error \(error)")
+            }
+        }
+        
+    }
     func getServices(){
         
         let api : API = .api1
