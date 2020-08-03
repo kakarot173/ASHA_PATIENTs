@@ -16,6 +16,8 @@ class DotLoginViewController: UIViewController {
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var proImage: UIImageView!
        var iconClick = true
+    private var headers = HeaderValues()
+    var httpBody: Data?
     var eyeButton:UIButton = UIButton(type: .custom)
     private let client = DotConnectionClient()
     override func viewDidLoad() {
@@ -95,6 +97,7 @@ class DotLoginViewController: UIViewController {
     func showRegister(){
         self.navigationController?.pushViewController(DotRegisterViewController(), animated: true)
         self.navigationController?.navigationBar.topItem?.title = "Register"
+        self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     // MARK:- API Calls
@@ -102,7 +105,6 @@ class DotLoginViewController: UIViewController {
            
            // Query item
            let queryItem = [ URLQueryItem(name: "keyName", value: "ValueName") ]
-    
            /*
            // Body as string
            let bodyString = "yourParameterString"
@@ -115,7 +117,7 @@ class DotLoginViewController: UIViewController {
            paramsDictionary["usertype"] = account
 
            guard let body = try? JSONSerialization.data(withJSONObject: paramsDictionary) else { return }
-           
+
            // Headers
           let headers = ["Content-Type":"application/json"]
            
@@ -148,4 +150,6 @@ class DotLoginViewController: UIViewController {
                }
            }
        }
+    
+    
 }

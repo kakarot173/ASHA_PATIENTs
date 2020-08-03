@@ -24,4 +24,5 @@ struct AdddocumentsModel:Hashable{
     var cardTitle : String?
     var selectedImage : UIImage?
    var isSelect : Bool?
+    var url : URL?
 }

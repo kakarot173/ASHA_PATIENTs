@@ -73,3 +73,37 @@ struct facilityModel:Codable,Hashable{
     let country:String
     let state:String
 }
+struct FileInfo {
+var fileContents: Data?
+var mimetype: String?
+var filename: String?
+var name: String?
+
+init(withFileURL url: URL?, filename: String, name: String, mimetype: String) {
+    guard let url = url else { return }
+    fileContents = try? Data(contentsOf: url)
+    self.filename = filename
+    self.name = name
+    self.mimetype = mimetype
+}
+}
+
+struct HeaderValues {
+    private var values: [String: String] = [:]
+    
+    mutating func add(value: String, forKey key: String) {
+        values[key] = value
+    }
+    
+    func value(forKey key: String) -> String? {
+        return values[key]
+    }
+    
+    func allValues() -> [String: String] {
+        return values
+    }
+    
+    func totalItems() -> Int {
+        return values.count
+    }
+}

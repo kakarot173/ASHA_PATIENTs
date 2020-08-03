@@ -160,10 +160,8 @@ extension DotCollectionViewController: UICollectionViewDelegate {
          let _ = nextViewController.view
         self.delegate?.addChildViewController(nextViewController, back: true)
     case "Records":
-         let storyBoard : UIStoryboard = UIStoryboard(name: "DotAppointmentsViewController", bundle:nil)
-         let nextViewController = storyBoard.instantiateInitialViewController() as! DotAppointmentsViewController
-         nextViewController.itemName = "My Records"
-         let _ = nextViewController.view
+         
+         let nextViewController = DotRecordsViewController()
         self.delegate?.addChildViewController(nextViewController, back: true)
     case "Talk to THB":
        
