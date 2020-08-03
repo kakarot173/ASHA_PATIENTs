@@ -293,10 +293,10 @@ class DotRegisterViewController: LBTAFormController {
                         switch type{
                         case "info":
                             do {
-                                                   DotRegisterViewController.shared.RegisterModels = try JSONDecoder().decode(registerModel.self, from: body)
-                                               } catch  {
-                                                   print(error.localizedDescription)
-                                               }
+                                DotRegisterViewController.shared.RegisterModels = try JSONDecoder().decode(registerModel.self, from: body)
+                            } catch  {
+                                print(error.localizedDescription)
+                            }
                         default:
                             self.showAlertView("Registration Failed", message: desc)
                         }

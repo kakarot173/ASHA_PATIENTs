@@ -16,8 +16,7 @@ class DotLoginViewController: UIViewController {
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var proImage: UIImageView!
        var iconClick = true
-    private var headers = HeaderValues()
-    var httpBody: Data?
+  
     var eyeButton:UIButton = UIButton(type: .custom)
     private let client = DotConnectionClient()
     override func viewDidLoad() {
