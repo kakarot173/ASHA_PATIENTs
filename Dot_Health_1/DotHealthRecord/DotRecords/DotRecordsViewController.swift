@@ -9,6 +9,7 @@
 import UIKit
 import LBTATools
 import MobileCoreServices
+import Photos
 class CellClass: UITableViewCell {
     
 }
@@ -147,9 +148,21 @@ class DotRecordsViewController: LBTAFormController {
         }
         }
     @objc func selectType(_ sender: UIButton) {
-               dataItems = ["Apple", "Mango", "Orange"]
-               selectedButton = sender
-               addTransparentView(frames: docTextField.frame)
+//               dataItems = ["Apple", "Mango", "Orange"]
+//               selectedButton = sender
+//               addTransparentView(frames: docTextField.frame)
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+                    print("OKAY")
+                } else {
+                    print("NOTOKAY")
+                }
+            })
+        }
+        checkLibrary()
+        checkPermission()
            }
     func addTransparentView(frames: CGRect) {
         let window = view.window

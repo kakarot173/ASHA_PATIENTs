@@ -17,6 +17,7 @@
 		2B27F4012491A45600A49C72 /* DotDetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27F3FF2491A45600A49C72 /* DotDetailsCellView.swift */; };
 		2B27F4022491A45600A49C72 /* DotDetailsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B27F4002491A45600A49C72 /* DotDetailsCellView.xib */; };
 		2B284BE024D79F4F00DBC1CE /* DotRecords+APIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B284BDF24D79F4F00DBC1CE /* DotRecords+APIExtensions.swift */; };
+		2B284BE224D9349000DBC1CE /* DotRecordsImagePicker+Photos+Camera+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B284BE124D9349000DBC1CE /* DotRecordsImagePicker+Photos+Camera+extension.swift */; };
 		2B38B08F2492CE7700E47409 /* MultiDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38B08D2492CE7700E47409 /* MultiDetailsTableViewCell.swift */; };
 		2B38B0902492CE7700E47409 /* MultiDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B38B08E2492CE7700E47409 /* MultiDetailsTableViewCell.xib */; };
 		2B43AB5424859DFF003C4B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43AB5324859DFF003C4B19 /* AppDelegate.swift */; };
@@ -285,6 +286,7 @@
 		2B27F3FF2491A45600A49C72 /* DotDetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotDetailsCellView.swift; sourceTree = "<group>"; };
 		2B27F4002491A45600A49C72 /* DotDetailsCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DotDetailsCellView.xib; sourceTree = "<group>"; };
 		2B284BDF24D79F4F00DBC1CE /* DotRecords+APIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotRecords+APIExtensions.swift"; sourceTree = "<group>"; };
+		2B284BE124D9349000DBC1CE /* DotRecordsImagePicker+Photos+Camera+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotRecordsImagePicker+Photos+Camera+extension.swift"; sourceTree = "<group>"; };
 		2B38B08D2492CE7700E47409 /* MultiDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		2B38B08E2492CE7700E47409 /* MultiDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		2B43AB5024859DFF003C4B19 /* Asha Cares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asha Cares.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -581,6 +583,7 @@
 				2B08422E24D5DB8200975F92 /* DotRecordsViewController.swift */,
 				2B08423024D5FF9C00975F92 /* DotRecords+CollectionViewExtension.swift */,
 				2B284BDF24D79F4F00DBC1CE /* DotRecords+APIExtensions.swift */,
+				2B284BE124D9349000DBC1CE /* DotRecordsImagePicker+Photos+Camera+extension.swift */,
 			);
 			path = DotRecords;
 			sourceTree = "<group>";
@@ -2020,6 +2023,7 @@
 				2BE560DF248B093500EE112E /* DotTabViewController.swift in Sources */,
 				2BE6129424C75E290094039F /* DotMedicinesController.swift in Sources */,
 				F341C69724C8C62C00795965 /* ChatCell.swift in Sources */,
+				2B284BE224D9349000DBC1CE /* DotRecordsImagePicker+Photos+Camera+extension.swift in Sources */,
 				2B81DE21249338080012F78A /* DotCalenderViewController.swift in Sources */,
 				F341C6E624C8C62C00795965 /* LoadingButton.swift in Sources */,
 				2B43AB9724859FF5003C4B19 /* APIClient.swift in Sources */,

@@ -16,7 +16,7 @@
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Asha_Cares" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O4M-Bm-hiu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Enter Details" largeTitleDisplayMode="always" id="Npg-OJ-Ope" customClass="navigationStyleItem" customModule="Dot_Health_1" customModuleProvider="target"/>
+                    <navigationItem key="navigationItem" title="Enter Details" largeTitleDisplayMode="always" id="Npg-OJ-Ope" customClass="navigationStyleItem" customModule="Asha_Cares" customModuleProvider="target"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zD-JH-Bw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,7 +78,7 @@
         <!--Dot Dashboard View Controller-->
         <scene sceneID="hbF-vC-usa">
             <objects>
-                <viewController id="tLC-Eg-YdA" customClass="DotDashboardViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tLC-Eg-YdA" customClass="DotDashboardViewController" customModule="Asha_Cares" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O1c-ks-ffK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Dot Tab View Controller-->
         <scene sceneID="PhL-na-Cbq">
             <objects>
-                <tabBarController storyboardIdentifier="mainTab" modalPresentationStyle="fullScreen" id="lrb-Hz-b55" customClass="DotTabViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTab" modalPresentationStyle="fullScreen" id="lrb-Hz-b55" customClass="DotTabViewController" customModule="Asha_Cares" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FIc-tM-i2v"/>
                     <tabBar key="tabBar" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="jkZ-lc-jFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -189,7 +189,7 @@
         <!--Dot Login View Controller-->
         <scene sceneID="ucw-i2-okq">
             <objects>
-                <viewController storyboardIdentifier="log" id="v6U-kR-SCi" customClass="DotLoginViewController" customModule="Dot_Health_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="log" id="v6U-kR-SCi" customClass="DotLoginViewController" customModule="Asha_Cares" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eny-fW-frO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +216,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-uh-yXx">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-nl-T09" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-nl-T09" customClass="DotTextFieldUtility" customModule="Asha_Cares" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                         <color key="tintColor" name="GradientColorlight"/>
                                                         <constraints>
@@ -251,7 +251,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="usg-Hs-pgl">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-nN-2s7" customClass="DotTextFieldUtility" customModule="Dot_Health_1" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-nN-2s7" customClass="DotTextFieldUtility" customModule="Asha_Cares" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                         <color key="tintColor" name="GradientColorlight"/>
                                                         <constraints>
@@ -272,7 +272,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-cb-Oas" customClass="ButtonUtils" customModule="Dot_Health_1" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-cb-Oas" customClass="ButtonUtils" customModule="Asha_Cares" customModuleProvider="target">
                                 <rect key="frame" x="29" y="742" width="365" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ee0-QH-dQr"/>
@@ -284,7 +284,7 @@
                                     <action selector="signUpAction:" destination="v6U-kR-SCi" eventType="touchUpInside" id="bZC-Fi-O3R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTW-EN-TdO" customClass="LoadingButton" customModule="Dot_Health_1" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTW-EN-TdO" customClass="LoadingButton" customModule="Asha_Cares" customModuleProvider="target">
                                 <rect key="frame" x="143" y="625" width="128" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="dsf-NQ-YzJ"/>

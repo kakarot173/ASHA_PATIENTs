@@ -83,6 +83,7 @@ class DotRegisterViewController: LBTAFormController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Enter Details"
+        navigationController?.navigationBar.tintColor = Theme.backgroundColor
        }
     override func viewDidLoad() {
         super.viewDidLoad()
