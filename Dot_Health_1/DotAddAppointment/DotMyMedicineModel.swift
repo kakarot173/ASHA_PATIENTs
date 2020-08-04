@@ -25,12 +25,12 @@ struct MyMedicineModel:Decodable {
     var patient_id:Int
     
     
-    init(appointment_id: Int, days: Int, dosage_instructions: String, drug_name: String, medication_id: Int, patient_id: Int ) {
-        self.appointment_id = appointment_id
-        self.days = days
-        self.dosage_instructions = dosage_instructions
-        self.drug_name = drug_name
-        self.medication_id = medication_id
-        self.patient_id = patient_id
-    }
+//    init(appointment_id: Int, days: Int, dosage_instructions: String, drug_name: String, medication_id: Int, patient_id: Int ) {
+//        self.appointment_id = appointment_id
+//        self.days = days
+//        self.dosage_instructions = dosage_instructions
+//        self.drug_name = drug_name
+//        self.medication_id = medication_id
+//        self.patient_id = patient_id
+//    }
 }

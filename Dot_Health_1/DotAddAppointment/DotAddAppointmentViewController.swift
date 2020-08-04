@@ -33,8 +33,6 @@ class DotAddAppointmentViewController: UIViewController {
         doctorListTableView.delegate = self
         doctorListTableView.dataSource = self
         doctorListTableView.reloadData()
-        
-     
         doctorListTableView.rowHeight = 135
         if screenName == "Medications"{
              self.navigationItem.title = "Medications"
