@@ -13,9 +13,9 @@ import QuickbloxWebRTC
 import SVProgressHUD
 
 struct CredentialsConstant {
-    static let applicationID:UInt = 84508
-    static let authKey = "nWVRWUFwYOLZOSw"
-    static let authSecret = "Hndd3srykjWMmc6"
+    static let applicationID:UInt = 84731
+    static let authKey = "2j9QFQH7FPNsj3j"
+    static let authSecret = "5ZWuKF7wAF-SvpH"
     static let accountKey = "ep4mHaWmU6wUAbZhsokC"
 }
 
