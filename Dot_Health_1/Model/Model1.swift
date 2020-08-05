@@ -73,7 +73,13 @@ init(withFileURL url: URL?, filename: String, name: String, mimetype: String) {
     self.mimetype = mimetype
 }
 }
-
+struct record:Codable,Hashable{
+    var category:String?
+    var file_content:String?
+    var medical_record_id:Int?
+    var patient_id:Int?
+    var storage_link:String?
+}
 struct HeaderValues {
     private var values: [String: String] = [:]
     

@@ -9,6 +9,26 @@
 import Foundation
 import MobileCoreServices
 extension DotRecordsViewController{
+func loadFiles(){
+        let api : API = .api1
+    let endpoint: Endpoint = api.getPostAPIEndpointForAll(urlString: "http://104.215.179.29/v1/patients/17/medicalReports", httpMethod: .get, queryItems: nil, headers: nil, body: nil)
+            client.callAPI(with: endpoint.request, modelParser: [record].self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model2Result):
+                
+//                if let model = model2Result as? [service]{
+//                    self.services = model
+//                }
+//                else{
+                    print("error occured")
+//                }
+            case .failure(let error):
+//                SVProgressHUD.dismiss()
+                print("the error \(error)")
+            }
+        }
+    }
 func upload(files: [FileInfo], toURL url: URL,
                    withHttpMethod httpMethod: HTTPMethod,
                    completion: @escaping(_ result: Result<AnyObject?, APIError>, _ failedFiles: [String]?) -> Void) {

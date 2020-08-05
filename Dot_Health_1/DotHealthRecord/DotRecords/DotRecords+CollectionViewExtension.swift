@@ -62,15 +62,15 @@ extension DotRecordsViewController{
         dataSource = DataSource(collectionView: CardsCollectionView, cellProvider: { (collectionView, indexpath, mov) -> DotAddDocsCell? in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DotAddDocsCell.reuseIdentifier, for: indexpath) as? DotAddDocsCell
                 else{fatalError("Could not create new cell")}
-            cell.nameLabel.text =  self.dummyModel[indexpath.row].cardName
+            cell.nameLabel.text =  "Docs \(indexpath.row)"
             //            cell.nameButton.setTitle( self.doctorDash[indexpath.row] , for: .normal)
             cell.isSelect = mov.isSelect ?? false
-            if self.dummyModel[indexpath.row].cardName == ""{
-                cell.DocumentImageView.image = #imageLiteral(resourceName: "icons8-plus-64")
-            }
-            else{
+//            if self.dummyModel[indexpath.row].cardName == ""{
+//                cell.DocumentImageView.image = #imageLiteral(resourceName: "icons8-plus-64")
+//            }
+//            else{
                 cell.DocumentImageView.image = UIImage()
-            }
+//            }
             //            cell.cardImageView.image = DotLoginViewController.shared.signature == "Doctor" ? self.imagesArray[indexpath.row] : self.imagesArray1[indexpath.row]
             return cell
         })

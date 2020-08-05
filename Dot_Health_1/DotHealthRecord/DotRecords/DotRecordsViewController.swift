@@ -35,6 +35,7 @@ class DotRecordsViewController: LBTAFormController {
       var green = [3,6,9,11]
       var red = [4,12,13,14]
       var dummyModel = [AdddocumentsModel]()
+      var recordsDataArray = [record]()
       var docIndex = 0
       let addDocumentsLimiter = 10
       var dataItems = [String]()
@@ -45,9 +46,9 @@ class DotRecordsViewController: LBTAFormController {
         dismiss(animated: true)
     }
 
-    let fbButton = UIButton(backgroundColor: .green)
+    var docsButton = UIButton(type: .custom)
     
-    let twitterButton = UIButton(backgroundColor: .green)
+    var cameraButton = UIButton(type: .custom)
 //    let githubButton = UIButton(image: #imageLiteral(resourceName: "github_circle").withRenderingMode(.alwaysOriginal))
     let downButton:UIButton = UIButton(type: .custom)
     
@@ -62,8 +63,8 @@ class DotRecordsViewController: LBTAFormController {
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
         configureCollectionView()
-               configureCollectionViewDataSource()
-               createDummyData()
+        configureCollectionViewDataSource()
+        createDummyData()
         let separator1 = UIView()
         let separator2 = UIView()
         let collectionViewContainer = UIView()
@@ -101,15 +102,20 @@ class DotRecordsViewController: LBTAFormController {
             stack1.constrainHeight(60)
             stack1.axis = .vertical
             stack1.alignment = .center
-         
+            switch buttonsArr[i]{
+            case "Take Photo" : cameraButton = buttons1
+            cameraButton.addTarget(self, action: #selector(self.openCamera), for: .touchUpInside)
+            case "Open Documents": docsButton = buttons1
+            docsButton.addTarget(self, action: #selector(self.openDocs), for: .touchUpInside)
+            default:
+                print("not buttons")
+            }
             buttonsStack.addArrangedSubview(stack1)
             buttonsStack.spacing = 8
             buttonsStack.constrainHeight(110)
             buttonsStack.distribution = .fillEqually
         }
         formContainerStackView.addArrangedSubview(buttonsStack)
-        fbButton.layer.cornerRadius = 50
-        twitterButton.layer.cornerRadius = 50
         formContainerStackView.addArrangedSubview(separator1)
         separator1.backgroundColor = .black
         separator1.constrainHeight(1)
@@ -131,10 +137,28 @@ class DotRecordsViewController: LBTAFormController {
         collectionViewContainer.layer.cornerRadius = 10
         collectionViewContainer.addSubview(CardsCollectionView)
         CardsCollectionView.edgesToSuperview()
+        loadFiles()
 //        formContainerStackView.addArrangedSubview(stack)
 //        stack.constrainHeight(100)
 //        stack.spacing = 8
 //        buttonsStackView.distribution = .fillEqually
+    }
+    @objc func openCamera(_ sender: UIButton) {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+                    print("OKAY")
+                } else {
+                    print("NOTOKAY")
+                }
+            })
+        }
+        checkLibrary()
+        checkPermission()
+    }
+    @objc func openDocs(_ sender: UIButton) {
+         openDocumentPicker()
     }
     @objc func selectAppointment(_ sender: UIButton) {
             dataItems = ["Apple", "Mango", "Orange"]
@@ -148,21 +172,9 @@ class DotRecordsViewController: LBTAFormController {
         }
         }
     @objc func selectType(_ sender: UIButton) {
-//               dataItems = ["Apple", "Mango", "Orange"]
-//               selectedButton = sender
-//               addTransparentView(frames: docTextField.frame)
-        let photos = PHPhotoLibrary.authorizationStatus()
-        if photos == .notDetermined {
-            PHPhotoLibrary.requestAuthorization({status in
-                if status == .authorized{
-                    print("OKAY")
-                } else {
-                    print("NOTOKAY")
-                }
-            })
-        }
-        checkLibrary()
-        checkPermission()
+               dataItems = ["Apple", "Mango", "Orange"]
+               selectedButton = sender
+               addTransparentView(frames: docTextField.frame)
            }
     func addTransparentView(frames: CGRect) {
         let window = view.window

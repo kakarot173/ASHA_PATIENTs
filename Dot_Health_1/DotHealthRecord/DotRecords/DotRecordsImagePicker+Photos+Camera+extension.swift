@@ -41,6 +41,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
 //    profileImage.image = image
     let imageData = image.jpegData(compressionQuality: 0.05)
+    let images = image.pngData()
     self.dismiss(animated: true, completion: nil)
 }
 
