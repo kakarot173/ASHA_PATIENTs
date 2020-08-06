@@ -47,6 +47,13 @@ class DotDoctorTableViewCell: UITableViewCell {
             self.priceLabel.text = "$100"//doctorArray[rowIndex].gender
             self.priceLabel.textColor = #colorLiteral(red: 0, green: 0.6795158386, blue: 0, alpha: 1)
         }
+        if let facilityArray = dataArray as? [FacilityModel]{
+            self.nameLabel.text = facilityArray[rowIndex].name
+            self.specialityLabel.text = facilityArray[rowIndex].country
+            self.hospitalNameLabel.text = facilityArray[rowIndex].state
+            self.priceLabel.text = "$100"//doctorArray[rowIndex].gender
+            self.priceLabel.textColor = #colorLiteral(red: 0, green: 0.6795158386, blue: 0, alpha: 1)
+        }
         
     }
 

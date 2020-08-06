@@ -11,5 +11,6 @@ import Foundation
 class MyData{
     static var appointmentModelArray = [DotAppointmentModel]()
     static var doctorModelArray = [DoctorModel]()
+    static var facilityModelArray = [FacilityModel]()
     static var myMedicineModelArray = [MyMedicineModel]()
 }

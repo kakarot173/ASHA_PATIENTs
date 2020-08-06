@@ -26,7 +26,8 @@ class DotAddAppointmentViewController: UIViewController {
     var ailments = [ailment]()
     var services = [service]()
     var doctorData = [DoctorModel]()
-    var facilityData = [facilityModel]()
+   // var facilityData = [facilityModel]()
+    var urlString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureViewItems()
@@ -45,11 +46,6 @@ class DotAddAppointmentViewController: UIViewController {
             getServices()
              self.navigationItem.title = "Add Appointments"
              topViewHeightConstraint.constant = 99
-            doctorFunctions.readDoctors(complition: {[unowned self] in
-                     
-                     self.doctorListTableView.reloadData()
-                    
-                 })
         }
         
         
@@ -144,8 +140,10 @@ extension DotAddAppointmentViewController{
                 }
                 else{
                     print("error occured")
+                    SVProgressHUD.dismiss()
                 }
             case .failure(let error):
+                
                 SVProgressHUD.dismiss()
                 print("the error \(error)")
             }
@@ -200,7 +198,7 @@ extension DotAddAppointmentViewController{
         SVProgressHUD.setDefaultMaskType(.custom)
         // Query item for doc
         var queryItem = [URLQueryItem]()
-        var urlString = ""
+      //  var urlString = ""
         if let item = searchItem.first?["name"] as? String,let id = searchItem.first?["id"] as? Int{
             if ailments.contains(where: {$0.ailment == item}){
                  queryItem = [ URLQueryItem(name: "ailmentId", value:"\(id)"), URLQueryItem(name: "city", value: "Bangalore")]
@@ -215,7 +213,7 @@ extension DotAddAppointmentViewController{
         
           // Query item for facility
         let api : API = .api1
-        let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)\(urlString)", queryItems: queryItem, headers: nil, body: nil)
+        let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)\(urlString)", queryItems: nil, headers: nil, body: nil)
         switch urlString{
         case "doctors":
             client.callAPI(with: endpoint.request, modelParser: [DoctorModel].self) { [weak self] result in
@@ -231,9 +229,16 @@ extension DotAddAppointmentViewController{
                                                   self.doctorListTableView.reloadData()
                                                  
                                               })
+                                 SVProgressHUD.dismiss()
                             }
                             else{
+                                doctorFunctions.readDoctors(complition: {[unowned self] in
+                                    
+                                    self.doctorListTableView.reloadData()
+                                    
+                                })
                                 print("error occured")
+                                SVProgressHUD.dismiss()
                             }
                         case .failure(let error):
                             SVProgressHUD.dismiss()
@@ -241,15 +246,20 @@ extension DotAddAppointmentViewController{
                         }
                     }
         case "facilities":
-            client.callAPI(with: endpoint.request, modelParser: [facilityModel].self) { [weak self] result in
+            client.callAPI(with: endpoint.request, modelParser: [FacilityModel].self) { [weak self] result in
                         guard let self = self else { return }
                         switch result {
                         case .success(let model2Result):
                             SVProgressHUD.dismiss()
-                            if let model = model2Result as? [facilityModel]{
-                                self.facilityData = model
-                                print(self.facilityData)
+                            if let model = model2Result as? [FacilityModel]{
+                                MyData.facilityModelArray = model
+                                print("Facility data :",MyData.facilityModelArray)
                                 // write here to populate facility data in table
+                                facilityFunctions.readFacilities(complition: {[unowned self] in
+                                    
+                                    self.doctorListTableView.reloadData()
+                                    
+                                })
                             }
                             else{
                                 print("error occured")
@@ -271,7 +281,11 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
         if screenName == "Medications"{
             return   MyData.myMedicineModelArray.count
         }
+        else if urlString == "facilities"{
+            return  MyData.facilityModelArray.count
+        }
         return MyData.doctorModelArray.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -279,8 +293,11 @@ extension DotAddAppointmentViewController:UITableViewDelegate,UITableViewDataSou
         if screenName == "Medications"{
              cell.setUp(rowIndex: indexPath.row,dataArray: MyData.myMedicineModelArray)
         }
+        else if urlString == "facilities"{
+             cell.setUp(rowIndex: indexPath.row,dataArray: MyData.facilityModelArray)
+        }
         else{
-             cell.setUp(rowIndex: indexPath.row,dataArray: MyData.doctorModelArray)
+            cell.setUp(rowIndex: indexPath.row,dataArray: MyData.doctorModelArray)
         }
         return cell
     }

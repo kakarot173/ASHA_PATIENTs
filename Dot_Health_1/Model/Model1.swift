@@ -45,20 +45,20 @@ struct registerModel:Decodable{
     let patient_password:String
 }
 
-struct facilityModel:Codable,Hashable{
-    let name:String
-    let doe:String
-    let type:String
-    let email:String
-    let phone:String
-    let facility_id:Int
-    let city:String
-    let pincode:String
-    let address1:String
-    let address2:String
-    let country:String
-    let state:String
-}
+//struct FacilityModel:Decodable,Hashable{
+//    let name:String
+//    let doe:String
+//    let type:String
+//    let email:String
+//    let phone:String
+//    let facility_id:Int
+//    let city:String
+//    let pincode:String
+//    let address1:String
+//    let address2:String
+//    let country:String
+//    let state:String
+//}
 struct FileInfo {
 var fileContents: Data?
 var mimetype: String?
