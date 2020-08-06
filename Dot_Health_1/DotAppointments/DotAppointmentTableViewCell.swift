@@ -53,11 +53,11 @@ class DotAppointmentTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "dd MMM yyyy"
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"
-        self.issueLabel.text = appointmentModel.issue
-        self.hospitalNameLabel.text = appointmentModel.hospitalName
-        self.doctorNameLabel.text = appointmentModel.doctorName
-        self.dateLabel.text = dateFormatter.string(from: appointmentModel.date)
-        self.timeLabel.text = timeFormatter.string(from: appointmentModel.date)
+        self.issueLabel.text = appointmentModel.purpose
+        self.hospitalNameLabel.text = appointmentModel.provider_name
+        self.doctorNameLabel.text = appointmentModel.provider_name
+        self.dateLabel.text = appointmentModel.slot_date//dateFormatter.string(from: appointmentModel.date)
+        self.timeLabel.text = appointmentModel.start_time//timeFormatter.string(from: appointmentModel.date)
 //        self.statusLabel.text = appointmentModel.status
 //        self.setStatusColor(status: appointmentModel.status)
         self.statusLabel = UtilityFunctions.setStatusColor(status: appointmentModel.status, label: self.statusLabel)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DotAppointmentsViewController: UIViewController {
 
@@ -22,6 +23,7 @@ class DotAppointmentsViewController: UIViewController {
    // var calenderPopover = DotCalenderViewController()
     var itemName: String?
     @IBOutlet weak var appointmentTableView: UITableView!
+     private let client = DotConnectionClient()
     override func viewDidLoad() {
         super.viewDidLoad()
       //  Bundle.main.loadNibNamed("DotAppointmentsViewController", owner: self, options: nil)
@@ -33,15 +35,11 @@ class DotAppointmentsViewController: UIViewController {
         endDateTextField.delegate = self
         appointmentTableView.dataSource = self
         appointmentTableView.delegate = self
-        appointmentFunctions.readAppointments(complition: {[unowned self] in
-            
-            self.appointmentTableView.reloadData()
-           
-        })
         appointmentTableView.rowHeight = 135
         appointmentTableView.allowsMultipleSelection = false
         self.navigationItem.title = itemName
         self.addAppointmentButton.createFloatingActionButton()
+        getAppointments()
     }
 
     func openDatePicker(){
@@ -82,9 +80,9 @@ class DotAppointmentsViewController: UIViewController {
         let _ = appointmentDetailsVC.view
         if let cellView = sender as? UITableViewCell,  let indexOfselectedRow = self.appointmentTableView.indexPath(for: cellView)?.row{
            let selectedAppointment = MyData.appointmentModelArray[indexOfselectedRow]
-            if let appointmentDetailModel = selectedAppointment.appointmentDetailModel[indexOfselectedRow] as? AppointmentDetailModel{
+           /* if let appointmentDetailModel = selectedAppointment.appointmentDetailModel[indexOfselectedRow] as? AppointmentDetailModel{
                       appointmentDetailsVC.detailsSetup(appointmentDetailModel: appointmentDetailModel)
-                 }
+                 }*/
         }
      
         
@@ -126,4 +124,51 @@ extension DotAppointmentsViewController: UITableViewDataSource, UITableViewDeleg
         
     }
    
+}
+
+extension DotAppointmentsViewController{
+    
+    func getAppointments(){
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultMaskType(.custom)
+        // Query item for doc
+        var queryItem = [URLQueryItem]()
+        queryItem = [ URLQueryItem(name: "userId", value:"17"), URLQueryItem(name: "userType", value: "patients")]
+        let urlString = "appointments"
+        
+          // Query item for facility
+        let api : API = .api1
+        let endpoint: Endpoint = api.getPostAPIEndpointForAppointments(urlString: "\(api.rawValue)\(urlString)", queryItems: queryItem, headers: nil, body: nil)
+      
+      
+        client.callAPI(with: endpoint.request, modelParser: String.self) { [weak self] result in
+                        guard let self = self else { return }
+                        switch result {
+                        case .success(let model2Result):
+                            SVProgressHUD.dismiss()
+                            if let model = model2Result as? [DotAppointmentModel]{
+                                MyData.appointmentModelArray = model
+                                print("Fetched doctor:",MyData.appointmentModelArray)
+                                appointmentFunctions.readAppointments(complition: {[unowned self] in
+                                                  
+                                                  self.appointmentTableView.reloadData()
+                                                 
+                                              })
+                            }
+                            else{
+                                print("error occured")
+                                appointmentFunctions.readAppointments(complition: {[unowned self] in
+                                           
+                                           self.appointmentTableView.reloadData()
+                                          
+                                       })
+                                  SVProgressHUD.dismiss()
+                            }
+                        case .failure(let error):
+                            SVProgressHUD.dismiss()
+                            print("the error \(error)")
+                        }
+                    }
+        
+    }
 }
