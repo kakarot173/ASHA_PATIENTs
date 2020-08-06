@@ -114,7 +114,10 @@ class DotAddAppointmentViewController: UIViewController {
     @IBAction func searchAction(_ sender: UIButton) {
         
        print(selectedAilment)
-       searchItemsForQuery(searchItem: selectedAilment)
+        if selectedAilment.count > 0{
+             searchItemsForQuery(searchItem: selectedAilment)
+        }
+      
     }
     
 }

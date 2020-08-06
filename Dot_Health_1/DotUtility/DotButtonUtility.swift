@@ -290,10 +290,12 @@ class ActionButton: UIButton {
 class DotViewUtility: UIView{
     override func draw(_ rect: CGRect) {
         backgroundColor = Theme.gradientColorLight
-        layer.shadowOpacity = 1
+   //     layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
-        layer.shadowColor = UIColor.darkGray.cgColor
+      //  layer.shadowColor = UIColor.darkGray.cgColor
         layer.cornerRadius = 10
+        borderWidth = 1
+        borderColor = .black
     }
 }
 
