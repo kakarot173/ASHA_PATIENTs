@@ -44,5 +44,6 @@
 - (IBAction)signOut;
 -(PUMTxnParam*)getTxnParam;
 - (IBAction)pay:(id)sender;
+-(void)setUpDoctorDetail:(int)rowIndex;
 @end
 

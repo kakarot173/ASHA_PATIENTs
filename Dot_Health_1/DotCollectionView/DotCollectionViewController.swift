@@ -163,7 +163,7 @@ extension DotCollectionViewController: UICollectionViewDelegate {
          
          let nextViewController = DotRecordsViewController()
         self.delegate?.addChildViewController(nextViewController, back: true)
-    case "Talk to THB":
+    case "Talk to Doctor":
        
       self.delegate?.showActionSheet()
        

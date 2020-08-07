@@ -90,7 +90,6 @@ extension DotDashboardViewController:setViewAutomatically,setViewControllerAutom
             
            let storyBoard : UIStoryboard = UIStoryboard(name: "Auth", bundle:nil)
             let nextViewController = storyBoard.instantiateInitialViewController() as! LoginTableViewController
-            //nextViewController.itemName = "Mtalk to THB"
             let _ = nextViewController.view
            self.addChildViewController(nextViewController, back: true)
               

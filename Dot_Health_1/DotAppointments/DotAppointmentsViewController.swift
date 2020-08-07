@@ -38,6 +38,7 @@ class DotAppointmentsViewController: UIViewController {
         appointmentTableView.rowHeight = 135
         appointmentTableView.allowsMultipleSelection = false
         self.navigationItem.title = itemName
+        self.searchButton.createFloatingActionButton()
         self.addAppointmentButton.createFloatingActionButton()
         getAppointments()
     }

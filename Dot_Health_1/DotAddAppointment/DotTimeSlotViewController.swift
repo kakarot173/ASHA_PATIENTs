@@ -87,9 +87,12 @@ class DotTimeSlotViewController: UIViewController {
        }
     
     @IBAction func proceedToPayAction(_ sender: UIButton) {
-      //  setupPayu()
-//        self.paymentObject.getTxnParam()
-//        self.paymentObject.pay(sender)
+      let storyBoard : UIStoryboard = UIStoryboard(name: String(describing: DotPaymentViewController.self) , bundle:nil)
+                 let nextViewController = storyBoard.instantiateInitialViewController() as! DotPaymentViewController
+                 
+                 let _ = nextViewController.view
+        //         nextViewController.setUpDoctorDetail(rowIndex:indexPath.row)
+                 self.show(nextViewController, sender: self)
     }
     
 }

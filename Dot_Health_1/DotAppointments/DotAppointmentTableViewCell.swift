@@ -55,7 +55,7 @@ class DotAppointmentTableViewCell: UITableViewCell {
         timeFormatter.dateFormat = "HH:mm"
         self.issueLabel.text = appointmentModel.purpose
         self.hospitalNameLabel.text = appointmentModel.provider_name
-        self.doctorNameLabel.text = appointmentModel.provider_name
+        self.doctorNameLabel.text = appointmentModel.provider_type
         self.dateLabel.text = appointmentModel.slot_date//dateFormatter.string(from: appointmentModel.date)
         self.timeLabel.text = appointmentModel.start_time//timeFormatter.string(from: appointmentModel.date)
 //        self.statusLabel.text = appointmentModel.status
