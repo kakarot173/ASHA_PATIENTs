@@ -91,7 +91,12 @@ class DotTimeSlotViewController: UIViewController {
                  let nextViewController = storyBoard.instantiateInitialViewController() as! DotPaymentViewController
                  
                  let _ = nextViewController.view
-        //         nextViewController.setUpDoctorDetail(rowIndex:indexPath.row)
+        nextViewController.doctorImageView.image =  self.doctorImageView.image
+        nextViewController.doctorNameLabel.text = self.nameLabel.text
+        nextViewController.doctorTypeLabel.text =  self.specialityLabel.text
+        nextViewController.doctorAddressLabel.text = self.hospitalNameLabel.text
+        nextViewController.priceLabel.text = self.priceLabel.text
+        nextViewController.priceLabel.textColor =  self.priceLabel.textColor
                  self.show(nextViewController, sender: self)
     }
     

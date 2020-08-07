@@ -574,8 +574,6 @@
 
     return hash;
 }
--(void)setUpDoctorDetail{
-    
-}
+
 
 @end

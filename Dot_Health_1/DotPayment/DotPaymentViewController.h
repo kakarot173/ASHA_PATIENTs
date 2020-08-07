@@ -35,6 +35,11 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UILabel* version;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem* logout;
+@property (weak, nonatomic) IBOutlet UIImageView *doctorImageView;
+@property (weak, nonatomic) IBOutlet UILabel *doctorNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *doctorTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *doctorAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 - (IBAction)disableCompletion:(id)sender;
 - (IBAction)disableWallet:(id)sender;
@@ -44,6 +49,5 @@
 - (IBAction)signOut;
 -(PUMTxnParam*)getTxnParam;
 - (IBAction)pay:(id)sender;
--(void)setUpDoctorDetail:(int)rowIndex;
 @end
 

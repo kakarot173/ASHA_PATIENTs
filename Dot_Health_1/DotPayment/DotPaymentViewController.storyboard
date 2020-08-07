@@ -118,19 +118,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-Of-htj">
                                                 <rect key="frame" x="104.5" y="24.5" width="192.5" height="88"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dr. Roy Thomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxL-tt-z8c">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Roy Thomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxL-tt-z8c">
                                                         <rect key="frame" x="0.0" y="0.0" width="192.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Oral Surgeon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nev-Gy-nUv">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Oral Surgeon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nev-Gy-nUv">
                                                         <rect key="frame" x="0.0" y="32" width="192.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NOA Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ar-Cn-mkU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="NOA Dental Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ar-Cn-mkU">
                                                         <rect key="frame" x="0.0" y="64" width="192.5" height="24"/>
                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -343,9 +343,14 @@
                     <connections>
                         <outlet property="btnMyWallet" destination="UDJ-B3-Z4v" id="cmL-gG-Bds"/>
                         <outlet property="btnPayment" destination="ndE-qf-hwl" id="Swu-n2-1nQ"/>
+                        <outlet property="doctorAddressLabel" destination="6ar-Cn-mkU" id="m7Z-2v-5wh"/>
+                        <outlet property="doctorImageView" destination="Lbl-WZ-KVE" id="7XA-bh-ea4"/>
+                        <outlet property="doctorNameLabel" destination="ZxL-tt-z8c" id="cuB-f7-HMe"/>
+                        <outlet property="doctorTypeLabel" destination="Nev-Gy-nUv" id="iew-hM-Ubi"/>
                         <outlet property="logout" destination="F47-9n-8q6" id="Ix9-Qg-rKq"/>
                         <outlet property="navItem" destination="ArL-Kt-Sb8" id="5lm-y7-M4m"/>
                         <outlet property="navigationBar" destination="a1K-ou-lfg" id="fTo-cK-oaN"/>
+                        <outlet property="priceLabel" destination="kqH-p2-00g" id="WqS-aO-YpA"/>
                         <outlet property="scrollView" destination="Uoi-5H-lQc" id="3Ji-IS-kg1"/>
                         <outlet property="tfAmount" destination="UtX-EC-tqO" id="Maq-jg-Hkf"/>
                         <outlet property="tfEmail" destination="SiQ-LJ-pQO" id="bkh-DB-xbE"/>
