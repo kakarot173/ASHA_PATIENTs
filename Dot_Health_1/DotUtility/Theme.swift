@@ -17,6 +17,8 @@ class Theme{
     static let tintcolor = UIColor(named: "Tint")
     static let gradientColorLight = UIColor(named: "GradientColorlight")
     static let gradientColorDark = UIColor(named: "GradientColorDark")
+    
+    //commit test
 
 }
 extension UIColor {
